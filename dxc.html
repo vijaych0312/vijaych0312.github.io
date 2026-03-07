@@ -1,115 +1,260 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DXC Technology</title>
+<title>DXC Technology | Vijay Kumar Chelluboyana</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-font-family:Arial;
-background:#0f172a;
+background:#000;
 color:white;
-padding:40px;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
 }
 
-.pipeline{
-font-size:20px;
-margin-top:30px;
+.container{
+width:1100px;
+max-width:90%;
+margin:auto;
+padding:80px 0;
 }
 
-.step{
-padding:10px 20px;
-border:1px solid gray;
-margin:5px;
-display:inline-block;
-opacity:0.4;
+.name{
+font-size:40px;
+font-weight:700;
 }
 
-.arrow{
-margin:10px;
+.role{
+font-size:18px;
+color:#aaa;
+margin-top:5px;
 }
 
-.tech{
-color:#94a3b8;
+.company{
+font-size:28px;
+color:#00e0ff;
 margin-top:20px;
 }
 
-a{
-color:#38bdf8;
+.section{
+margin-top:70px;
+}
+
+.section h2{
+color:#00e0ff;
+margin-bottom:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:35px;
+border-radius:16px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#00e0ff;
+}
+
+ul{
+line-height:2;
+color:#ddd;
+}
+
+.pipeline{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+align-items:center;
+}
+
+.stage{
+padding:14px 28px;
+border-radius:10px;
+border:1px solid #333;
+background:#0a0a0a;
+transition:.3s;
+}
+
+.stage:hover{
+background:#00e0ff;
+color:black;
+}
+
+.arrow{
+font-size:22px;
+opacity:.6;
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.tech{
+padding:18px;
+border:1px solid #222;
+background:#0a0a0a;
+border-radius:10px;
+text-align:center;
+transition:.4s;
+}
+
+.tech:hover{
+background:#00e0ff;
+color:black;
+}
+
+.architecture img{
+width:100%;
+max-width:850px;
+margin-top:25px;
+border-radius:10px;
+}
+
+.back{
+display:inline-block;
+margin-top:60px;
+color:#00e0ff;
 text-decoration:none;
 }
 
-</style>
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
 
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>DXC Technology</h1>
+<div class="container">
+
+<div class="name">VIJAY Kumar Chelluboyana</div>
+<div class="role">DevOps Engineer</div>
+<div class="company">DXC Technology</div>
+
+<div class="section hidden">
 
 <h2>Responsibilities</h2>
 
+<div class="card">
+
 <ul>
-<li>Maintained Jenkins CI/CD pipelines</li>
-<li>Docker container builds</li>
-<li>Managed Azure Kubernetes clusters</li>
-<li>Infrastructure automation using Terraform</li>
-<li>Monitoring using Prometheus and Grafana</li>
+
+<li>Developed CI/CD pipelines to automate application deployment workflows.</li>
+
+<li>Managed containerized applications using Docker.</li>
+
+<li>Implemented infrastructure provisioning using Terraform.</li>
+
+<li>Maintained Kubernetes clusters and deployment configurations.</li>
+
+<li>Configured monitoring and logging systems for infrastructure health.</li>
+
+<li>Collaborated with engineering teams to optimize DevOps processes.</li>
+
 </ul>
+
+</div>
+
+</div>
+
+<div class="section hidden">
 
 <h2>CI/CD Pipeline</h2>
 
 <div class="pipeline">
 
-<span class="step">Git</span>
-<span class="arrow">→</span>
+<div class="stage">GitHub</div>
+<div class="arrow">→</div>
 
-<span class="step">Jenkins</span>
-<span class="arrow">→</span>
+<div class="stage">Build</div>
+<div class="arrow">→</div>
 
-<span class="step">Docker</span>
-<span class="arrow">→</span>
+<div class="stage">Docker</div>
+<div class="arrow">→</div>
 
-<span class="step">Kubernetes</span>
-<span class="arrow">→</span>
+<div class="stage">Kubernetes</div>
+<div class="arrow">→</div>
 
-<span class="step">Azure</span>
+<div class="stage">AWS</div>
 
 </div>
+
+</div>
+
+<div class="section hidden">
 
 <h2>Architecture</h2>
 
-<img width="700"
-src="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/media/aks-containers.png">
+<div class="card architecture">
+
+<p>
+Infrastructure automation and application deployments were implemented using containerized environments running on Kubernetes with automated CI/CD pipelines enabling continuous delivery.
+</p>
+
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*kgXq4gGmO6exdFvtnxoQew.png">
+
+</div>
+
+</div>
+
+<div class="section hidden">
 
 <h2>Technologies</h2>
 
-<div class="tech">
-Azure • Terraform • Jenkins • Docker • Kubernetes • Prometheus • Grafana
+<div class="tech-grid">
+
+<div class="tech">AWS</div>
+<div class="tech">Terraform</div>
+<div class="tech">Docker</div>
+<div class="tech">Kubernetes</div>
+<div class="tech">CI/CD</div>
+<div class="tech">Linux</div>
+
 </div>
 
-<br><br>
+</div>
 
-<a href="index.html">← Back to Portfolio</a>
+<a class="back" href="index.html">← Back to Portfolio</a>
+
+</div>
 
 <script>
 
-let steps=document.querySelectorAll(".step");
-let i=0;
-
-setInterval(()=>{
-
-steps.forEach(s=>s.style.opacity=0.4);
-steps[i].style.opacity=1;
-
-i++;
-
-if(i>=steps.length){
-i=0;
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
+});
+});
 
-},1000);
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
 
 </script>
 
