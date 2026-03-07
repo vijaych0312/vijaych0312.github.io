@@ -1,184 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vijay Kumar Chelluboyana | DevOps Engineer</title>
+<title>Vijay Kumar Chelluboyana | Cloud & DevOps Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-background:#0b1220;
-color:white;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-header{
-text-align:center;
-padding:80px 20px 60px 20px;
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+color:white;
+overflow-x:hidden;
 }
 
-.name{
-font-size:48px;
-font-weight:700;
-}
-
-.title{
-font-size:22px;
-color:#60a5fa;
-margin-top:10px;
-}
-
-.about{
-margin-top:20px;
-color:#9ca3af;
-max-width:650px;
-margin-left:auto;
-margin-right:auto;
-line-height:1.6;
-}
-
-.links{
-margin-top:25px;
-}
-
-.links a{
-margin:0 15px;
-color:#60a5fa;
-text-decoration:none;
-font-size:16px;
-}
-
-.links a:hover{
-text-decoration:underline;
-}
-
-.section{
-margin-top:80px;
-}
+/* container */
 
 .container{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.card{
-background:#1f2937;
-width:260px;
-padding:30px;
-border-radius:12px;
-text-align:center;
-transition:0.3s;
-cursor:pointer;
-}
-
-.card:hover{
-transform:translateY(-8px);
-background:#374151;
-}
-
-a{
-text-decoration:none;
-color:white;
-}
-
-.section-title{
-text-align:center;
-font-size:28px;
-margin-bottom:30px;
-}
-
-.skills{
-width:600px;
+width:1200px;
+max-width:90%;
 margin:auto;
 }
 
+/* hero section */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:700;
+}
+
+.hero h2{
+font-size:24px;
+margin-top:10px;
+color:#aaa;
+}
+
+.hero p{
+margin-top:20px;
+max-width:600px;
+color:#ccc;
+}
+
+.scroll{
+margin-top:60px;
+font-size:14px;
+color:#777;
+}
+
+/* sections */
+
+.section{
+padding:120px 0;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:40px;
+color:#00e0ff;
+text-align:center;
+}
+
+/* cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:#0a0a0a;
+border:1px solid #222;
+padding:35px;
+border-radius:15px;
+transition:.4s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+border-color:#00e0ff;
+box-shadow:0 15px 35px rgba(0,224,255,.2);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+/* company cards */
+
+.company-card{
+cursor:pointer;
+}
+
+/* education */
+
+.edu{
+background:#0a0a0a;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+margin-bottom:20px;
+transition:.3s;
+}
+
+.edu:hover{
+border-color:#00e0ff;
+transform:translateY(-5px);
+}
+
+/* skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+}
+
 .skill{
-margin:18px 0;
+padding:12px 20px;
+background:#0a0a0a;
+border:1px solid #222;
+border-radius:20px;
+transition:.3s;
 }
 
-.bar{
-background:#1f2937;
-height:12px;
-border-radius:10px;
-margin-top:6px;
+.skill:hover{
+background:#00e0ff;
+color:black;
 }
 
-.bar div{
-height:100%;
-background:#60a5fa;
-border-radius:10px;
-}
+/* footer */
 
 footer{
 text-align:center;
-margin-top:80px;
-padding:30px;
-color:#9ca3af;
-font-size:14px;
+padding:60px 0;
+color:#777;
+}
+
+/* scroll animation */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
 
-<div class="name">
-Vijay Kumar Chelluboyana
-</div>
+<div class="hero">
 
-<div class="title">
-DevOps Engineer | AWS | Kubernetes | Terraform
-</div>
+<h1>VIJAY Kumar Chelluboyana</h1>
+<h2>Cloud & DevOps Engineer</h2>
 
-<div class="about">
-DevOps engineer focused on building scalable cloud infrastructure, CI/CD automation,
-and containerized deployments. Experienced with AWS, Kubernetes, Terraform,
-and modern DevOps pipelines.
-</div>
+<p>
+Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient systems using modern DevOps technologies.
+</p>
 
-<div class="links">
-
-<a href="https://github.com/vijaych0312" target="_blank">GitHub</a>
-
-<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+<div class="scroll">Scroll to explore ↓</div>
 
 </div>
 
-</header>
 
-<div class="section">
+<div class="section hidden">
 
-<div class="section-title">
-Professional Experience
-</div>
+<h2>Professional Experience</h2>
 
 <div class="container">
 
-<a href="welldoc.html">
-<div class="card">
-<h2>Welldoc</h2>
-<p>Cloud Engineer</p>
+<div class="cards">
+
+<a href="welldoc.html" style="text-decoration:none;color:white;">
+<div class="card company-card">
+
+<h3>Cloud Engineer</h3>
+<p>Welldoc</p>
+
 </div>
 </a>
 
-<a href="dxc.html">
-<div class="card">
-<h2>DXC Technology</h2>
-<p>DevOps Engineer</p>
+
+<a href="dxc.html" style="text-decoration:none;color:white;">
+<div class="card company-card">
+
+<h3>DevOps Engineer</h3>
+<p>DXC Technology</p>
+
 </div>
 </a>
 
-<a href="cedar.html">
-<div class="card">
-<h2>Cedar InfoTech</h2>
-<p>Cloud Engineer</p>
+
+<a href="cedar.html" style="text-decoration:none;color:white;">
+<div class="card company-card">
+
+<h3>Cloud Engineer</h3>
+<p>Cedar InfoTech</p>
+
 </div>
 </a>
 
@@ -186,48 +232,78 @@ Professional Experience
 
 </div>
 
-<div class="section">
-
-<div class="section-title">
-DevOps Skills
 </div>
+
+
+<div class="section hidden">
+
+<h2>Education</h2>
+
+<div class="container">
+
+<div class="edu">
+<h3>Master's Degree</h3>
+<p>Pace University – New York</p>
+</div>
+
+<div class="edu">
+<h3>Bachelor's Degree</h3>
+<p>Jain University – Bangalore</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section hidden">
+
+<h2>DevOps & Cloud Skills</h2>
+
+<div class="container">
 
 <div class="skills">
 
-<div class="skill">
-AWS
-<div class="bar"><div style="width:90%"></div></div>
-</div>
+<div class="skill">AWS</div>
+<div class="skill">Docker</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">Terraform</div>
+<div class="skill">GitHub Actions</div>
+<div class="skill">CI/CD</div>
+<div class="skill">CloudWatch</div>
+<div class="skill">Linux</div>
 
-<div class="skill">
-Docker
-<div class="bar"><div style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-Kubernetes
-<div class="bar"><div style="width:80%"></div></div>
-</div>
-
-<div class="skill">
-Terraform
-<div class="bar"><div style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-CI/CD
-<div class="bar"><div style="width:90%"></div></div>
 </div>
 
 </div>
 
 </div>
+
 
 <footer>
 
-© 2026 Vijay Kumar Chelluboyana
+<p>© 2026 Vijay Kumar Chelluboyana</p>
 
 </footer>
+
+
+<script>
+
+/* scroll animation */
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
 
 </body>
 </html>
