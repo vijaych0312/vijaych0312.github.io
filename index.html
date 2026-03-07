@@ -29,6 +29,8 @@ max-width:90%;
 margin:auto;
 }
 
+/* HERO */
+
 .hero{
 height:100vh;
 display:flex;
@@ -38,9 +40,28 @@ align-items:center;
 text-align:center;
 }
 
+/* Animated Name */
+
 .hero h1{
-font-size:60px;
+font-size:64px;
 font-weight:700;
+background:linear-gradient(90deg,#00e0ff,#ffffff,#00e0ff);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:200%;
+}
+
 }
 
 .hero h2{
@@ -56,9 +77,9 @@ font-size:16px;
 }
 
 .contact{
-margin-top:12px;
-font-size:15px;
+margin-top:10px;
 color:#bbb;
+font-size:15px;
 }
 
 .hero p{
@@ -67,11 +88,24 @@ max-width:600px;
 color:#ccc;
 }
 
+/* Scroll animation */
+
 .scroll{
 margin-top:40px;
 font-size:14px;
 color:#777;
+animation:float 2s ease-in-out infinite;
 }
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(6px);}
+100%{transform:translateY(0);}
+
+}
+
+/* SECTIONS */
 
 .section{
 padding:70px 0;
@@ -83,6 +117,8 @@ margin-bottom:40px;
 color:#00e0ff;
 text-align:center;
 }
+
+/* EXPERIENCE CARDS */
 
 .cards{
 display:grid;
@@ -113,6 +149,8 @@ margin-bottom:10px;
 cursor:pointer;
 }
 
+/* EDUCATION */
+
 .edu{
 background:#0a0a0a;
 padding:25px;
@@ -126,6 +164,8 @@ transition:.3s;
 border-color:#00e0ff;
 transform:translateY(-5px);
 }
+
+/* SKILLS */
 
 .skills{
 display:flex;
@@ -148,11 +188,15 @@ background:#00e0ff;
 color:black;
 }
 
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:40px 0;
 color:#777;
 }
+
+/* SCROLL ANIMATION */
 
 .hidden{
 opacity:0;
@@ -188,6 +232,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
+<!-- EXPERIENCE -->
 
 <div class="section hidden">
 
@@ -199,28 +244,22 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 <a href="welldoc.html" style="text-decoration:none;color:white;">
 <div class="card company-card">
-
 <h3>Cloud Engineer</h3>
 <p>Welldoc</p>
-
 </div>
 </a>
 
 <a href="dxc.html" style="text-decoration:none;color:white;">
 <div class="card company-card">
-
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
-
 </div>
 </a>
 
 <a href="cedar.html" style="text-decoration:none;color:white;">
 <div class="card company-card">
-
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
-
 </div>
 </a>
 
@@ -230,6 +269,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
+<!-- EDUCATION -->
 
 <div class="section hidden">
 
@@ -251,6 +291,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
+<!-- SKILLS -->
 
 <div class="section hidden">
 
@@ -275,13 +316,11 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
-
 <footer>
 
 <p>© 2026 Vijay Kumar Chelluboyana</p>
 
 </footer>
-
 
 <script>
 
