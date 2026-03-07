@@ -2,20 +2,42 @@
 <html>
 <head>
 
-<title>Cedar InfoTech</title>
+<title>Cedar Experience</title>
 
 <style>
 
 body{
-font-family:-apple-system;
-background:black;
+font-family:Arial;
+background:#0f172a;
 color:white;
-padding:60px;
+padding:40px;
 }
 
-li{
-margin-bottom:15px;
-color:#ccc;
+.pipeline{
+font-size:20px;
+margin-top:30px;
+}
+
+.step{
+padding:10px 20px;
+border:1px solid gray;
+margin:5px;
+display:inline-block;
+opacity:0.4;
+}
+
+.arrow{
+margin:10px;
+}
+
+.tech{
+color:#94a3b8;
+margin-top:20px;
+}
+
+a{
+color:#38bdf8;
+text-decoration:none;
 }
 
 </style>
@@ -24,30 +46,72 @@ color:#ccc;
 
 <body>
 
-<a href="index.html">← Back</a>
-
-<h1>Cloud Engineer – Cedar InfoTech</h1>
+<h1>Cedar</h1>
 
 <h2>Responsibilities</h2>
 
 <ul>
-
-<li>Managed AWS EC2, IAM, S3 and CloudWatch.</li>
-
-<li>Configured Auto Scaling Groups for high availability.</li>
-
-<li>Automated server provisioning using shell scripts.</li>
-
-<li>Configured CloudWatch alarms.</li>
-
-<li>Supported enterprise networking and VPC architecture.</li>
-
+<li>Managed Kubernetes clusters</li>
+<li>Automated infrastructure with Terraform</li>
+<li>Built container deployment pipelines</li>
+<li>Improved deployment automation</li>
+<li>Configured monitoring and logging</li>
 </ul>
 
-<h2>AWS Infrastructure</h2>
+<h2>CI/CD Pipeline</h2>
+
+<div class="pipeline">
+
+<span class="step">GitHub</span>
+<span class="arrow">→</span>
+
+<span class="step">CI</span>
+<span class="arrow">→</span>
+
+<span class="step">Docker</span>
+<span class="arrow">→</span>
+
+<span class="step">Kubernetes</span>
+<span class="arrow">→</span>
+
+<span class="step">AWS</span>
+
+</div>
+
+<h2>Architecture</h2>
 
 <img width="700"
-src="https://miro.medium.com/v2/resize:fit:1400/1*9u6H1bUaz2QmiVjCwXTlzA.png">
+src="https://miro.medium.com/v2/resize:fit:1400/1*ZfGqJr-1KkKQpHgMHqmpYg.png">
+
+<h2>Technologies</h2>
+
+<div class="tech">
+AWS • Terraform • Docker • Kubernetes • GitHub Actions • Prometheus
+</div>
+
+<br><br>
+
+<a href="index.html">← Back to Portfolio</a>
+
+<script>
+
+let steps=document.querySelectorAll(".step");
+let i=0;
+
+setInterval(()=>{
+
+steps.forEach(s=>s.style.opacity=0.4);
+steps[i].style.opacity=1;
+
+i++;
+
+if(i>=steps.length){
+i=0;
+}
+
+},1000);
+
+</script>
 
 </body>
 </html>
