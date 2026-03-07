@@ -23,8 +23,8 @@ scroll-snap-type:y mandatory;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#000;
-color:white;
+background:#f7f9fc;
+color:#1a1a1a;
 overflow-x:hidden;
 }
 
@@ -38,6 +38,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 scroll-snap-align:start;
+background:white;
 }
 
 /* container */
@@ -53,7 +54,7 @@ margin:auto;
 .hero h1{
 font-size:64px;
 font-weight:700;
-background:linear-gradient(90deg,#00e0ff,#ffffff,#00e0ff);
+background:linear-gradient(90deg,#0077ff,#00c6ff,#0077ff);
 background-size:200%;
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -68,7 +69,7 @@ animation:shine 6s linear infinite;
 .hero h2{
 font-size:24px;
 margin-top:10px;
-color:#aaa;
+color:#555;
 }
 
 .location{
@@ -79,14 +80,14 @@ font-size:16px;
 
 .contact{
 margin-top:10px;
-color:#bbb;
+color:#666;
 font-size:15px;
 }
 
 .hero p{
 margin-top:20px;
 max-width:600px;
-color:#ccc;
+color:#444;
 }
 
 /* Scroll arrow animation */
@@ -94,7 +95,7 @@ color:#ccc;
 .scroll{
 margin-top:40px;
 font-size:14px;
-color:#777;
+color:#888;
 animation:float 2s ease-in-out infinite;
 }
 
@@ -108,14 +109,14 @@ animation:float 2s ease-in-out infinite;
 
 .section{
 padding:70px 0;
-background:black;
+background:#f7f9fc;
 scroll-snap-align:start;
 }
 
 .section h2{
 font-size:34px;
 margin-bottom:40px;
-color:#00e0ff;
+color:#0077ff;
 text-align:center;
 }
 
@@ -128,18 +129,19 @@ gap:30px;
 }
 
 .card{
-background:#0a0a0a;
-border:1px solid #222;
+background:white;
+border:1px solid #e3e7ee;
 padding:35px;
 border-radius:15px;
 transition:.4s;
 text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.02);
-border-color:#00e0ff;
-box-shadow:0 15px 35px rgba(0,224,255,.2);
+transform:translateY(-8px);
+border-color:#0077ff;
+box-shadow:0 15px 35px rgba(0,119,255,.15);
 }
 
 .company-card{
@@ -149,16 +151,17 @@ cursor:pointer;
 /* education */
 
 .edu{
-background:#0a0a0a;
+background:white;
 padding:25px;
 border-radius:12px;
-border:1px solid #222;
+border:1px solid #e3e7ee;
 margin-bottom:20px;
 transition:.3s;
+box-shadow:0 5px 12px rgba(0,0,0,0.04);
 }
 
 .edu:hover{
-border-color:#00e0ff;
+border-color:#0077ff;
 transform:translateY(-5px);
 }
 
@@ -174,15 +177,17 @@ margin-top:20px;
 
 .skill{
 padding:12px 20px;
-background:#0a0a0a;
-border:1px solid #222;
+background:white;
+border:1px solid #e3e7ee;
 border-radius:20px;
 transition:.3s;
+box-shadow:0 3px 8px rgba(0,0,0,0.04);
 }
 
 .skill:hover{
-background:#00e0ff;
-color:black;
+background:#0077ff;
+color:white;
+border-color:#0077ff;
 }
 
 /* footer */
@@ -191,6 +196,8 @@ footer{
 text-align:center;
 padding:40px 0;
 color:#777;
+background:white;
+border-top:1px solid #e3e7ee;
 }
 
 /* scroll reveal */
@@ -243,21 +250,21 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 <div class="cards">
 
-<a href="welldoc.html" style="text-decoration:none;color:white;">
+<a href="welldoc.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
 <h3>Cloud Engineer</h3>
 <p>Welldoc</p>
 </div>
 </a>
 
-<a href="dxc.html" style="text-decoration:none;color:white;">
+<a href="dxc.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
 </div>
 </a>
 
-<a href="cedar.html" style="text-decoration:none;color:white;">
+<a href="cedar.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
