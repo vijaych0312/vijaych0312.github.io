@@ -16,6 +16,11 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+scroll-snap-type:y mandatory;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#000;
@@ -23,11 +28,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* Slide behavior only for first page */
-
-html{
-scroll-behavior:smooth;
-}
+/* HERO SLIDE */
 
 .hero{
 height:100vh;
@@ -36,8 +37,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-position:sticky;
-top:0;
+scroll-snap-align:start;
 }
 
 /* container */
@@ -109,6 +109,7 @@ animation:float 2s ease-in-out infinite;
 .section{
 padding:70px 0;
 background:black;
+scroll-snap-align:start;
 }
 
 .section h2{
@@ -212,7 +213,7 @@ transform:translateY(0);
 
 <!-- HERO SLIDE -->
 
-<div class="hero">
+<section class="hero">
 
 <h1>VIJAY KUMAR CHELLUBOYANA</h1>
 <h2>Cloud & DevOps Engineer</h2>
@@ -229,12 +230,12 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 <div class="scroll">Scroll to explore ↓</div>
 
-</div>
+</section>
 
 
 <!-- EXPERIENCE -->
 
-<div class="section hidden">
+<section class="section hidden">
 
 <h2>Professional Experience</h2>
 
@@ -267,12 +268,12 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
-</div>
+</section>
 
 
 <!-- EDUCATION -->
 
-<div class="section hidden">
+<section class="section hidden">
 
 <h2>Education</h2>
 
@@ -290,12 +291,12 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
-</div>
+</section>
 
 
 <!-- SKILLS -->
 
-<div class="section hidden">
+<section class="section hidden">
 
 <h2>DevOps & Cloud Skills</h2>
 
@@ -316,7 +317,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
-</div>
+</section>
 
 <footer>
 
