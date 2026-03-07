@@ -1,119 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vijay Kumar Chelluboyana | Cloud & DevOps Engineer</title>
+<meta charset="UTF-8">
+<title>Vijay Kumar Chelluboyana</title>
 
 <style>
+
 body{
-font-family: Arial;
-margin:40px;
-background:#f4f4f4;
+margin:0;
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+background:black;
+color:white;
+overflow-x:hidden;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+section{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
 }
 
-h1{
-color:#222;
+.hero{
+background:url("https://images.unsplash.com/photo-1555066931-4365d14bab8c") center/cover no-repeat;
 }
 
-h2{
-color:#444;
-margin-top:30px;
+.hero h1{
+font-size:60px;
 }
 
-a{
-color:#0077cc;
-text-decoration:none;
+.hero p{
+font-size:22px;
+opacity:0.9;
 }
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.skills{
+background:#111;
+}
+
+.projects{
+background:#000;
+}
+
+.contact{
+background:#111;
+}
+
+img{
+width:300px;
+border-radius:20px;
+margin-top:20px;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
+<section class="hero">
+<h1 class="fade">Vijay Kumar Chelluboyana</h1>
+<p class="fade">Cloud & DevOps Engineer</p>
+</section>
 
-<h1>Vijay Kumar Chelluboyana</h1>
-<p><b>Cloud / DevOps Engineer</b></p>
-
-<p>
-Columbia, MD | Open to Remote / Hybrid | Open to Relocation
+<section class="skills">
+<h2 class="fade">Building Scalable Cloud Infrastructure</h2>
+<p class="fade">
+AWS • Azure • Terraform • Kubernetes • CI/CD
 </p>
+<img class="fade" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+</section>
 
-<h2>About Me</h2>
-
-<p>
-Cloud & DevOps Engineer with 4+ years of experience delivering enterprise-scale 
-cloud solutions. Experienced in AWS and Azure cloud platforms, Infrastructure as Code 
-(Terraform, CloudFormation, CDK), CI/CD pipelines, and Kubernetes/EKS. 
-Passionate about building scalable, secure, and automated cloud infrastructure.
+<section class="projects">
+<h2 class="fade">DevOps & Cloud Engineering</h2>
+<p class="fade">
+Designing automated infrastructure, Kubernetes clusters,
+and enterprise CI/CD pipelines.
 </p>
+<img class="fade" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+</section>
 
-<h2>Technical Skills</h2>
-
-<ul>
-<li><b>Cloud:</b> AWS, Azure</li>
-<li><b>DevOps:</b> Jenkins, GitHub Actions, AWS CodePipeline</li>
-<li><b>Infrastructure as Code:</b> Terraform, CloudFormation, AWS CDK</li>
-<li><b>Containers:</b> Docker, Kubernetes, Amazon EKS, Helm</li>
-<li><b>Monitoring:</b> CloudWatch, Prometheus, Grafana, Dynatrace</li>
-<li><b>Configuration Management:</b> Ansible, Chef, Puppet</li>
-<li><b>Languages:</b> Python, Shell, Java</li>
-<li><b>Tools:</b> Git, GitHub, GitLab, Jira, Confluence</li>
-</ul>
-
-<h2>Professional Experience</h2>
-
-<p><b>Cloud Engineer – Welldoc (2024 – Present)</b></p>
-<ul>
-<li>Built highly available AWS infrastructure using VPC, ALB, NAT Gateway and multi-AZ architecture.</li>
-<li>Implemented Infrastructure as Code using Terraform, CloudFormation and AWS CDK.</li>
-<li>Managed Amazon EKS clusters and automated deployments.</li>
-<li>Created CI/CD pipelines using GitHub Actions and AWS services.</li>
-</ul>
-
-<p><b>DevOps Engineer – DXC Technology (2022 – 2023)</b></p>
-<ul>
-<li>Designed Azure infrastructure including VNets, NSGs, VPNs and Azure AD.</li>
-<li>Automated infrastructure using Terraform and ARM templates.</li>
-<li>Implemented CI/CD pipelines using Jenkins.</li>
-<li>Containerized applications using Docker and deployed to Kubernetes.</li>
-</ul>
-
-<h2>Certifications</h2>
-
-<ul>
-<li>AWS Certified DevOps Engineer – Professional</li>
-<li>Microsoft Azure DevOps Engineer Expert</li>
-<li>Terraform Associate</li>
-<li>Certified Kubernetes Administrator (CKA)</li>
-</ul>
-
-<h2>Education</h2>
-
-<p>
-Master of Science in Computer Science<br>
-Pace University, New York – 2025
-</p>
-
-<h2>Contact</h2>
-
-<p>
-Email: vijaychelluboyana@gmail.com <br><br>
-
+<section class="contact">
+<h2 class="fade">Let's Connect</h2>
+<p class="fade">
 <a href="https://github.com/vijaych0312">GitHub</a> |
 <a href="https://linkedin.com">LinkedIn</a>
-
 </p>
+</section>
 
-</div>
+<script>
+
+const elements = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+elements.forEach(el=>observer.observe(el));
+
+</script>
 
 </body>
 </html>
