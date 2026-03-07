@@ -11,6 +11,7 @@ margin:0;
 font-family:-apple-system,BlinkMacSystemFont,sans-serif;
 background:black;
 color:white;
+overflow-x:hidden;
 }
 
 section{
@@ -20,45 +21,17 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:40px;
 }
 
-h1{
-font-size:60px;
-margin-bottom:10px;
-}
+h1{font-size:60px;}
+h2{font-size:40px;}
+p{font-size:20px;color:#aaa;max-width:700px;}
 
-h2{
-font-size:40px;
-margin-bottom:20px;
-}
-
-p{
-font-size:20px;
-max-width:700px;
-color:#a1a1a6;
-}
-
-.hero{background:black;}
-.education{background:#111;}
-.experience{background:black;}
-.contact{background:#111;}
-
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-a{
-color:white;
-text-decoration:none;
-border-bottom:1px solid gray;
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
 }
 
 </style>
@@ -66,64 +39,83 @@ border-bottom:1px solid gray;
 
 <body>
 
-<section class="hero">
-<h1 class="fade">Vijay Kumar Chelluboyana</h1>
-<p class="fade">Cloud & DevOps Engineer</p>
+<canvas id="bg"></canvas>
+
+<section>
+<h1>Vijay Kumar Chelluboyana</h1>
+<p>Cloud & DevOps Engineer</p>
 </section>
 
-<section class="education">
-<h2 class="fade">Education</h2>
-<p class="fade">
-Master of Science in Computer Science<br>
-Pace University, New York
-</p>
-
-<p class="fade">
-Bachelor of Engineering<br>
-Jain University, Bangalore
-</p>
+<section>
+<h2>Education</h2>
+<p>MS Computer Science — Pace University, New York</p>
+<p>Bachelor's — Jain University, Bangalore</p>
 </section>
 
-<section class="experience">
-<h2 class="fade">Professional Experience</h2>
-
-<p class="fade">
-Cloud Engineer – Welldoc
-</p>
-
-<p class="fade">
-DevOps Engineer – DXC Technology
-</p>
-
-<p class="fade">
-Cloud Engineer – Cedar InfoTech
-</p>
-
+<section>
+<h2>Experience</h2>
+<p>Welldoc</p>
+<p>DXC Technology</p>
+<p>Cedar InfoTech</p>
 </section>
 
-<section class="contact">
-<h2 class="fade">Connect</h2>
-
-<p class="fade">
+<section>
+<h2>Connect</h2>
+<p>
 <a href="https://github.com/vijaych0312">GitHub</a> |
 <a href="https://linkedin.com">LinkedIn</a>
 </p>
-
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
 <script>
 
-const elements=document.querySelectorAll(".fade");
+const scene = new THREE.Scene();
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
+const camera = new THREE.PerspectiveCamera(
+75,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+);
+
+const renderer = new THREE.WebGLRenderer({
+canvas:document.querySelector("#bg")
+});
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+camera.position.z=5;
+
+const geometry = new THREE.TorusKnotGeometry(1,0.3,100,16);
+const material = new THREE.MeshStandardMaterial({color:0xffffff});
+const knot = new THREE.Mesh(geometry,material);
+
+scene.add(knot);
+
+const light = new THREE.PointLight(0xffffff);
+light.position.set(5,5,5);
+
+scene.add(light);
+
+function animate(){
+requestAnimationFrame(animate);
+
+knot.rotation.x +=0.01;
+knot.rotation.y +=0.01;
+
+renderer.render(scene,camera);
 }
-});
-});
 
-elements.forEach(el=>observer.observe(el));
+animate();
+
+window.addEventListener("scroll",()=>{
+const t=document.body.getBoundingClientRect().top;
+
+knot.rotation.x = t*0.001;
+knot.rotation.y = t*0.002;
+});
 
 </script>
 
