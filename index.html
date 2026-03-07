@@ -23,15 +23,11 @@ color:white;
 overflow-x:hidden;
 }
 
-/* container */
-
 .container{
 width:1200px;
 max-width:90%;
 margin:auto;
 }
-
-/* hero section */
 
 .hero{
 height:100vh;
@@ -53,6 +49,12 @@ margin-top:10px;
 color:#aaa;
 }
 
+.location{
+margin-top:6px;
+color:#777;
+font-size:16px;
+}
+
 .hero p{
 margin-top:20px;
 max-width:600px;
@@ -65,8 +67,6 @@ font-size:14px;
 color:#777;
 }
 
-/* sections */
-
 .section{
 padding:120px 0;
 }
@@ -77,8 +77,6 @@ margin-bottom:40px;
 color:#00e0ff;
 text-align:center;
 }
-
-/* cards */
 
 .cards{
 display:grid;
@@ -105,13 +103,9 @@ box-shadow:0 15px 35px rgba(0,224,255,.2);
 margin-bottom:10px;
 }
 
-/* company cards */
-
 .company-card{
 cursor:pointer;
 }
-
-/* education */
 
 .edu{
 background:#0a0a0a;
@@ -126,8 +120,6 @@ transition:.3s;
 border-color:#00e0ff;
 transform:translateY(-5px);
 }
-
-/* skills */
 
 .skills{
 display:flex;
@@ -150,15 +142,11 @@ background:#00e0ff;
 color:black;
 }
 
-/* footer */
-
 footer{
 text-align:center;
 padding:60px 0;
 color:#777;
 }
-
-/* scroll animation */
 
 .hidden{
 opacity:0;
@@ -176,11 +164,11 @@ transform:translateY(0);
 
 <body>
 
-
 <div class="hero">
 
-<h1>VIJAY Kumar Chelluboyana</h1>
+<h1>NAME: VIJAY KUMAR CHELLUBOYANA</h1>
 <h2>Cloud & DevOps Engineer</h2>
+<div class="location">NEW YORK, USA</div>
 
 <p>
 Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient systems using modern DevOps technologies.
@@ -288,8 +276,6 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 
 <script>
-
-/* scroll animation */
 
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
