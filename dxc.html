@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vijay Kumar Chelluboyana | Cloud & DevOps Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>DXC Technology</title>
 
 <style>
 
@@ -14,149 +12,64 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#000;
+background:black;
 color:white;
-overflow-x:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
 }
 
 .container{
-width:1200px;
-max-width:90%;
-margin:auto;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:60px;
-font-weight:700;
-}
-
-.hero h2{
-font-size:24px;
-margin-top:10px;
-color:#aaa;
-}
-
-.location{
-margin-top:6px;
-color:#777;
-font-size:16px;
-}
-
-.hero p{
-margin-top:20px;
-max-width:600px;
-color:#ccc;
-}
-
-.scroll{
-margin-top:60px;
-font-size:14px;
-color:#777;
-}
-
-.section{
-padding:120px 0;
-}
-
-.section h2{
-font-size:34px;
-margin-bottom:40px;
-color:#00e0ff;
-text-align:center;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.card{
-background:#0a0a0a;
-border:1px solid #222;
-padding:35px;
-border-radius:15px;
-transition:.4s;
-text-align:center;
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.02);
-border-color:#00e0ff;
-box-shadow:0 15px 35px rgba(0,224,255,.2);
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.company-card{
-cursor:pointer;
-}
-
-.edu{
-background:#0a0a0a;
-padding:25px;
-border-radius:12px;
-border:1px solid #222;
-margin-bottom:20px;
-transition:.3s;
-}
-
-.edu:hover{
-border-color:#00e0ff;
-transform:translateY(-5px);
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
-}
-
-.skill{
-padding:12px 20px;
-background:#0a0a0a;
-border:1px solid #222;
+background:#111;
+padding:60px;
 border-radius:20px;
-transition:.3s;
+box-shadow:0 0 40px rgba(0,0,0,0.9);
+transform:perspective(1000px) rotateX(5deg);
+transition:0.5s;
 }
 
-.skill:hover{
-background:#00e0ff;
+.container:hover{
+transform:perspective(1000px) rotateX(0deg) scale(1.02);
+}
+
+h1{
+font-size:48px;
+letter-spacing:3px;
+margin-bottom:20px;
+text-shadow:0 5px 20px rgba(255,255,255,0.15);
+}
+
+h2{
+font-size:24px;
+color:#aaa;
+margin-bottom:40px;
+}
+
+.info{
+font-size:18px;
+margin:10px 0;
+}
+
+a{
+display:inline-block;
+margin-top:40px;
+padding:12px 30px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+border:1px solid white;
+transition:0.3s;
+}
+
+a:hover{
+background:white;
 color:black;
-}
-
-footer{
-text-align:center;
-padding:60px 0;
-color:#777;
-}
-
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
 }
 
 </style>
@@ -164,132 +77,23 @@ transform:translateY(0);
 
 <body>
 
-<div class="hero">
-
-<h1>VIJAY KUMAR CHELLUBOYANA</h1>
-<h2>Cloud & DevOps Engineer</h2>
-<div class="location">NEW YORK, USA</div>
-
-<p>
-Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient systems using modern DevOps technologies.
-</p>
-
-<div class="scroll">Scroll to explore ↓</div>
-
-</div>
-
-
-<div class="section hidden">
-
-<h2>Professional Experience</h2>
-
 <div class="container">
 
-<div class="cards">
+<h1>DXC TECHNOLOGY</h1>
 
-<a href="welldoc.html" style="text-decoration:none;color:white;">
-<div class="card company-card">
+<h2>PROJECT EXPERIENCE</h2>
 
-<h3>Cloud Engineer</h3>
-<p>Welldoc</p>
+<div class="info">NAME: VIJAY KUMAR CHELLUBOYANA</div>
 
-</div>
-</a>
+<div class="info">LOCATION: NEW YORK, USA</div>
 
+<div class="info">ROLE: CLOUD & DEVOPS ENGINEER</div>
 
-<a href="dxc.html" style="text-decoration:none;color:white;">
-<div class="card company-card">
+<div class="info">TECHNOLOGIES: AWS • TERRAFORM • DOCKER • KUBERNETES • CI/CD</div>
 
-<h3>DevOps Engineer</h3>
-<p>DXC Technology</p>
+<a href="index.html">BACK TO HOME</a>
 
 </div>
-</a>
-
-
-<a href="cedar.html" style="text-decoration:none;color:white;">
-<div class="card company-card">
-
-<h3>Cloud Engineer</h3>
-<p>Cedar InfoTech</p>
-
-</div>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="section hidden">
-
-<h2>Education</h2>
-
-<div class="container">
-
-<div class="edu">
-<h3>Master's Degree</h3>
-<p>Pace University – New York</p>
-</div>
-
-<div class="edu">
-<h3>Bachelor's Degree</h3>
-<p>Jain University – Bangalore</p>
-</div>
-
-</div>
-
-</div>
-
-
-<div class="section hidden">
-
-<h2>DevOps & Cloud Skills</h2>
-
-<div class="container">
-
-<div class="skills">
-
-<div class="skill">AWS</div>
-<div class="skill">Docker</div>
-<div class="skill">Kubernetes</div>
-<div class="skill">Terraform</div>
-<div class="skill">GitHub Actions</div>
-<div class="skill">CI/CD</div>
-<div class="skill">CloudWatch</div>
-<div class="skill">Linux</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<footer>
-
-<p>© 2026 Vijay Kumar Chelluboyana</p>
-
-</footer>
-
-
-<script>
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll(".hidden").forEach(el=>{
-observer.observe(el);
-});
-
-</script>
 
 </body>
 </html>
