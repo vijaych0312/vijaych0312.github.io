@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Vijay Kumar Chelluboyana</title>
@@ -8,10 +8,9 @@
 
 body{
 margin:0;
-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,sans-serif;
 background:black;
 color:white;
-overflow-x:hidden;
 }
 
 section{
@@ -24,23 +23,31 @@ text-align:center;
 padding:40px;
 }
 
-.hero{
-background:url("https://images.unsplash.com/photo-1555066931-4365d14bab8c") center/cover no-repeat;
-}
-
-.hero h1{
+h1{
 font-size:60px;
+margin-bottom:10px;
 }
 
-.hero p{
-font-size:22px;
-opacity:0.9;
+h2{
+font-size:40px;
+margin-bottom:20px;
 }
+
+p{
+font-size:20px;
+max-width:700px;
+color:#a1a1a6;
+}
+
+.hero{background:black;}
+.education{background:#111;}
+.experience{background:black;}
+.contact{background:#111;}
 
 .fade{
 opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
+transform:translateY(30px);
+transition:1s;
 }
 
 .fade.show{
@@ -48,26 +55,13 @@ opacity:1;
 transform:translateY(0);
 }
 
-.skills{
-background:#111;
-}
-
-.projects{
-background:#000;
-}
-
-.contact{
-background:#111;
-}
-
-img{
-width:300px;
-border-radius:20px;
-margin-top:20px;
+a{
+color:white;
+text-decoration:none;
+border-bottom:1px solid gray;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -77,36 +71,51 @@ margin-top:20px;
 <p class="fade">Cloud & DevOps Engineer</p>
 </section>
 
-<section class="skills">
-<h2 class="fade">Building Scalable Cloud Infrastructure</h2>
+<section class="education">
+<h2 class="fade">Education</h2>
 <p class="fade">
-AWS • Azure • Terraform • Kubernetes • CI/CD
+Master of Science in Computer Science<br>
+Pace University, New York
 </p>
-<img class="fade" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
+<p class="fade">
+Bachelor of Engineering<br>
+Jain University, Bangalore
+</p>
 </section>
 
-<section class="projects">
-<h2 class="fade">DevOps & Cloud Engineering</h2>
+<section class="experience">
+<h2 class="fade">Professional Experience</h2>
+
 <p class="fade">
-Designing automated infrastructure, Kubernetes clusters,
-and enterprise CI/CD pipelines.
+Cloud Engineer – Welldoc
 </p>
-<img class="fade" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+
+<p class="fade">
+DevOps Engineer – DXC Technology
+</p>
+
+<p class="fade">
+Cloud Engineer – Cedar InfoTech
+</p>
+
 </section>
 
 <section class="contact">
-<h2 class="fade">Let's Connect</h2>
+<h2 class="fade">Connect</h2>
+
 <p class="fade">
 <a href="https://github.com/vijaych0312">GitHub</a> |
 <a href="https://linkedin.com">LinkedIn</a>
 </p>
+
 </section>
 
 <script>
 
-const elements = document.querySelectorAll(".fade");
+const elements=document.querySelectorAll(".fade");
 
-const observer = new IntersectionObserver(entries=>{
+const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add("show");
