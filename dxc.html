@@ -7,15 +7,37 @@
 <style>
 
 body{
-font-family:-apple-system;
-background:black;
+font-family:Arial;
+background:#0f172a;
 color:white;
-padding:60px;
+padding:40px;
 }
 
-li{
-margin-bottom:15px;
-color:#ccc;
+.pipeline{
+font-size:20px;
+margin-top:30px;
+}
+
+.step{
+padding:10px 20px;
+border:1px solid gray;
+margin:5px;
+display:inline-block;
+opacity:0.4;
+}
+
+.arrow{
+margin:10px;
+}
+
+.tech{
+color:#94a3b8;
+margin-top:20px;
+}
+
+a{
+color:#38bdf8;
+text-decoration:none;
 }
 
 </style>
@@ -24,38 +46,72 @@ color:#ccc;
 
 <body>
 
-<a href="index.html">← Back</a>
-
-<h1>DevOps Engineer – DXC Technology</h1>
+<h1>DXC Technology</h1>
 
 <h2>Responsibilities</h2>
 
 <ul>
-
-<li>Designed Azure infrastructure including VNets and VMs.</li>
-
-<li>Automated infrastructure using Terraform and ARM templates.</li>
-
-<li>Built CI/CD pipelines using Jenkins.</li>
-
-<li>Containerized applications using Docker.</li>
-
-<li>Managed Kubernetes clusters.</li>
-
-<li>Implemented monitoring with Prometheus and Grafana.</li>
-
+<li>Maintained Jenkins CI/CD pipelines</li>
+<li>Docker container builds</li>
+<li>Managed Azure Kubernetes clusters</li>
+<li>Infrastructure automation using Terraform</li>
+<li>Monitoring using Prometheus and Grafana</li>
 </ul>
 
-<h2>DevOps Pipeline</h2>
+<h2>CI/CD Pipeline</h2>
 
-<p>
+<div class="pipeline">
 
-Git → Jenkins → Docker → Kubernetes → Azure
+<span class="step">Git</span>
+<span class="arrow">→</span>
 
-</p>
+<span class="step">Jenkins</span>
+<span class="arrow">→</span>
+
+<span class="step">Docker</span>
+<span class="arrow">→</span>
+
+<span class="step">Kubernetes</span>
+<span class="arrow">→</span>
+
+<span class="step">Azure</span>
+
+</div>
+
+<h2>Architecture</h2>
 
 <img width="700"
-src="https://miro.medium.com/v2/resize:fit:1400/1*R7uKc9EjoTx6KDAdAm8YGg.png">
+src="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/media/aks-containers.png">
+
+<h2>Technologies</h2>
+
+<div class="tech">
+Azure • Terraform • Jenkins • Docker • Kubernetes • Prometheus • Grafana
+</div>
+
+<br><br>
+
+<a href="index.html">← Back to Portfolio</a>
+
+<script>
+
+let steps=document.querySelectorAll(".step");
+let i=0;
+
+setInterval(()=>{
+
+steps.forEach(s=>s.style.opacity=0.4);
+steps[i].style.opacity=1;
+
+i++;
+
+if(i>=steps.length){
+i=0;
+}
+
+},1000);
+
+</script>
 
 </body>
 </html>
