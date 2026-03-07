@@ -1,17 +1,322 @@
-<section>
+<!DOCTYPE html>
+<html>
 
-<h2>Professional Experience</h2>
+<head>
+<title>My DevOps Portfolio</title>
 
-<p>
-<a href="welldoc.html">Cloud Engineer – Welldoc</a>
-</p>
+<style>
 
-<p>
-<a href="dxc.html">DevOps Engineer – DXC Technology</a>
-</p>
+body{
+font-family:Arial;
+margin:0;
+background:#0f172a;
+color:white;
+}
 
-<p>
-<a href="cedar.html">Cloud Engineer – Cedar InfoTech</a>
-</p>
+header{
+text-align:center;
+padding:40px;
+font-size:32px;
+font-weight:bold;
+}
 
-</section>
+.container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:40px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+width:250px;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#334155;
+}
+
+.page{
+display:none;
+padding:40px;
+max-width:900px;
+margin:auto;
+}
+
+.pipeline{
+margin-top:30px;
+font-size:20px;
+}
+
+.step{
+padding:10px 20px;
+border:1px solid gray;
+margin:5px;
+display:inline-block;
+opacity:0.4;
+border-radius:6px;
+}
+
+.arrow{
+margin:10px;
+}
+
+img{
+margin-top:20px;
+border-radius:10px;
+}
+
+h2{
+margin-top:40px;
+}
+
+.tech{
+margin-top:15px;
+color:#94a3b8;
+}
+
+.back{
+margin-top:40px;
+display:inline-block;
+cursor:pointer;
+color:#38bdf8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+DevOps Engineer Portfolio
+</header>
+
+<div class="container">
+
+<div class="card" onclick="openPage('welldoc')">
+Welldoc
+</div>
+
+<div class="card" onclick="openPage('dxc')">
+DXC Technology
+</div>
+
+<div class="card" onclick="openPage('cedar')">
+Cedar
+</div>
+
+</div>
+
+<!-- WELLDOC PAGE -->
+
+<div id="welldoc" class="page">
+
+<h1>Welldoc</h1>
+
+<h2>Responsibilities</h2>
+
+<ul>
+<li>Built CI/CD pipelines using GitHub Actions</li>
+<li>Containerized microservices using Docker</li>
+<li>Deployed applications to AWS EKS</li>
+<li>Infrastructure provisioning with Terraform</li>
+<li>Monitoring using CloudWatch</li>
+</ul>
+
+<h2>CI/CD Pipeline</h2>
+
+<div class="pipeline">
+
+<span class="step">GitHub</span>
+<span class="arrow">→</span>
+
+<span class="step">Build</span>
+<span class="arrow">→</span>
+
+<span class="step">Docker</span>
+<span class="arrow">→</span>
+
+<span class="step">Kubernetes</span>
+<span class="arrow">→</span>
+
+<span class="step">AWS</span>
+
+</div>
+
+<h2>Architecture</h2>
+
+<img width="700"
+src="https://docs.aws.amazon.com/images/architecture-diagrams/latest/three-tier-web-architecture/three-tier-web-architecture.png">
+
+<h2>Technologies</h2>
+
+<div class="tech">
+AWS • Terraform • Docker • Kubernetes • GitHub Actions • CloudWatch
+</div>
+
+<div class="back" onclick="goHome()">← Back</div>
+
+</div>
+
+<!-- DXC PAGE -->
+
+<div id="dxc" class="page">
+
+<h1>DXC Technology</h1>
+
+<h2>Responsibilities</h2>
+
+<ul>
+<li>Maintained Jenkins CI/CD pipelines</li>
+<li>Managed Docker container builds</li>
+<li>Deployed microservices on Azure Kubernetes Service</li>
+<li>Automated infrastructure using Terraform</li>
+<li>Implemented monitoring with Grafana and Prometheus</li>
+</ul>
+
+<h2>CI/CD Pipeline</h2>
+
+<div class="pipeline">
+
+<span class="step">Git</span>
+<span class="arrow">→</span>
+
+<span class="step">Jenkins</span>
+<span class="arrow">→</span>
+
+<span class="step">Docker</span>
+<span class="arrow">→</span>
+
+<span class="step">Kubernetes</span>
+<span class="arrow">→</span>
+
+<span class="step">Azure</span>
+
+</div>
+
+<h2>Architecture</h2>
+
+<img width="700"
+src="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/containers/media/aks-containers.png">
+
+<h2>Technologies</h2>
+
+<div class="tech">
+Azure • Terraform • Jenkins • Docker • Kubernetes • Grafana
+</div>
+
+<div class="back" onclick="goHome()">← Back</div>
+
+</div>
+
+<!-- CEDAR PAGE -->
+
+<div id="cedar" class="page">
+
+<h1>Cedar</h1>
+
+<h2>Responsibilities</h2>
+
+<ul>
+<li>Built container pipelines for healthcare microservices</li>
+<li>Managed Kubernetes clusters</li>
+<li>Implemented Terraform infrastructure</li>
+<li>Improved deployment automation</li>
+<li>Configured logging and monitoring</li>
+</ul>
+
+<h2>CI/CD Pipeline</h2>
+
+<div class="pipeline">
+
+<span class="step">GitHub</span>
+<span class="arrow">→</span>
+
+<span class="step">CI</span>
+<span class="arrow">→</span>
+
+<span class="step">Docker</span>
+<span class="arrow">→</span>
+
+<span class="step">Kubernetes</span>
+<span class="arrow">→</span>
+
+<span class="step">AWS</span>
+
+</div>
+
+<h2>Architecture</h2>
+
+<img width="700"
+src="https://miro.medium.com/v2/resize:fit:1400/1*ZfGqJr-1KkKQpHgMHqmpYg.png">
+
+<h2>Technologies</h2>
+
+<div class="tech">
+AWS • Terraform • Docker • Kubernetes • GitHub Actions • Prometheus
+</div>
+
+<div class="back" onclick="goHome()">← Back</div>
+
+</div>
+
+<script>
+
+function openPage(id){
+
+document.querySelector(".container").style.display="none";
+
+document.querySelectorAll(".page").forEach(p=>{
+p.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+startPipeline();
+
+}
+
+function goHome(){
+
+document.querySelector(".container").style.display="flex";
+
+document.querySelectorAll(".page").forEach(p=>{
+p.style.display="none";
+});
+
+}
+
+function startPipeline(){
+
+let steps=document.querySelectorAll(".step");
+let i=0;
+
+setInterval(()=>{
+
+steps.forEach(s=>s.style.opacity=0.4);
+
+steps[i].style.opacity=1;
+
+i++;
+
+if(i>=steps.length){
+i=0;
+}
+
+},1000);
+
+}
+
+</script>
+
+</body>
+
+</html>
