@@ -23,13 +23,11 @@ color:white;
 overflow-x:hidden;
 }
 
-.container{
-width:1200px;
-max-width:90%;
-margin:auto;
-}
+/* Slide behavior only for first page */
 
-/* HERO */
+html{
+scroll-behavior:smooth;
+}
 
 .hero{
 height:100vh;
@@ -38,6 +36,16 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+position:sticky;
+top:0;
+}
+
+/* container */
+
+.container{
+width:1200px;
+max-width:90%;
+margin:auto;
 }
 
 /* Animated Name */
@@ -53,15 +61,8 @@ animation:shine 6s linear infinite;
 }
 
 @keyframes shine{
-
-0%{
-background-position:0%;
-}
-
-100%{
-background-position:200%;
-}
-
+0%{background-position:0%;}
+100%{background-position:200%;}
 }
 
 .hero h2{
@@ -88,7 +89,7 @@ max-width:600px;
 color:#ccc;
 }
 
-/* Scroll animation */
+/* Scroll arrow animation */
 
 .scroll{
 margin-top:40px;
@@ -98,17 +99,16 @@ animation:float 2s ease-in-out infinite;
 }
 
 @keyframes float{
-
 0%{transform:translateY(0);}
 50%{transform:translateY(6px);}
 100%{transform:translateY(0);}
-
 }
 
-/* SECTIONS */
+/* sections */
 
 .section{
 padding:70px 0;
+background:black;
 }
 
 .section h2{
@@ -118,7 +118,7 @@ color:#00e0ff;
 text-align:center;
 }
 
-/* EXPERIENCE CARDS */
+/* cards */
 
 .cards{
 display:grid;
@@ -141,15 +141,11 @@ border-color:#00e0ff;
 box-shadow:0 15px 35px rgba(0,224,255,.2);
 }
 
-.card h3{
-margin-bottom:10px;
-}
-
 .company-card{
 cursor:pointer;
 }
 
-/* EDUCATION */
+/* education */
 
 .edu{
 background:#0a0a0a;
@@ -165,7 +161,7 @@ border-color:#00e0ff;
 transform:translateY(-5px);
 }
 
-/* SKILLS */
+/* skills */
 
 .skills{
 display:flex;
@@ -188,7 +184,7 @@ background:#00e0ff;
 color:black;
 }
 
-/* FOOTER */
+/* footer */
 
 footer{
 text-align:center;
@@ -196,7 +192,7 @@ padding:40px 0;
 color:#777;
 }
 
-/* SCROLL ANIMATION */
+/* scroll reveal */
 
 .hidden{
 opacity:0;
@@ -214,10 +210,13 @@ transform:translateY(0);
 
 <body>
 
+<!-- HERO SLIDE -->
+
 <div class="hero">
 
 <h1>VIJAY KUMAR CHELLUBOYANA</h1>
 <h2>Cloud & DevOps Engineer</h2>
+
 <div class="location">NEW YORK, USA</div>
 
 <div class="contact">
@@ -231,6 +230,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 <div class="scroll">Scroll to explore ↓</div>
 
 </div>
+
 
 <!-- EXPERIENCE -->
 
@@ -269,6 +269,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
+
 <!-- EDUCATION -->
 
 <div class="section hidden">
@@ -290,6 +291,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 </div>
 
 </div>
+
 
 <!-- SKILLS -->
 
