@@ -1,3 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Welldoc Experience</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+padding:40px;
+}
+
+.pipeline{
+font-size:20px;
+margin-top:30px;
+}
+
+.step{
+padding:10px 20px;
+border:1px solid gray;
+margin:5px;
+display:inline-block;
+opacity:0.4;
+}
+
+.arrow{
+margin:10px;
+}
+
+.tech{
+color:#94a3b8;
+margin-top:20px;
+}
+
+a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Welldoc</h1>
+
+<h2>Responsibilities</h2>
+
+<ul>
+<li>Built CI/CD pipelines using GitHub Actions</li>
+<li>Docker containerization for microservices</li>
+<li>Deployment to AWS EKS</li>
+<li>Infrastructure automation with Terraform</li>
+<li>Monitoring using CloudWatch</li>
+</ul>
+
 <h2>CI/CD Pipeline</h2>
 
 <div class="pipeline">
@@ -18,26 +78,20 @@
 
 </div>
 
-<style>
+<h2>Architecture</h2>
 
-.pipeline{
-margin-top:30px;
-font-size:22px;
-}
+<img width="700"
+src="https://docs.aws.amazon.com/images/architecture-diagrams/latest/three-tier-web-architecture/three-tier-web-architecture.png">
 
-.step{
-padding:12px 20px;
-border:1px solid gray;
-margin:5px;
-display:inline-block;
-opacity:0.4;
-}
+<h2>Technologies</h2>
 
-.arrow{
-margin:10px;
-}
+<div class="tech">
+AWS • Terraform • Docker • Kubernetes • GitHub Actions • CloudWatch
+</div>
 
-</style>
+<br><br>
+
+<a href="index.html">← Back to Portfolio</a>
 
 <script>
 
@@ -47,11 +101,9 @@ let i=0;
 setInterval(()=>{
 
 steps.forEach(s=>s.style.opacity=0.4);
-
 steps[i].style.opacity=1;
 
 i++;
-
 if(i>=steps.length){
 i=0;
 }
@@ -59,3 +111,6 @@ i=0;
 },1000);
 
 </script>
+
+</body>
+</html>
