@@ -48,6 +48,40 @@ color:white;
 text-decoration:none;
 }
 
+.skills{
+width:600px;
+margin:auto;
+margin-top:30px;
+}
+
+.skill{
+margin:15px 0;
+}
+
+.bar{
+background:#1e293b;
+height:12px;
+border-radius:10px;
+margin-top:5px;
+}
+
+.bar div{
+height:100%;
+background:#38bdf8;
+border-radius:10px;
+}
+
+.section-title{
+text-align:center;
+margin-top:60px;
+}
+
+.github{
+text-align:center;
+margin-top:20px;
+font-size:18px;
+}
+
 </style>
 
 </head>
@@ -80,7 +114,10 @@ DevOps Engineer Portfolio
 <p>Senior DevOps Engineer</p>
 </div>
 </a>
-<h2 style="text-align:center;margin-top:60px;">DevOps Skills</h2>
+
+</div>
+
+<h2 class="section-title">DevOps Skills</h2>
 
 <div class="skills">
 
@@ -110,7 +147,60 @@ CI/CD
 </div>
 
 </div>
+
+<h2 class="section-title">DevOps Projects</h2>
+
+<div class="container">
+
+<div class="card">
+<h3>Kubernetes Deployment</h3>
+<p>Automated microservice deployment using Kubernetes.</p>
 </div>
+
+<div class="card">
+<h3>Terraform Infrastructure</h3>
+<p>Provisioned AWS infrastructure using Terraform modules.</p>
+</div>
+
+<div class="card">
+<h3>CI/CD Automation</h3>
+<p>Automated build and deployment pipelines.</p>
+</div>
+
+</div>
+
+<h2 class="section-title">GitHub</h2>
+
+<div class="github">
+
+<a href="https://github.com/yourusername" target="_blank">
+View My GitHub
+</a>
+
+</div>
+
+<script>
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+card.style.opacity=0;
+card.style.transform="translateY(30px)";
+card.style.transition="1s";
+});
+
+window.addEventListener("load",()=>{
+
+cards.forEach((card,i)=>{
+setTimeout(()=>{
+card.style.opacity=1;
+card.style.transform="translateY(0)";
+},i*200);
+});
+
+});
+
+</script>
 
 </body>
 </html>
