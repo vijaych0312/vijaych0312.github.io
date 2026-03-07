@@ -1,71 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<title>Welldoc Experience</title>
-
-<style>
-
-body{
-font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-background:black;
-color:white;
-padding:60px;
-}
-
-h1{
-font-size:40px;
-}
-
-li{
-margin-bottom:15px;
-color:#ccc;
-}
-
-.pipeline span{
-padding:10px;
-margin:10px;
-border:1px solid gray;
-display:inline-block;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<a href="index.html">← Back</a>
-
-<h1>Cloud Engineer – Welldoc</h1>
-
-<h2>Responsibilities</h2>
-
-<ul>
-<li>Designed highly available AWS architecture using VPC and ALB.</li>
-<li>Built Infrastructure as Code using Terraform and CloudFormation.</li>
-<li>Managed Amazon EKS Kubernetes clusters.</li>
-<li>Implemented CI/CD pipelines using GitHub Actions.</li>
-<li>Configured AWS WAF security protections.</li>
-<li>Implemented monitoring using CloudWatch.</li>
-</ul>
-
 <h2>CI/CD Pipeline</h2>
 
 <div class="pipeline">
 
-<span>GitHub</span> →
-<span>Build</span> →
-<span>Docker</span> →
-<span>Kubernetes</span> →
-<span>AWS</span>
+<span class="step">GitHub</span>
+<span class="arrow">→</span>
+
+<span class="step">Build</span>
+<span class="arrow">→</span>
+
+<span class="step">Docker</span>
+<span class="arrow">→</span>
+
+<span class="step">Kubernetes</span>
+<span class="arrow">→</span>
+
+<span class="step">AWS</span>
 
 </div>
 
-<h2>AWS Architecture</h2>
+<style>
 
-<img width="700"
-src="https://miro.medium.com/v2/resize:fit:1400/1*4rM1m3uE2L4bFh4FjW1sRw.png">
+.pipeline{
+margin-top:30px;
+font-size:22px;
+}
 
-</body>
-</html>
+.step{
+padding:12px 20px;
+border:1px solid gray;
+margin:5px;
+display:inline-block;
+opacity:0.4;
+}
+
+.arrow{
+margin:10px;
+}
+
+</style>
+
+<script>
+
+let steps=document.querySelectorAll(".step");
+let i=0;
+
+setInterval(()=>{
+
+steps.forEach(s=>s.style.opacity=0.4);
+
+steps[i].style.opacity=1;
+
+i++;
+
+if(i>=steps.length){
+i=0;
+}
+
+},1000);
+
+</script>
