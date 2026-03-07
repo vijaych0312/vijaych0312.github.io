@@ -13,6 +13,10 @@ color:white;
 padding:40px;
 }
 
+h1{
+color:#38bdf8;
+}
+
 .pipeline{
 font-size:20px;
 margin-top:30px;
@@ -24,6 +28,7 @@ border:1px solid gray;
 margin:5px;
 display:inline-block;
 opacity:0.4;
+border-radius:6px;
 }
 
 .arrow{
@@ -33,6 +38,17 @@ margin:10px;
 .tech{
 color:#94a3b8;
 margin-top:20px;
+}
+
+.architecture{
+margin-top:20px;
+}
+
+.architecture img{
+width:100%;
+max-width:800px;
+border-radius:10px;
+margin-top:15px;
 }
 
 a{
@@ -54,8 +70,8 @@ text-decoration:none;
 <li>Built CI/CD pipelines using GitHub Actions</li>
 <li>Docker containerization for microservices</li>
 <li>Deployment to AWS EKS</li>
-<li>Infrastructure automation with Terraform</li>
-<li>Monitoring using CloudWatch</li>
+<li>Infrastructure automation using Terraform</li>
+<li>Monitoring with AWS CloudWatch</li>
 </ul>
 
 <h2>CI/CD Pipeline</h2>
@@ -64,24 +80,29 @@ text-decoration:none;
 
 <span class="step">GitHub</span>
 <span class="arrow">→</span>
-
 <span class="step">Build</span>
 <span class="arrow">→</span>
-
 <span class="step">Docker</span>
 <span class="arrow">→</span>
-
 <span class="step">Kubernetes</span>
 <span class="arrow">→</span>
-
 <span class="step">AWS</span>
 
 </div>
 
 <h2>Architecture</h2>
 
-<img width="700"
-src="https://docs.aws.amazon.com/images/architecture-diagrams/latest/three-tier-web-architecture/three-tier-web-architecture.png">
+<div class="architecture">
+
+<p>
+Application deployed using AWS cloud infrastructure with containerized services
+running in Kubernetes. Traffic is routed through a load balancer and monitored
+using CloudWatch.
+</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/AWS_Architecture_Diagram.svg">
+
+</div>
 
 <h2>Technologies</h2>
 
