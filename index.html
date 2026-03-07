@@ -28,7 +28,51 @@ color:#1a1a1a;
 overflow-x:hidden;
 }
 
-/* HERO SLIDE */
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+border-bottom:1px solid #e3e7ee;
+z-index:1000;
+}
+
+.nav-container{
+width:1200px;
+max-width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:70px;
+}
+
+.logo{
+font-weight:600;
+font-size:18px;
+color:#0077ff;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#444;
+font-size:15px;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#0077ff;
+}
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -39,6 +83,7 @@ align-items:center;
 text-align:center;
 scroll-snap-align:start;
 background:white;
+padding-top:70px;
 }
 
 /* container */
@@ -90,7 +135,7 @@ max-width:600px;
 color:#444;
 }
 
-/* Scroll arrow animation */
+/* Scroll arrow */
 
 .scroll{
 margin-top:40px;
@@ -108,7 +153,7 @@ animation:float 2s ease-in-out infinite;
 /* sections */
 
 .section{
-padding:70px 0;
+padding:90px 0;
 background:#f7f9fc;
 scroll-snap-align:start;
 }
@@ -218,7 +263,27 @@ transform:translateY(0);
 
 <body>
 
-<!-- HERO SLIDE -->
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">Vijay Kumar</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -242,7 +307,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 <!-- EXPERIENCE -->
 
-<section class="section hidden">
+<section id="experience" class="section hidden">
 
 <h2>Professional Experience</h2>
 
@@ -280,7 +345,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 <!-- EDUCATION -->
 
-<section class="section hidden">
+<section id="education" class="section hidden">
 
 <h2>Education</h2>
 
@@ -303,7 +368,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 <!-- SKILLS -->
 
-<section class="section hidden">
+<section id="skills" class="section hidden">
 
 <h2>DevOps & Cloud Skills</h2>
 
