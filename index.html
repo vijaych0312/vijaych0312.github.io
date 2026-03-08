@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -48,19 +50,22 @@ z-index:1000;
 
 .nav-links{
 display:flex;
-gap:50px;
+gap:40px;
 }
 
 .nav-links a{
 color:#555;
-font-size:20px;
+font-size:16px;
+display:flex;
+align-items:center;
+gap:8px;
 text-decoration:none;
 transition:.3s;
 }
 
 .nav-links a:hover{
 color:#0077ff;
-transform:scale(1.2);
+transform:scale(1.1);
 }
 
 /* HERO */
@@ -75,8 +80,6 @@ text-align:center;
 scroll-snap-align:start;
 padding-top:70px;
 }
-
-/* container */
 
 .container{
 width:1200px;
@@ -119,10 +122,44 @@ color:#666;
 font-size:15px;
 }
 
+.social{
+margin-top:15px;
+font-size:24px;
+display:flex;
+gap:25px;
+}
+
+.social a{
+color:#555;
+transition:.3s;
+}
+
+.social a:hover{
+color:#0077ff;
+transform:scale(1.3);
+}
+
 .hero p{
 margin-top:20px;
 max-width:600px;
 color:#555;
+}
+
+.resume-btn{
+margin-top:25px;
+display:inline-block;
+padding:12px 28px;
+background:#0077ff;
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.resume-btn:hover{
+background:#005fe0;
+transform:translateY(-2px);
 }
 
 .scroll{
@@ -174,10 +211,6 @@ box-shadow:0 8px 20px rgba(0,0,0,0.06);
 transform:translateY(-10px);
 border-color:#0077ff;
 box-shadow:0 18px 40px rgba(0,119,255,.15);
-}
-
-.company-card{
-cursor:pointer;
 }
 
 /* education */
@@ -245,7 +278,26 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero h2{
+font-size:18px;
+}
+
+.nav-links{
+gap:20px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -256,13 +308,11 @@ transform:translateY(0);
 
 <div class="nav-links">
 
-<a href="#"><i class="fas fa-home"></i></a>
-
-<a href="#experience"><i class="fas fa-briefcase"></i></a>
-
-<a href="#education"><i class="fas fa-graduation-cap"></i></a>
-
-<a href="#skills"><i class="fas fa-cogs"></i></a>
+<a href="#"><i class="fas fa-home"></i> Home</a>
+<a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+<a href="#projects"><i class="fas fa-code"></i> Projects</a>
+<a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+<a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
 
 </div>
 
@@ -273,17 +323,25 @@ transform:translateY(0);
 <section class="hero">
 
 <h1>VIJAY KUMAR CHELLUBOYANA</h1>
+
 <h2>Cloud & DevOps Engineer</h2>
 
-<div class="location">NEW YORK, USA</div>
+<div class="location">New York, USA</div>
 
 <div class="contact">
 vijaychelluboyana@gmail.com | +1 (347) 433-6878
 </div>
 
+<div class="social">
+<a href="https://github.com/vijaych0312" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://linkedin.com/in/vijaych0312" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
 <p>
-Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient systems using modern DevOps technologies.
+Cloud & DevOps Engineer specializing in AWS infrastructure, CI/CD automation, container orchestration, and scalable cloud architecture.
 </p>
+
+<a href="CVijay_resume1.pdf" class="resume-btn" target="_blank">Download Resume</a>
 
 <div class="scroll">Scroll to explore ↓</div>
 
@@ -299,26 +357,51 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 <div class="cards">
 
-<a href="welldoc.html" style="text-decoration:none;color:inherit;">
-<div class="card company-card">
+<div class="card">
 <h3>Cloud Engineer</h3>
 <p>Welldoc</p>
 </div>
-</a>
 
-<a href="dxc.html" style="text-decoration:none;color:inherit;">
-<div class="card company-card">
+<div class="card">
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
 </div>
-</a>
 
-<a href="cedar.html" style="text-decoration:none;color:inherit;">
-<div class="card company-card">
+<div class="card">
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
 </div>
-</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="section hidden">
+
+<h2>Projects</h2>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h3>Kubernetes CI/CD Pipeline</h3>
+<p>Automated CI/CD pipeline deploying Dockerized apps to Kubernetes using GitHub Actions.</p>
+</div>
+
+<div class="card">
+<h3>AWS Infrastructure Automation</h3>
+<p>Provisioned scalable infrastructure using Terraform including VPC, EC2, ALB and RDS.</p>
+</div>
+
+<div class="card">
+<h3>Monitoring & Alerting</h3>
+<p>Implemented CloudWatch monitoring with alerting and automated log analysis.</p>
+</div>
 
 </div>
 
@@ -396,4 +479,5 @@ observer.observe(el);
 </script>
 
 </body>
+
 </html>
