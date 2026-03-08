@@ -146,23 +146,24 @@ line-height:1.7;
 
 /* EXPERIENCE */
 
-.timeline{
-max-width:700px;
-margin:auto;
+.experience-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
-.timeline-item{
+.exp-card{
 background:#241b15;
+padding:30px;
+border-radius:12px;
 border:1px solid #3a2d23;
-padding:25px;
-border-radius:10px;
-margin-bottom:25px;
 transition:.3s;
+text-align:center;
 }
 
-.timeline-item:hover{
+.exp-card:hover{
 border-color:#f59e0b;
-transform:translateY(-4px);
+transform:translateY(-6px);
 }
 
 /* PROJECTS */
@@ -246,10 +247,17 @@ padding:40px;
 color:#c9b8a5;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
 .hero h1{
 font-size:36px;
+}
+
+.nav-links{
+gap:18px;
+font-size:14px;
 }
 
 }
@@ -259,6 +267,8 @@ font-size:36px;
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <div class="navbar">
 <div class="nav-links">
@@ -327,25 +337,31 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and fir
 
 <h2>Professional Experience</h2>
 
-<div class="timeline">
+<div class="experience-grid">
 
-<div class="timeline-item">
+<a href="welldoc.html" style="text-decoration:none;color:inherit;">
+<div class="exp-card">
 <h3>Cloud / DevOps Engineer</h3>
 <p>Welldoc</p>
 <p>2024 – Present</p>
 </div>
+</a>
 
-<div class="timeline-item">
+<a href="dxc.html" style="text-decoration:none;color:inherit;">
+<div class="exp-card">
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
 <p>2022 – 2024</p>
 </div>
+</a>
 
-<div class="timeline-item">
+<a href="cedar.html" style="text-decoration:none;color:inherit;">
+<div class="exp-card">
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
 <p>2021 – 2022</p>
 </div>
+</a>
 
 </div>
 
