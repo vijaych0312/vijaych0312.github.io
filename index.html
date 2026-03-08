@@ -10,7 +10,6 @@
 <title>Vijay Kumar Chelluboyana | Cloud & DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -291,24 +290,6 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* mobile */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:36px;
-}
-
-.hero h2{
-font-size:18px;
-}
-
-.nav-links{
-gap:20px;
-}
-
-}
-
 </style>
 
 </head>
@@ -328,7 +309,7 @@ gap:20px;
 
 <section class="hero">
 
-<img src="profile.jpg" alt="Vijay Kumar Chelluboyana" class="profile-photo">
+<img src="profile.jpg" class="profile-photo">
 
 <h1>VIJAY KUMAR CHELLUBOYANA</h1>
 
@@ -351,7 +332,135 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 
 </section>
 
-<!-- The rest of your sections remain exactly the same -->
+<!-- ABOUT -->
+
+<section id="about" class="section hidden">
+<h2>About Me</h2>
+<div class="container">
+<div class="about-text">
+<p>AWS Cloud & DevOps Engineer with 4+ years of experience in automating infrastructure, building scalable cloud solutions, and managing enterprise-level production environments.</p>
+<p>Skilled in AWS services including IAM, EC2, EBS, S3, ELB, Lambda, CloudWatch, and SNS, with expertise in CI/CD pipelines using GitHub Actions and CodePipeline.</p>
+<p>Strong understanding of networking and security including TCP/IP, DNS, HTTPS, firewalls, proxies, and load balancers.</p>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience" class="section hidden">
+<h2>Professional Experience</h2>
+<div class="container">
+<div class="cards">
+
+<a href="welldoc.html" style="text-decoration:none;color:inherit;">
+<div class="card company-card">
+<h3>Cloud / DevOps Engineer</h3>
+<p>Welldoc</p>
+</div>
+</a>
+
+<a href="dxc.html" style="text-decoration:none;color:inherit;">
+<div class="card company-card">
+<h3>DevOps Engineer</h3>
+<p>DXC Technology</p>
+</div>
+</a>
+
+<a href="cedar.html" style="text-decoration:none;color:inherit;">
+<div class="card company-card">
+<h3>Cloud Engineer</h3>
+<p>Cedar InfoTech</p>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="section hidden">
+<h2>Projects</h2>
+<div class="container">
+<div class="cards">
+
+<div class="card">
+<h3>Kubernetes CI/CD Pipeline</h3>
+<p>Automated CI/CD pipeline deploying Dockerized apps to Kubernetes.</p>
+</div>
+
+<div class="card">
+<h3>AWS Infrastructure Automation</h3>
+<p>Provisioned AWS infrastructure using Terraform.</p>
+</div>
+
+<div class="card">
+<h3>Monitoring & Alerting</h3>
+<p>Implemented centralized monitoring using AWS CloudWatch.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education" class="section hidden">
+<h2>Education</h2>
+<div class="container">
+
+<div class="edu">
+<h3>Master's Degree</h3>
+<p>Pace University – New York</p>
+</div>
+
+<div class="edu">
+<h3>Bachelor's Degree</h3>
+<p>Jain University – Bangalore</p>
+</div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="section hidden">
+<h2>DevOps & Cloud Skills</h2>
+<div class="container">
+<div class="skills">
+
+<div class="skill">AWS</div>
+<div class="skill">Docker</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">Terraform</div>
+<div class="skill">GitHub Actions</div>
+<div class="skill">CI/CD</div>
+<div class="skill">CloudWatch</div>
+<div class="skill">Linux</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Vijay Kumar Chelluboyana</p>
+</footer>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
 
 </body>
 </html>
