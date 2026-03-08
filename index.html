@@ -23,11 +23,21 @@ scroll-behavior:smooth;
 scroll-snap-type:y mandatory;
 }
 
+/* DEFAULT DARK THEME */
+
 body{
 font-family:'Poppins',sans-serif;
 background:#0f172a;
 color:#e2e8f0;
 overflow-x:hidden;
+transition:0.3s;
+}
+
+/* LIGHT THEME */
+
+body.light{
+background:#f7f9fc;
+color:#1a1a1a;
 }
 
 /* NAVBAR */
@@ -45,9 +55,15 @@ justify-content:center;
 z-index:1000;
 }
 
+body.light .navbar{
+background:white;
+border-bottom:1px solid #e3e7ee;
+}
+
 .nav-links{
 display:flex;
-gap:50px;
+gap:40px;
+align-items:center;
 }
 
 .nav-links a{
@@ -57,9 +73,21 @@ text-decoration:none;
 transition:.3s;
 }
 
+body.light .nav-links a{
+color:#555;
+}
+
 .nav-links a:hover{
 color:#38bdf8;
 transform:scale(1.2);
+}
+
+/* THEME BUTTON */
+
+.theme-toggle{
+cursor:pointer;
+font-size:20px;
+color:#38bdf8;
 }
 
 /* HERO */
@@ -72,7 +100,6 @@ justify-content:center;
 align-items:center;
 text-align:center;
 scroll-snap-align:start;
-background:#0f172a;
 padding-top:70px;
 }
 
@@ -81,8 +108,6 @@ width:1200px;
 max-width:90%;
 margin:auto;
 }
-
-/* Animated Name */
 
 .hero h1{
 font-size:64px;
@@ -105,22 +130,31 @@ margin-top:10px;
 color:#cbd5f5;
 }
 
+body.light .hero h2{
+color:#555;
+}
+
 .location{
 margin-top:6px;
 color:#94a3b8;
-font-size:16px;
+}
+
+body.light .location{
+color:#777;
 }
 
 .contact{
 margin-top:10px;
 color:#94a3b8;
-font-size:15px;
+}
+
+body.light .contact{
+color:#666;
 }
 
 .hero p{
 margin-top:20px;
 max-width:600px;
-color:#cbd5f5;
 }
 
 /* HERO BUTTONS */
@@ -129,8 +163,8 @@ color:#cbd5f5;
 margin-top:30px;
 display:flex;
 gap:20px;
-justify-content:center;
 flex-wrap:wrap;
+justify-content:center;
 }
 
 .btn{
@@ -159,25 +193,16 @@ background:#38bdf8;
 color:#020617;
 }
 
-.scroll{
-margin-top:40px;
-font-size:14px;
-color:#94a3b8;
-animation:float 2s ease-in-out infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(6px);}
-100%{transform:translateY(0);}
-}
-
-/* sections */
+/* SECTIONS */
 
 .section{
 padding:90px 0;
 background:#020617;
 scroll-snap-align:start;
+}
+
+body.light .section{
+background:#f7f9fc;
 }
 
 .section h2{
@@ -187,7 +212,7 @@ color:#38bdf8;
 text-align:center;
 }
 
-/* cards */
+/* CARDS */
 
 .cards{
 display:grid;
@@ -202,20 +227,19 @@ padding:35px;
 border-radius:15px;
 transition:.4s;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+body.light .card{
+background:white;
+border:1px solid #e3e7ee;
 }
 
 .card:hover{
 transform:translateY(-8px);
 border-color:#38bdf8;
-box-shadow:0 15px 35px rgba(56,189,248,.2);
 }
 
-.company-card{
-cursor:pointer;
-}
-
-/* education */
+/* EDUCATION */
 
 .edu{
 background:#111827;
@@ -223,8 +247,11 @@ padding:25px;
 border-radius:12px;
 border:1px solid #1f2937;
 margin-bottom:20px;
-transition:.3s;
-box-shadow:0 5px 12px rgba(0,0,0,0.3);
+}
+
+body.light .edu{
+background:white;
+border:1px solid #e3e7ee;
 }
 
 .edu:hover{
@@ -232,14 +259,13 @@ border-color:#38bdf8;
 transform:translateY(-5px);
 }
 
-/* skills */
+/* SKILLS */
 
 .skills{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:15px;
-margin-top:20px;
 }
 
 .skill{
@@ -248,26 +274,34 @@ background:#111827;
 border:1px solid #1f2937;
 border-radius:20px;
 transition:.3s;
-box-shadow:0 3px 8px rgba(0,0,0,0.3);
+}
+
+body.light .skill{
+background:white;
+border:1px solid #e3e7ee;
 }
 
 .skill:hover{
 background:#38bdf8;
 color:#020617;
-border-color:#38bdf8;
 }
 
-/* footer */
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:40px 0;
 color:#94a3b8;
 background:#020617;
-border-top:1px solid #1f2937;
 }
 
-/* scroll reveal */
+body.light footer{
+background:white;
+color:#777;
+border-top:1px solid #e3e7ee;
+}
+
+/* SCROLL ANIMATION */
 
 .hidden{
 opacity:0;
@@ -287,10 +321,16 @@ transform:translateY(0);
 
 <div class="navbar">
 <div class="nav-links">
+
 <a href="#"><i class="fas fa-home"></i></a>
 <a href="#experience"><i class="fas fa-briefcase"></i></a>
 <a href="#education"><i class="fas fa-graduation-cap"></i></a>
 <a href="#skills"><i class="fas fa-cogs"></i></a>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+<i class="fas fa-moon"></i>
+</div>
+
 </div>
 </div>
 
@@ -322,8 +362,6 @@ View Experience
 </a>
 
 </div>
-
-<div class="scroll">Scroll to explore ↓</div>
 
 </section>
 
@@ -412,12 +450,12 @@ View Experience
 </section>
 
 <footer>
-
 <p>© 2026 Vijay Kumar Chelluboyana</p>
-
 </footer>
 
 <script>
+
+/* SCROLL REVEAL */
 
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -430,6 +468,26 @@ entry.target.classList.add("show");
 document.querySelectorAll(".hidden").forEach(el=>{
 observer.observe(el);
 });
+
+/* THEME TOGGLE */
+
+function toggleTheme(){
+
+document.body.classList.toggle("light");
+
+if(document.body.classList.contains("light")){
+localStorage.setItem("theme","light");
+}else{
+localStorage.setItem("theme","dark");
+}
+
+}
+
+/* LOAD SAVED THEME */
+
+if(localStorage.getItem("theme")==="light"){
+document.body.classList.add("light");
+}
 
 </script>
 
