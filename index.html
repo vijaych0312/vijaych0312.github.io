@@ -2,21 +2,10 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vijay Kumar Chelluboyana | DevOps Engineer</title>
-
-<meta name="description" content="Cloud & DevOps Engineer specializing in AWS, Kubernetes, Terraform and CI/CD pipelines.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<title>Vijay | DevOps Engineer</title>
 
 <style>
 
@@ -24,218 +13,164 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#1a1410;
-color:#f5e9da;
-}
-
-/* NAVBAR */
-
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-height:70px;
-background:#1f1712;
-border-bottom:1px solid #3a2d23;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:1000;
-}
-
-.nav-links{
-display:flex;
-gap:35px;
-}
-
-.nav-links a{
-color:#f5e9da;
-text-decoration:none;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#f59e0b;
-}
-
-/* SECTIONS */
-
-section{
-padding:120px 20px;
+background:#1C1C1C;
+color:#e8efe9;
+line-height:1.6;
 }
 
 .container{
-width:1100px;
-max-width:90%;
+width:90%;
+max-width:1100px;
 margin:auto;
+}
+
+header{
+background:#1B2922;
+padding:20px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav h1{
+color:#4A6958;
+font-size:24px;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#e8efe9;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#4A6958;
+}
+
+.hero{
+text-align:center;
+padding:110px 20px;
+background:#1B2922;
+}
+
+.hero h2{
+font-size:42px;
+}
+
+.hero span{
+color:#4A6958;
+}
+
+.hero p{
+margin-top:10px;
+color:#cfd9d3;
+}
+
+section{
+padding:80px 20px;
 }
 
 h2{
 text-align:center;
-margin-bottom:50px;
-color:#f59e0b;
-font-size:34px;
+margin-bottom:40px;
+color:#4A6958;
 }
 
-/* HERO */
-
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-text-align:center;
-}
-
-.hero h1{
-font-size:60px;
-}
-
-.typing{
-color:#f59e0b;
-}
-
-.hero p{
-margin-top:15px;
-color:#c9b8a5;
-}
-
-.social{
-margin-top:20px;
-display:flex;
-gap:25px;
-font-size:25px;
-}
-
-.social a{
-color:#f5e9da;
-}
-
-.resume-btn{
-margin-top:25px;
-padding:12px 30px;
-background:#f59e0b;
-color:#1a1410;
-text-decoration:none;
-border-radius:30px;
-transition:.3s;
-}
-
-.resume-btn:hover{
-background:#fb923c;
-}
-
-/* ABOUT */
-
-.about{
-background:#241b15;
-border:1px solid #3a2d23;
-padding:40px;
-border-radius:14px;
-line-height:1.7;
-}
-
-/* EXPERIENCE */
-
-.experience-grid{
+.skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
 }
 
-.exp-card{
-background:#241b15;
-padding:30px;
-border-radius:12px;
-border:1px solid #3a2d23;
-transition:.3s;
+.skill{
+background:#435146;
+padding:15px;
 text-align:center;
+border-radius:8px;
+transition:.3s;
 }
 
-.exp-card:hover{
-border-color:#f59e0b;
-transform:translateY(-6px);
+.skill:hover{
+background:#4A6958;
 }
-
-/* PROJECTS */
 
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .project{
-background:#241b15;
-padding:30px;
+background:#435146;
+padding:25px;
 border-radius:12px;
-border:1px solid #3a2d23;
 transition:.3s;
 }
 
 .project:hover{
-border-color:#f59e0b;
-transform:translateY(-6px);
+transform:translateY(-5px);
+background:#4A6958;
 }
 
-/* SKILLS */
-
-.skill{
-margin-bottom:25px;
-}
-
-.skill-name{
-display:flex;
-justify-content:space-between;
-margin-bottom:6px;
-}
-
-.skill-bar{
-height:8px;
-background:#3a2d23;
-border-radius:10px;
-}
-
-.skill-fill{
-height:8px;
-background:#f59e0b;
-border-radius:10px;
-}
-
-/* ICON SKILLS */
-
-.icon-skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-margin-top:40px;
-}
-
-.icon-skill{
-background:#241b15;
-padding:20px;
-border-radius:10px;
-border:1px solid #3a2d23;
-text-align:center;
-width:110px;
-}
-
-.icon-skill i{
-font-size:40px;
+.project h3{
 margin-bottom:10px;
 }
 
-/* CONTACT */
+.exp-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.exp-card{
+background:#435146;
+padding:30px;
+border-radius:12px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
+}
+
+.exp-card:hover{
+transform:translateY(-5px);
+background:#4A6958;
+}
+
+#resume{
+text-align:center;
+}
+
+.resume-btn{
+display:inline-block;
+padding:16px 32px;
+background:#4A6958;
+color:white;
+font-weight:600;
+border-radius:30px;
+text-decoration:none;
+transition:.3s;
+}
+
+.resume-btn:hover{
+background:#6d8f7b;
+}
 
 .contact{
 text-align:center;
@@ -243,85 +178,70 @@ text-align:center;
 
 footer{
 text-align:center;
-padding:40px;
-color:#c9b8a5;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:36px;
-}
-
-.nav-links{
-gap:18px;
-font-size:14px;
-}
-
+padding:25px;
+background:#1B2922;
+margin-top:40px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
-<div class="navbar">
-<div class="nav-links">
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<h1>VIJAY KUMAR CHELLUBOYANA</h1>
-
-<h2><span class="typing"></span></h2>
-
-<p>Automating Infrastructure • Building Scalable Cloud Systems</p>
-
-<div class="social">
-
-<a href="https://github.com/vijaych0312" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://linkedin.com/in/vijaych0312" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-<a href="CVijay_resume1.pdf" class="resume-btn">Download Resume</a>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
+<header>
 
 <div class="container">
 
-<h2>About Me</h2>
+<nav>
 
-<div class="about">
+<h1>Vijay</h1>
 
-AWS Cloud & DevOps Engineer with 4+ years of experience designing scalable cloud infrastructure and automating deployments.
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-Experienced with AWS services including EC2, S3, IAM, Lambda, ELB, CloudWatch and CI/CD pipelines using GitHub Actions.
+</nav>
 
-Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and firewalls.
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<h2>Hello, I'm <span>Vijay</span></h2>
+
+<p>
+DevOps Engineer specializing in AWS, Kubernetes, Docker, Terraform,
+and CI/CD automation.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="container">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">AWS</div>
+<div class="skill">Docker</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">Terraform</div>
+<div class="skill">GitHub Actions</div>
+<div class="skill">Linux</div>
+<div class="skill">Python</div>
+<div class="skill">CI/CD</div>
 
 </div>
 
@@ -329,7 +249,40 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and fir
 
 </section>
 
-<!-- EXPERIENCE -->
+<section id="projects">
+
+<div class="container">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>CI/CD Pipeline</h3>
+<p>
+Automated deployment using GitHub Actions, Docker, and Kubernetes.
+</p>
+</div>
+
+<div class="project">
+<h3>AWS Infrastructure</h3>
+<p>
+Provisioned AWS infrastructure using Terraform with EC2, S3, and IAM.
+</p>
+</div>
+
+<div class="project">
+<h3>Kubernetes Monitoring</h3>
+<p>
+Implemented monitoring using Prometheus and Grafana.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <section id="experience">
 
@@ -337,7 +290,7 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and fir
 
 <h2>Professional Experience</h2>
 
-<div class="experience-grid">
+<div class="exp-grid">
 
 <a href="welldoc.html" style="text-decoration:none;color:inherit;">
 <div class="exp-card">
@@ -369,104 +322,19 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and fir
 
 </section>
 
-<!-- PROJECTS -->
-
-<section id="projects">
+<section id="resume">
 
 <div class="container">
 
-<h2>Projects</h2>
+<h2>Resume</h2>
 
-<div class="projects">
-
-<div class="project">
-<h3>Kubernetes CI/CD Pipeline</h3>
-<p>Docker → GitHub Actions → Kubernetes deployment</p>
-</div>
-
-<div class="project">
-<h3>AWS Infrastructure Automation</h3>
-<p>Provisioned AWS infrastructure using Terraform</p>
-</div>
-
-<div class="project">
-<h3>Monitoring System</h3>
-<p>AWS CloudWatch alerts and logging pipelines</p>
-</div>
-
-</div>
+<a href="CVijay_resume1.pdf" target="_blank" class="resume-btn">
+View / Download Resume
+</a>
 
 </div>
 
 </section>
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<div class="container">
-
-<h2>DevOps Skills</h2>
-
-<div class="skill">
-<div class="skill-name">
-<span>AWS</span>
-<span>95%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:95%"></div>
-</div>
-</div>
-
-<div class="skill">
-<div class="skill-name">
-<span>Docker</span>
-<span>90%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:90%"></div>
-</div>
-</div>
-
-<div class="skill">
-<div class="skill-name">
-<span>Kubernetes</span>
-<span>85%</span>
-</div>
-<div class="skill-bar">
-<div class="skill-fill" style="width:85%"></div>
-</div>
-</div>
-
-<div class="icon-skills">
-
-<div class="icon-skill">
-<i class="devicon-amazonwebservices-plain colored"></i>
-<p>AWS</p>
-</div>
-
-<div class="icon-skill">
-<i class="devicon-docker-plain colored"></i>
-<p>Docker</p>
-</div>
-
-<div class="icon-skill">
-<i class="devicon-kubernetes-plain colored"></i>
-<p>Kubernetes</p>
-</div>
-
-<div class="icon-skill">
-<i class="devicon-terraform-plain colored"></i>
-<p>Terraform</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -474,9 +342,9 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and fir
 
 <h2>Contact</h2>
 
-<p>Email: vijaychelluboyana@gmail.com</p>
-<p>Phone: +1 (347) 433-6878</p>
-<p>Location: New York, USA</p>
+<p>Email: vijay@example.com</p>
+<p>LinkedIn: linkedin.com/in/vijay</p>
+<p>GitHub: github.com/vijay</p>
 
 </div>
 
@@ -484,25 +352,9 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and fir
 
 <footer>
 
-© 2026 Vijay Kumar Chelluboyana
+<p>© 2026 Vijay | DevOps Engineer</p>
 
 </footer>
 
-<script>
-
-var typed = new Typed(".typing",{
-strings:[
-"Cloud & DevOps Engineer",
-"AWS Infrastructure Specialist",
-"Kubernetes & CI/CD Expert"
-],
-typeSpeed:60,
-backSpeed:40,
-loop:true
-})
-
-</script>
-
 </body>
-
 </html>
