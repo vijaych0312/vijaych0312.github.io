@@ -6,13 +6,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vijay Kumar Chelluboyana | Cloud & DevOps Engineer</title>
+<title>Vijay Kumar Chelluboyana | DevOps Engineer</title>
+
+<meta name="description" content="Cloud & DevOps Engineer specializing in AWS, Kubernetes, Terraform and CI/CD pipelines.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <style>
 
@@ -28,8 +32,8 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#1e1e1e;
-color:#e5e5e5;
+background:#0f172a;
+color:#e2e8f0;
 }
 
 /* NAVBAR */
@@ -39,8 +43,8 @@ position:fixed;
 top:0;
 width:100%;
 height:70px;
-background:#2a2a2a;
-border-bottom:1px solid #3a3a3a;
+background:#020617;
+border-bottom:1px solid #1e293b;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -53,37 +57,19 @@ gap:35px;
 }
 
 .nav-links a{
-color:#cfcfcf;
-font-size:16px;
-display:flex;
-align-items:center;
-gap:8px;
+color:#cbd5f5;
 text-decoration:none;
 transition:.3s;
 }
 
 .nav-links a:hover{
-color:#4da3ff;
-}
-
-/* SNAP CONTAINER */
-
-.snap-container{
-height:100vh;
-overflow-y:scroll;
-scroll-snap-type:y mandatory;
-scroll-padding-top:70px;
+color:#3b82f6;
 }
 
 /* SECTIONS */
 
 section{
-min-height:100vh;
-scroll-snap-align:start;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:100px 20px;
+padding:120px 20px;
 }
 
 .container{
@@ -92,17 +78,22 @@ max-width:90%;
 margin:auto;
 }
 
-section h2{
+h2{
 text-align:center;
-color:#4da3ff;
-margin-bottom:40px;
+margin-bottom:50px;
+color:#3b82f6;
 font-size:34px;
 }
 
 /* HERO */
 
 .hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+flex-direction:column;
 }
 
 .hero h1{
@@ -110,117 +101,173 @@ font-size:60px;
 }
 
 .hero h2{
+color:#94a3b8;
 margin-top:10px;
-color:#bbb;
 }
 
-.location,
-.contact{
-margin-top:10px;
-color:#9a9a9a;
+.typing{
+color:#3b82f6;
+}
+
+.hero p{
+margin-top:15px;
+color:#94a3b8;
 }
 
 .social{
-margin-top:15px;
-font-size:24px;
+margin-top:20px;
+font-size:25px;
 display:flex;
-justify-content:center;
 gap:25px;
 }
 
 .social a{
-color:#ccc;
+color:#cbd5f5;
 }
 
 .resume-btn{
-margin-top:25px;
-display:inline-block;
-padding:12px 28px;
-background:#4da3ff;
-color:white;
+margin-top:30px;
+padding:12px 30px;
+background:#3b82f6;
 border-radius:30px;
+color:white;
 text-decoration:none;
 }
 
 /* ABOUT */
 
-.about-text{
-background:#2a2a2a;
+.about{
+background:#020617;
+border:1px solid #1e293b;
 padding:40px;
-border-radius:16px;
-border:1px solid #3a3a3a;
+border-radius:14px;
 line-height:1.7;
 }
 
-/* CARDS */
+/* TIMELINE */
 
-.cards{
+.timeline{
+position:relative;
+max-width:900px;
+margin:auto;
+}
+
+.timeline::after{
+content:'';
+position:absolute;
+width:2px;
+background:#3b82f6;
+top:0;
+bottom:0;
+left:50%;
+}
+
+.timeline-item{
+padding:20px 40px;
+position:relative;
+width:50%;
+}
+
+.timeline-item.left{
+left:0;
+}
+
+.timeline-item.right{
+left:50%;
+}
+
+.timeline-content{
+background:#020617;
+border:1px solid #1e293b;
+padding:20px;
+border-radius:12px;
+}
+
+/* PROJECTS */
+
+.projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-.card{
-background:#2a2a2a;
-border:1px solid #3a3a3a;
-padding:35px;
-border-radius:16px;
-text-align:center;
+.project{
+background:#020617;
+padding:30px;
+border-radius:12px;
+border:1px solid #1e293b;
 transition:.3s;
 }
 
-.card:hover{
-border-color:#4da3ff;
+.project:hover{
 transform:translateY(-6px);
+border-color:#3b82f6;
 }
 
 /* SKILLS */
 
-.skills{
+.skill{
+margin-bottom:25px;
+}
+
+.skill-name{
+display:flex;
+justify-content:space-between;
+margin-bottom:6px;
+}
+
+.skill-bar{
+height:8px;
+background:#1e293b;
+border-radius:10px;
+}
+
+.skill-fill{
+height:8px;
+background:#3b82f6;
+border-radius:10px;
+}
+
+/* ICON SKILLS */
+
+.icon-skills{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:25px;
+margin-top:40px;
 }
 
-.skill{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:10px;
-padding:18px;
-width:120px;
-background:#2a2a2a;
-border:1px solid #3a3a3a;
-border-radius:16px;
-transition:.3s;
+.icon-skill{
+background:#020617;
+padding:20px;
+border-radius:10px;
+border:1px solid #1e293b;
+text-align:center;
+width:100px;
 }
 
-.skill i{
+.icon-skill i{
 font-size:40px;
+margin-bottom:10px;
 }
 
-.skill:hover{
-transform:translateY(-5px);
-border-color:#4da3ff;
+/* CONTACT */
+
+.contact{
+text-align:center;
 }
 
-/* EDUCATION */
-
-.edu{
-background:#2a2a2a;
-padding:25px;
-border-radius:14px;
-border:1px solid #3a3a3a;
-margin-bottom:20px;
+.contact p{
+margin:10px 0;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:40px 0;
-color:#888;
+padding:40px;
+color:#64748b;
 }
 
 /* MOBILE */
@@ -228,20 +275,20 @@ color:#888;
 @media(max-width:768px){
 
 .hero h1{
-font-size:34px;
+font-size:36px;
 }
 
-.hero h2{
-font-size:18px;
+.timeline::after{
+left:20px;
 }
 
-.nav-links{
-gap:18px;
-font-size:14px;
+.timeline-item{
+width:100%;
+padding-left:60px;
 }
 
-.cards{
-grid-template-columns:1fr;
+.timeline-item.right{
+left:0;
 }
 
 }
@@ -258,23 +305,20 @@ grid-template-columns:1fr;
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
-<a href="#education">Education</a>
 <a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
 </div>
 </div>
 
-<div class="snap-container">
+<!-- HERO -->
 
 <section class="hero">
 
 <h1>VIJAY KUMAR CHELLUBOYANA</h1>
-<h2>Cloud & DevOps Engineer</h2>
 
-<div class="location">New York, USA</div>
+<h2><span class="typing"></span></h2>
 
-<div class="contact">
-vijaychelluboyana@gmail.com | +1 (347) 433-6878
-</div>
+<p>Automating Infrastructure • Building Scalable Cloud Systems</p>
 
 <div class="social">
 
@@ -288,66 +332,65 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 
 </div>
 
-<a href="CVijay_resume1.pdf" class="resume-btn" target="_blank">
-Download Resume
-</a>
+<a href="CVijay_resume1.pdf" class="resume-btn">Download Resume</a>
 
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
 
-<h2>About Me</h2>
-
 <div class="container">
 
-<div class="about-text">
+<h2>About Me</h2>
 
-<p>
-AWS Cloud & DevOps Engineer with 4+ years of experience in automating infrastructure, building scalable cloud solutions, and managing enterprise-level production environments.
-</p>
+<div class="about">
 
-<p>
-Experienced in AWS services including IAM, EC2, S3, Lambda, ELB, CloudWatch, and CI/CD pipelines using GitHub Actions.
-</p>
+AWS Cloud & DevOps Engineer with 4+ years of experience designing scalable cloud infrastructure and automating deployments.
 
-<p>
-Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, and load balancers.
-</p>
+Experienced with AWS services including EC2, S3, IAM, Lambda, ELB, CloudWatch and CI/CD pipelines using GitHub Actions.
+
+Strong networking knowledge including TCP/IP, DNS, HTTPS, load balancers and firewalls.
 
 </div>
 
 </div>
 
 </section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
-<h2>Professional Experience</h2>
-
 <div class="container">
 
-<div class="cards">
+<h2>Professional Experience</h2>
 
-<a href="welldoc.html" style="text-decoration:none;color:inherit;">
-<div class="card">
+<div class="timeline">
+
+<div class="timeline-item left">
+<div class="timeline-content">
 <h3>Cloud / DevOps Engineer</h3>
 <p>Welldoc</p>
+<p>2024 – Present</p>
 </div>
-</a>
+</div>
 
-<a href="dxc.html" style="text-decoration:none;color:inherit;">
-<div class="card">
+<div class="timeline-item right">
+<div class="timeline-content">
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
+<p>2022 – 2024</p>
 </div>
-</a>
+</div>
 
-<a href="cedar.html" style="text-decoration:none;color:inherit;">
-<div class="card">
+<div class="timeline-item left">
+<div class="timeline-content">
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
+<p>2021 – 2022</p>
 </div>
-</a>
+</div>
 
 </div>
 
@@ -355,27 +398,29 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 
 </section>
 
-<section id="projects">
+<!-- PROJECTS -->
 
-<h2>Projects</h2>
+<section id="projects">
 
 <div class="container">
 
-<div class="cards">
+<h2>Projects</h2>
 
-<div class="card">
+<div class="projects">
+
+<div class="project">
 <h3>Kubernetes CI/CD Pipeline</h3>
 <p>Docker → GitHub Actions → Kubernetes deployment</p>
 </div>
 
-<div class="card">
+<div class="project">
 <h3>AWS Infrastructure Automation</h3>
 <p>Provisioned AWS infrastructure using Terraform</p>
 </div>
 
-<div class="card">
-<h3>Monitoring & Alerting</h3>
-<p>Implemented monitoring using AWS CloudWatch</p>
+<div class="project">
+<h3>Monitoring System</h3>
+<p>AWS CloudWatch alerts and logging pipelines</p>
 </div>
 
 </div>
@@ -384,75 +429,128 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 
 </section>
 
-<section id="education">
-
-<h2>Education</h2>
-
-<div class="container">
-
-<div class="edu">
-<h3>Master's Degree</h3>
-<p>Pace University – New York</p>
-</div>
-
-<div class="edu">
-<h3>Bachelor's Degree</h3>
-<p>Jain University – Bangalore</p>
-</div>
-
-</div>
-
-</section>
+<!-- SKILLS -->
 
 <section id="skills">
 
-<h2>DevOps & Cloud Skills</h2>
-
 <div class="container">
 
-<div class="skills">
+<h2>DevOps Skills</h2>
 
 <div class="skill">
-<i class="devicon-amazonwebservices-plain colored"></i>
+<div class="skill-name">
 <span>AWS</span>
+<span>95%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:95%"></div>
+</div>
 </div>
 
 <div class="skill">
-<i class="devicon-docker-plain colored"></i>
+<div class="skill-name">
 <span>Docker</span>
+<span>90%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
+</div>
 </div>
 
 <div class="skill">
-<i class="devicon-kubernetes-plain colored"></i>
+<div class="skill-name">
 <span>Kubernetes</span>
+<span>85%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:85%"></div>
+</div>
 </div>
 
 <div class="skill">
-<i class="devicon-terraform-plain colored"></i>
+<div class="skill-name">
 <span>Terraform</span>
+<span>80%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:80%"></div>
+</div>
 </div>
 
-<div class="skill">
+<div class="icon-skills">
+
+<div class="icon-skill">
+<i class="devicon-amazonwebservices-plain colored"></i>
+<p>AWS</p>
+</div>
+
+<div class="icon-skill">
+<i class="devicon-docker-plain colored"></i>
+<p>Docker</p>
+</div>
+
+<div class="icon-skill">
+<i class="devicon-kubernetes-plain colored"></i>
+<p>Kubernetes</p>
+</div>
+
+<div class="icon-skill">
+<i class="devicon-terraform-plain colored"></i>
+<p>Terraform</p>
+</div>
+
+<div class="icon-skill">
 <i class="devicon-githubactions-plain colored"></i>
-<span>GitHub Actions</span>
+<p>CI/CD</p>
 </div>
 
-<div class="skill">
+<div class="icon-skill">
 <i class="devicon-linux-plain colored"></i>
-<span>Linux</span>
+<p>Linux</p>
 </div>
 
 </div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container contact">
+
+<h2>Contact</h2>
+
+<p>Email: vijaychelluboyana@gmail.com</p>
+<p>Phone: +1 (347) 433-6878</p>
+<p>Location: New York, USA</p>
 
 </div>
 
 </section>
 
 <footer>
+
 © 2026 Vijay Kumar Chelluboyana
+
 </footer>
 
-</div>
+<script>
+
+var typed = new Typed(".typing",{
+strings:[
+"Cloud & DevOps Engineer",
+"AWS Infrastructure Specialist",
+"Kubernetes & CI/CD Expert"
+],
+typeSpeed:60,
+backSpeed:40,
+loop:true
+})
+
+</script>
 
 </body>
 
