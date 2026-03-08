@@ -12,6 +12,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
 <style>
 
 *{
@@ -61,7 +63,7 @@ transition:.3s;
 color:#4da3ff;
 }
 
-/* SCROLL CONTAINER (important for iPhone) */
+/* SNAP CONTAINER */
 
 .snap-container{
 height:100vh;
@@ -175,14 +177,29 @@ transform:translateY(-6px);
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:15px;
+gap:25px;
 }
 
 .skill{
-padding:10px 20px;
-border-radius:20px;
-border:1px solid #3a3a3a;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+padding:18px;
+width:120px;
 background:#2a2a2a;
+border:1px solid #3a3a3a;
+border-radius:16px;
+transition:.3s;
+}
+
+.skill i{
+font-size:40px;
+}
+
+.skill:hover{
+transform:translateY(-5px);
+border-color:#4da3ff;
 }
 
 /* EDUCATION */
@@ -220,6 +237,10 @@ gap:18px;
 font-size:14px;
 }
 
+.cards{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -253,11 +274,18 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 </div>
 
 <div class="social">
-<a href="https://github.com/vijaych0312"><i class="fab fa-github"></i></a>
-<a href="https://linkedin.com/in/vijaych0312"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/vijaych0312" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com/in/vijaych0312" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
 </div>
 
-<a href="CVijay_resume1.pdf" class="resume-btn">Download Resume</a>
+<a href="CVijay_resume1.pdf" class="resume-btn" target="_blank">
+Download Resume
+</a>
 
 </section>
 
@@ -270,11 +298,15 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 <div class="about-text">
 
 <p>
-AWS Cloud & DevOps Engineer with 4+ years of experience building scalable cloud solutions and automating infrastructure.
+AWS Cloud & DevOps Engineer with 4+ years of experience in automating infrastructure, building scalable cloud solutions, and managing enterprise-level production environments.
 </p>
 
 <p>
-Hands-on with AWS, Kubernetes, Docker, Terraform, and CI/CD pipelines using GitHub Actions.
+Experienced in AWS services including IAM, EC2, S3, Lambda, ELB, CloudWatch, and CI/CD pipelines using GitHub Actions.
+</p>
+
+<p>
+Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, and load balancers.
 </p>
 
 </div>
@@ -328,17 +360,17 @@ Hands-on with AWS, Kubernetes, Docker, Terraform, and CI/CD pipelines using GitH
 
 <div class="card">
 <h3>Kubernetes CI/CD Pipeline</h3>
-<p>Docker → GitHub Actions → Kubernetes deployment.</p>
+<p>Docker → GitHub Actions → Kubernetes deployment</p>
 </div>
 
 <div class="card">
 <h3>AWS Infrastructure Automation</h3>
-<p>Terraform provisioning for AWS environments.</p>
+<p>Provisioned AWS infrastructure using Terraform</p>
 </div>
 
 <div class="card">
 <h3>Monitoring & Alerting</h3>
-<p>AWS CloudWatch monitoring and alerts.</p>
+<p>Implemented monitoring using AWS CloudWatch</p>
 </div>
 
 </div>
@@ -375,13 +407,35 @@ Hands-on with AWS, Kubernetes, Docker, Terraform, and CI/CD pipelines using GitH
 
 <div class="skills">
 
-<div class="skill">AWS</div>
-<div class="skill">Docker</div>
-<div class="skill">Kubernetes</div>
-<div class="skill">Terraform</div>
-<div class="skill">GitHub Actions</div>
-<div class="skill">CI/CD</div>
-<div class="skill">Linux</div>
+<div class="skill">
+<i class="devicon-amazonwebservices-plain colored"></i>
+<span>AWS</span>
+</div>
+
+<div class="skill">
+<i class="devicon-docker-plain colored"></i>
+<span>Docker</span>
+</div>
+
+<div class="skill">
+<i class="devicon-kubernetes-plain colored"></i>
+<span>Kubernetes</span>
+</div>
+
+<div class="skill">
+<i class="devicon-terraform-plain colored"></i>
+<span>Terraform</span>
+</div>
+
+<div class="skill">
+<i class="devicon-githubactions-plain colored"></i>
+<span>GitHub Actions</span>
+</div>
+
+<div class="skill">
+<i class="devicon-linux-plain colored"></i>
+<span>Linux</span>
+</div>
 
 </div>
 
@@ -396,4 +450,5 @@ Hands-on with AWS, Kubernetes, Docker, Terraform, and CI/CD pipelines using GitH
 </div>
 
 </body>
+
 </html>
