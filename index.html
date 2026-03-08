@@ -23,7 +23,7 @@ scroll-behavior:smooth;
 scroll-snap-type:y mandatory;
 }
 
-/* DEFAULT DARK THEME */
+/* DARK MODE DEFAULT */
 
 body{
 font-family:'Poppins',sans-serif;
@@ -33,7 +33,7 @@ overflow-x:hidden;
 transition:0.3s;
 }
 
-/* LIGHT THEME */
+/* LIGHT MODE */
 
 body.light{
 background:#f7f9fc;
@@ -86,8 +86,13 @@ transform:scale(1.2);
 
 .theme-toggle{
 cursor:pointer;
-font-size:20px;
+font-size:22px;
 color:#38bdf8;
+transition:0.3s;
+}
+
+.theme-toggle:hover{
+transform:scale(1.2);
 }
 
 /* HERO */
@@ -99,14 +104,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-scroll-snap-align:start;
 padding-top:70px;
-}
-
-.container{
-width:1200px;
-max-width:90%;
-margin:auto;
 }
 
 .hero h1{
@@ -139,17 +137,9 @@ margin-top:6px;
 color:#94a3b8;
 }
 
-body.light .location{
-color:#777;
-}
-
 .contact{
 margin-top:10px;
 color:#94a3b8;
-}
-
-body.light .contact{
-color:#666;
 }
 
 .hero p{
@@ -157,7 +147,7 @@ margin-top:20px;
 max-width:600px;
 }
 
-/* HERO BUTTONS */
+/* BUTTONS */
 
 .hero-buttons{
 margin-top:30px;
@@ -198,7 +188,6 @@ color:#020617;
 .section{
 padding:90px 0;
 background:#020617;
-scroll-snap-align:start;
 }
 
 body.light .section{
@@ -273,7 +262,6 @@ padding:12px 20px;
 background:#111827;
 border:1px solid #1f2937;
 border-radius:20px;
-transition:.3s;
 }
 
 body.light .skill{
@@ -297,21 +285,7 @@ background:#020617;
 
 body.light footer{
 background:white;
-color:#777;
 border-top:1px solid #e3e7ee;
-}
-
-/* SCROLL ANIMATION */
-
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
 }
 
 </style>
@@ -327,14 +301,14 @@ transform:translateY(0);
 <a href="#education"><i class="fas fa-graduation-cap"></i></a>
 <a href="#skills"><i class="fas fa-cogs"></i></a>
 
+<!-- SUN / MOON BUTTON -->
+
 <div class="theme-toggle" onclick="toggleTheme()">
-<i class="fas fa-moon"></i>
+<i id="theme-icon" class="fas fa-moon"></i>
 </div>
 
 </div>
 </div>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -365,119 +339,24 @@ View Experience
 
 </section>
 
-<!-- EXPERIENCE -->
-
-<section id="experience" class="section hidden">
-
-<h2>Professional Experience</h2>
-
-<div class="container">
-
-<div class="cards">
-
-<a href="welldoc.html" style="text-decoration:none;color:inherit;">
-<div class="card company-card">
-<h3>Cloud Engineer</h3>
-<p>Welldoc</p>
-</div>
-</a>
-
-<a href="dxc.html" style="text-decoration:none;color:inherit;">
-<div class="card company-card">
-<h3>DevOps Engineer</h3>
-<p>DXC Technology</p>
-</div>
-</a>
-
-<a href="cedar.html" style="text-decoration:none;color:inherit;">
-<div class="card company-card">
-<h3>Cloud Engineer</h3>
-<p>Cedar InfoTech</p>
-</div>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EDUCATION -->
-
-<section id="education" class="section hidden">
-
-<h2>Education</h2>
-
-<div class="container">
-
-<div class="edu">
-<h3>Master's Degree</h3>
-<p>Pace University – New York</p>
-</div>
-
-<div class="edu">
-<h3>Bachelor's Degree</h3>
-<p>Jain University – Bangalore</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="section hidden">
-
-<h2>DevOps & Cloud Skills</h2>
-
-<div class="container">
-
-<div class="skills">
-
-<div class="skill">AWS</div>
-<div class="skill">Docker</div>
-<div class="skill">Kubernetes</div>
-<div class="skill">Terraform</div>
-<div class="skill">GitHub Actions</div>
-<div class="skill">CI/CD</div>
-<div class="skill">CloudWatch</div>
-<div class="skill">Linux</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Vijay Kumar Chelluboyana</p>
-</footer>
-
 <script>
-
-/* SCROLL REVEAL */
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll(".hidden").forEach(el=>{
-observer.observe(el);
-});
 
 /* THEME TOGGLE */
 
 function toggleTheme(){
 
-document.body.classList.toggle("light");
+const body=document.body;
+const icon=document.getElementById("theme-icon");
 
-if(document.body.classList.contains("light")){
+body.classList.toggle("light");
+
+if(body.classList.contains("light")){
+icon.classList.remove("fa-moon");
+icon.classList.add("fa-sun");
 localStorage.setItem("theme","light");
 }else{
+icon.classList.remove("fa-sun");
+icon.classList.add("fa-moon");
 localStorage.setItem("theme","dark");
 }
 
@@ -485,9 +364,18 @@ localStorage.setItem("theme","dark");
 
 /* LOAD SAVED THEME */
 
-if(localStorage.getItem("theme")==="light"){
+window.onload=function(){
+
+const saved=localStorage.getItem("theme");
+const icon=document.getElementById("theme-icon");
+
+if(saved==="light"){
 document.body.classList.add("light");
+icon.classList.remove("fa-moon");
+icon.classList.add("fa-sun");
 }
+
+};
 
 </script>
 
