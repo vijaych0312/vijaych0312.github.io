@@ -7,6 +7,8 @@
 <title>Vijay Kumar Chelluboyana | Cloud & DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ICON LIBRARY -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -24,8 +26,8 @@ scroll-snap-type:y mandatory;
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#0f172a,#111827);
-color:#e5e7eb;
+background:#0f172a;
+color:#e2e8f0;
 overflow-x:hidden;
 }
 
@@ -36,14 +38,15 @@ position:fixed;
 top:0;
 width:100%;
 height:70px;
-background:rgba(15,23,42,0.9);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(255,255,255,0.05);
+background:#111827;
+border-bottom:1px solid #1f2937;
 display:flex;
 align-items:center;
 justify-content:center;
 z-index:1000;
 }
+
+/* center icons */
 
 .nav-links{
 display:flex;
@@ -51,7 +54,7 @@ gap:50px;
 }
 
 .nav-links a{
-color:#cbd5e1;
+color:#9ca3af;
 font-size:20px;
 text-decoration:none;
 transition:.3s;
@@ -60,47 +63,6 @@ transition:.3s;
 .nav-links a:hover{
 color:#38bdf8;
 transform:scale(1.2);
-}
-
-/* INTRO */
-
-.intro{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-scroll-snap-align:start;
-}
-
-.intro h1{
-font-size:72px;
-font-weight:700;
-letter-spacing:3px;
-background:linear-gradient(90deg,#38bdf8,#60a5fa,#38bdf8);
-background-size:200%;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:shine 6s linear infinite;
-}
-
-.enter{
-margin-top:40px;
-font-size:14px;
-color:#94a3b8;
-animation:float 2s ease-in-out infinite;
-}
-
-@keyframes shine{
-0%{background-position:0%;}
-100%{background-position:200%;}
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(6px);}
-100%{transform:translateY(0);}
 }
 
 /* HERO */
@@ -113,12 +75,39 @@ justify-content:center;
 align-items:center;
 text-align:center;
 scroll-snap-align:start;
+background:#0f172a;
 padding-top:70px;
 }
 
+/* container */
+
+.container{
+width:1200px;
+max-width:90%;
+margin:auto;
+}
+
+/* Animated Name */
+
+.hero h1{
+font-size:64px;
+font-weight:700;
+background:linear-gradient(90deg,#38bdf8,#60a5fa,#38bdf8);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+0%{background-position:0%;}
+100%{background-position:200%;}
+}
+
 .hero h2{
-font-size:28px;
-color:#e2e8f0;
+font-size:24px;
+margin-top:10px;
+color:#cbd5f5;
 }
 
 .location{
@@ -136,69 +125,75 @@ font-size:15px;
 .hero p{
 margin-top:20px;
 max-width:600px;
-color:#cbd5e1;
+color:#cbd5f5;
 }
 
-/* SECTIONS */
+.scroll{
+margin-top:40px;
+font-size:14px;
+color:#94a3b8;
+animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(6px);}
+100%{transform:translateY(0);}
+}
+
+/* sections */
 
 .section{
-padding:100px 0;
+padding:90px 0;
+background:#020617;
 scroll-snap-align:start;
 }
 
 .section h2{
 font-size:34px;
-margin-bottom:50px;
+margin-bottom:40px;
 color:#38bdf8;
 text-align:center;
 }
 
-/* CARDS */
+/* cards */
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
-width:1200px;
-max-width:90%;
-margin:auto;
 }
 
 .card{
-background:rgba(255,255,255,0.03);
-border:1px solid rgba(255,255,255,0.08);
+background:#111827;
+border:1px solid #1f2937;
 padding:35px;
-border-radius:14px;
+border-radius:15px;
 transition:.4s;
 text-align:center;
-backdrop-filter:blur(10px);
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 border-color:#38bdf8;
-box-shadow:0 15px 40px rgba(56,189,248,0.2);
+box-shadow:0 15px 35px rgba(56,189,248,.2);
 }
 
 .company-card{
 cursor:pointer;
 }
 
-/* EDUCATION */
-
-.container{
-width:800px;
-max-width:90%;
-margin:auto;
-}
+/* education */
 
 .edu{
-background:rgba(255,255,255,0.03);
+background:#111827;
 padding:25px;
 border-radius:12px;
-border:1px solid rgba(255,255,255,0.08);
+border:1px solid #1f2937;
 margin-bottom:20px;
 transition:.3s;
+box-shadow:0 5px 12px rgba(0,0,0,0.3);
 }
 
 .edu:hover{
@@ -206,7 +201,7 @@ border-color:#38bdf8;
 transform:translateY(-5px);
 }
 
-/* SKILLS */
+/* skills */
 
 .skills{
 display:flex;
@@ -217,28 +212,31 @@ margin-top:20px;
 }
 
 .skill{
-padding:12px 22px;
-background:rgba(255,255,255,0.05);
+padding:12px 20px;
+background:#111827;
+border:1px solid #1f2937;
 border-radius:20px;
-border:1px solid rgba(255,255,255,0.1);
 transition:.3s;
+box-shadow:0 3px 8px rgba(0,0,0,0.3);
 }
 
 .skill:hover{
 background:#38bdf8;
-color:#0f172a;
+color:#020617;
+border-color:#38bdf8;
 }
 
-/* FOOTER */
+/* footer */
 
 footer{
 text-align:center;
 padding:40px 0;
 color:#94a3b8;
-border-top:1px solid rgba(255,255,255,0.05);
+background:#020617;
+border-top:1px solid #1f2937;
 }
 
-/* SCROLL REVEAL */
+/* scroll reveal */
 
 .hidden{
 opacity:0;
@@ -259,28 +257,30 @@ transform:translateY(0);
 <!-- NAVBAR -->
 
 <div class="navbar">
+
 <div class="nav-links">
-<a href="#intro"><i class="fas fa-home"></i></a>
+
+<a href="#"><i class="fas fa-home"></i></a>
+
 <a href="#experience"><i class="fas fa-briefcase"></i></a>
+
 <a href="#education"><i class="fas fa-graduation-cap"></i></a>
+
 <a href="#skills"><i class="fas fa-cogs"></i></a>
-</div>
+
 </div>
 
-<!-- INTRO -->
+</div>
 
-<section id="intro" class="intro">
-<h1>VIJAY KUMAR CHELLUBOYANA</h1>
-<div class="enter">Scroll to enter ↓</div>
-</section>
 
 <!-- HERO -->
 
 <section class="hero">
 
+<h1>VIJAY KUMAR CHELLUBOYANA</h1>
 <h2>Cloud & DevOps Engineer</h2>
 
-<div class="location">New York, USA</div>
+<div class="location">NEW YORK, USA</div>
 
 <div class="contact">
 vijaychelluboyana@gmail.com | +1 (347) 433-6878
@@ -290,13 +290,18 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient systems using modern DevOps technologies.
 </p>
 
+<div class="scroll">Scroll to explore ↓</div>
+
 </section>
+
 
 <!-- EXPERIENCE -->
 
 <section id="experience" class="section hidden">
 
 <h2>Professional Experience</h2>
+
+<div class="container">
 
 <div class="cards">
 
@@ -323,7 +328,10 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </div>
 
+</div>
+
 </section>
+
 
 <!-- EDUCATION -->
 
@@ -346,6 +354,7 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 </div>
 
 </section>
+
 
 <!-- SKILLS -->
 
@@ -373,7 +382,9 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 </section>
 
 <footer>
+
 <p>© 2026 Vijay Kumar Chelluboyana</p>
+
 </footer>
 
 <script>
