@@ -247,8 +247,8 @@ margin-top:40px;
 
 .hidden{
 opacity:0;
-transform:translateY(40px);
-transition:1s;
+transform:translateY(60px);
+transition:all 0.9s ease;
 }
 
 .show{
@@ -453,16 +453,22 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 
 <script>
 
-const observer=new IntersectionObserver(entries=>{
+document.addEventListener("DOMContentLoaded", function(){
+
+const observer = new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add("show");
 }
 });
+},{
+threshold:0.15
 });
 
 document.querySelectorAll(".hidden").forEach(el=>{
 observer.observe(el);
+});
+
 });
 
 </script>
