@@ -154,28 +154,33 @@ color:#4A6958;
 transform:scale(1.3);
 }
 
-/* RESUME BUTTON */
+/* GLASS RESUME BUTTON */
 
 .resume-btn{
-margin-top:25px;
+margin-top:30px;
 display:inline-flex;
 align-items:center;
 gap:10px;
-padding:14px 30px;
-background:#4A6958;
-color:white;
-border-radius:40px;
-text-decoration:none;
-font-weight:500;
+padding:14px 34px;
 font-size:16px;
-transition:all .3s ease;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
+color:#e6efe9;
+text-decoration:none;
+border-radius:40px;
+
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.15);
+
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+
+transition:all .35s ease;
 }
 
 .resume-btn:hover{
-background:#5f7f6c;
 transform:translateY(-3px);
-box-shadow:0 15px 35px rgba(0,0,0,0.35);
+background:rgba(255,255,255,0.15);
+border-color:#4A6958;
+box-shadow:0 10px 30px rgba(0,0,0,0.35);
 }
 
 /* SECTIONS */
@@ -336,8 +341,8 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 <a href="https://linkedin.com/in/vijaych0312" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
 
-<a href="CVijay_resume1.pdf" class="resume-btn" download>
-<i class="fas fa-download"></i> Download Resume
+<a href="CVijay_resume1.pdf" class="resume-btn" target="_blank">
+Resume
 </a>
 
 </div>
