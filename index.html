@@ -23,7 +23,6 @@ box-sizing:border-box;
 html{
 scroll-behavior:smooth;
 scroll-snap-type:y mandatory;
-overflow-y:scroll;
 }
 
 body{
@@ -31,6 +30,7 @@ font-family:'Poppins',sans-serif;
 background:#1e1e1e;
 color:#e5e5e5;
 overflow-x:hidden;
+-webkit-overflow-scrolling:touch;
 }
 
 /* NAVBAR */
@@ -71,14 +71,14 @@ transform:scale(1.05);
 /* HERO */
 
 .hero{
-height:100vh;
+min-height:100vh;
 scroll-snap-align:start;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding-top:70px;
+padding-top:80px;
 }
 
 .hero h1{
@@ -108,6 +108,7 @@ margin-top:15px;
 font-size:24px;
 display:flex;
 gap:25px;
+justify-content:center;
 }
 
 .social a{
@@ -145,8 +146,9 @@ color:#8a8a8a;
 /* SECTIONS */
 
 .section{
-padding:90px 0;
+padding:100px 0;
 scroll-snap-align:start;
+scroll-snap-stop:always;
 }
 
 .section h2{
@@ -243,15 +245,14 @@ text-align:center;
 padding:40px 0;
 color:#8a8a8a;
 border-top:1px solid #3a3a3a;
-margin-top:40px;
 }
 
-/* ANIMATION */
+/* SCROLL ANIMATION */
 
 .hidden{
 opacity:0;
 transform:translateY(60px);
-transition:all 0.8s ease;
+transition:all .8s ease;
 }
 
 .show{
@@ -259,10 +260,12 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
 .hero h1{
-font-size:36px;
+font-size:34px;
 }
 
 .hero h2{
@@ -270,7 +273,16 @@ font-size:18px;
 }
 
 .nav-links{
-gap:20px;
+gap:18px;
+font-size:14px;
+}
+
+.section{
+padding:80px 0;
+}
+
+.cards{
+grid-template-columns:1fr;
 }
 
 }
@@ -295,7 +307,6 @@ gap:20px;
 <section class="hero">
 
 <h1>VIJAY KUMAR CHELLUBOYANA</h1>
-
 <h2>Cloud & DevOps Engineer</h2>
 
 <div class="location">New York, USA</div>
@@ -320,7 +331,6 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 <h2>About Me</h2>
 
 <div class="container">
-
 <div class="about-text">
 
 <p>
@@ -336,7 +346,6 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 </p>
 
 </div>
-
 </div>
 
 </section>
@@ -346,7 +355,6 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 <h2>Professional Experience</h2>
 
 <div class="container">
-
 <div class="cards">
 
 <a href="welldoc.html" style="text-decoration:none;color:inherit;">
@@ -371,7 +379,6 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 </a>
 
 </div>
-
 </div>
 
 </section>
@@ -381,7 +388,6 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 <h2>Projects</h2>
 
 <div class="container">
-
 <div class="cards">
 
 <div class="card">
@@ -400,7 +406,6 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 </div>
 
 </div>
-
 </div>
 
 </section>
@@ -430,7 +435,6 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 <h2>DevOps & Cloud Skills</h2>
 
 <div class="container">
-
 <div class="skills">
 
 <div class="skill">AWS</div>
@@ -443,15 +447,12 @@ Strong networking knowledge including TCP/IP, DNS, HTTPS, firewalls, proxies, an
 <div class="skill">Linux</div>
 
 </div>
-
 </div>
 
 </section>
 
 <footer>
-
 <p>© 2026 Vijay Kumar Chelluboyana</p>
-
 </footer>
 
 <script>
