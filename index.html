@@ -50,7 +50,7 @@ z-index:1000;
 
 .nav-links{
 display:flex;
-gap:40px;
+gap:35px;
 }
 
 .nav-links a{
@@ -77,14 +77,8 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-scroll-snap-align:start;
 padding-top:70px;
-}
-
-.container{
-width:1200px;
-max-width:90%;
-margin:auto;
+scroll-snap-align:start;
 }
 
 .hero h1{
@@ -111,13 +105,11 @@ color:#444;
 .location{
 margin-top:6px;
 color:#666;
-font-size:16px;
 }
 
 .contact{
 margin-top:10px;
 color:#666;
-font-size:15px;
 }
 
 .social{
@@ -135,12 +127,6 @@ transition:.3s;
 .social a:hover{
 color:#0077ff;
 transform:scale(1.3);
-}
-
-.hero p{
-margin-top:20px;
-max-width:700px;
-color:#555;
 }
 
 .resume-btn{
@@ -162,7 +148,6 @@ transform:translateY(-2px);
 
 .scroll{
 margin-top:40px;
-font-size:14px;
 color:#777;
 animation:float 2s ease-in-out infinite;
 }
@@ -186,6 +171,14 @@ margin-bottom:40px;
 color:#0077ff;
 text-align:center;
 }
+
+.container{
+width:1100px;
+max-width:90%;
+margin:auto;
+}
+
+/* about */
 
 .about-text{
 background:white;
@@ -214,6 +207,10 @@ text-align:center;
 box-shadow:0 8px 20px rgba(0,0,0,0.06);
 }
 
+.company-card{
+cursor:pointer;
+}
+
 .card:hover{
 transform:translateY(-10px);
 border-color:#0077ff;
@@ -229,7 +226,6 @@ border-radius:14px;
 border:1px solid #e3e7ee;
 margin-bottom:20px;
 transition:.3s;
-box-shadow:0 6px 16px rgba(0,0,0,0.05);
 }
 
 .edu:hover{
@@ -244,7 +240,6 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:15px;
-margin-top:20px;
 }
 
 .skill{
@@ -253,14 +248,14 @@ background:white;
 border:1px solid #e3e7ee;
 border-radius:25px;
 transition:.3s;
-box-shadow:0 4px 10px rgba(0,0,0,0.04);
 }
 
 .skill:hover{
 background:#0077ff;
 color:white;
-border-color:#0077ff;
 }
+
+/* footer */
 
 footer{
 text-align:center;
@@ -270,7 +265,7 @@ border-top:1px solid #e3e7ee;
 margin-top:40px;
 }
 
-/* scroll reveal */
+/* animation */
 
 .hidden{
 opacity:0;
@@ -283,11 +278,21 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* mobile */
+
 @media(max-width:768px){
 
-.hero h1{font-size:36px;}
-.hero h2{font-size:18px;}
-.nav-links{gap:20px;}
+.hero h1{
+font-size:36px;
+}
+
+.hero h2{
+font-size:18px;
+}
+
+.nav-links{
+gap:20px;
+}
 
 }
 
@@ -346,19 +351,15 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 <div class="about-text">
 
 <p>
-AWS Cloud & DevOps Engineer with 4+ years of experience in automating infrastructure, building scalable cloud solutions, and managing enterprise-level production environments. Skilled in AWS services including IAM, EC2, EBS, S3, ELB, Lambda, CloudWatch, and SNS, with hands-on expertise in cloud deployment, on-prem to cloud migration, and cloud modernization projects.
+AWS Cloud & DevOps Engineer with 4+ years of experience in automating infrastructure, building scalable cloud solutions, and managing enterprise-level production environments.
 </p>
 
-<br>
-
 <p>
-Experienced in designing and implementing end-to-end CI/CD pipelines using CodePipeline and GitHub Actions. Flexible in working with multiple cloud platforms including AWS and Azure. Strong understanding of networking and security concepts, including TCP/IP, DNS, HTTPS, firewalls, proxies, and load balancers.
+Skilled in AWS services including IAM, EC2, EBS, S3, ELB, Lambda, CloudWatch, and SNS, with expertise in CI/CD pipelines using GitHub Actions and CodePipeline.
 </p>
 
-<br>
-
 <p>
-Proven ability to lead cloud infrastructure initiatives, collaborate effectively in team projects, and prioritize tasks to meet critical deadlines. Passionate about delivering efficient, reliable, and secure cloud solutions while continuously learning and adapting to emerging cloud technologies.
+Strong understanding of networking and security including TCP/IP, DNS, HTTPS, firewalls, proxies, and load balancers.
 </p>
 
 </div>
@@ -377,20 +378,26 @@ Proven ability to lead cloud infrastructure initiatives, collaborate effectively
 
 <div class="cards">
 
-<div class="card">
-<h3>Cloud Engineer</h3>
+<a href="welldoc.html" style="text-decoration:none;color:inherit;">
+<div class="card company-card">
+<h3>Cloud / DevOps Engineer</h3>
 <p>Welldoc</p>
 </div>
+</a>
 
-<div class="card">
+<a href="dxc.html" style="text-decoration:none;color:inherit;">
+<div class="card company-card">
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
 </div>
+</a>
 
-<div class="card">
+<a href="cedar.html" style="text-decoration:none;color:inherit;">
+<div class="card company-card">
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
 </div>
+</a>
 
 </div>
 
@@ -410,17 +417,17 @@ Proven ability to lead cloud infrastructure initiatives, collaborate effectively
 
 <div class="card">
 <h3>Kubernetes CI/CD Pipeline</h3>
-<p>Automated CI/CD pipeline deploying Dockerized apps to Kubernetes using GitHub Actions.</p>
+<p>Automated CI/CD pipeline deploying Dockerized apps to Kubernetes.</p>
 </div>
 
 <div class="card">
 <h3>AWS Infrastructure Automation</h3>
-<p>Provisioned scalable infrastructure using Terraform including VPC, EC2, ALB and RDS.</p>
+<p>Provisioned AWS infrastructure using Terraform.</p>
 </div>
 
 <div class="card">
 <h3>Monitoring & Alerting</h3>
-<p>Implemented CloudWatch monitoring with alerting and automated log analysis.</p>
+<p>Implemented centralized monitoring using AWS CloudWatch.</p>
 </div>
 
 </div>
@@ -499,4 +506,5 @@ observer.observe(el);
 </script>
 
 </body>
+
 </html>
