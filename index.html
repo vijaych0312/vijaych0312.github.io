@@ -242,42 +242,35 @@ border-color:#4A6958;
 box-shadow:0 18px 40px rgba(0,0,0,.3);
 }
 
-/* EDUCATION */
-
-.edu{
-background:#435146;
-padding:25px;
-border-radius:14px;
-border:1px solid #4A6958;
-margin-bottom:20px;
-transition:.3s;
-}
-
-.edu:hover{
-border-color:#4A6958;
-transform:translateY(-5px);
-}
-
 /* SKILLS */
 
 .skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
 }
 
 .skill{
-padding:12px 20px;
 background:#435146;
 border:1px solid #4A6958;
-border-radius:25px;
+border-radius:20px;
+padding:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+font-size:15px;
 transition:.3s;
+}
+
+.skill i{
+font-size:20px;
 }
 
 .skill:hover{
 background:#4A6958;
 color:white;
+transform:translateY(-5px);
 }
 
 /* FOOTER */
@@ -359,20 +352,21 @@ Resume
 <h2>About Me</h2>
 <div class="container">
 <div class="about-text">
-<p>AWS Cloud & DevOps Engineer with 4+ years of experience in automating infrastructure, building scalable cloud solutions, and managing enterprise-level production environments.</p>
-<p>Skilled in AWS services including IAM, EC2, EBS, S3, ELB, Lambda, CloudWatch, and SNS, with expertise in CI/CD pipelines using GitHub Actions and CodePipeline.</p>
-<p>Strong understanding of networking and security including TCP/IP, DNS, HTTPS, firewalls, proxies, and load balancers.</p>
+<p>AWS Cloud & DevOps Engineer with 4+ years of experience building scalable cloud infrastructure and CI/CD automation.</p>
 </div>
 </div>
 </section>
 
 <section id="experience" class="section hidden">
 <h2>Professional Experience</h2>
+
 <div class="container">
+
 <div class="cards">
 
 <a href="welldoc.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
+<i class="fas fa-heart-pulse"></i>
 <h3>Cloud / DevOps Engineer</h3>
 <p>Welldoc</p>
 </div>
@@ -380,6 +374,7 @@ Resume
 
 <a href="dxc.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
+<i class="fas fa-building"></i>
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
 </div>
@@ -387,72 +382,38 @@ Resume
 
 <a href="cedar.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
+<i class="fas fa-server"></i>
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
 </div>
 </a>
 
 </div>
-</div>
-</section>
-
-<section id="projects" class="section hidden">
-<h2>Projects</h2>
-<div class="container">
-<div class="cards">
-
-<div class="card">
-<h3>Kubernetes CI/CD Pipeline</h3>
-<p>Automated CI/CD pipeline deploying Dockerized apps to Kubernetes.</p>
-</div>
-
-<div class="card">
-<h3>AWS Infrastructure Automation</h3>
-<p>Provisioned AWS infrastructure using Terraform.</p>
-</div>
-
-<div class="card">
-<h3>Monitoring & Alerting</h3>
-<p>Implemented centralized monitoring using AWS CloudWatch.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="education" class="section hidden">
-<h2>Education</h2>
-<div class="container">
-
-<div class="edu">
-<h3>Master's Degree</h3>
-<p>Pace University – New York</p>
-</div>
-
-<div class="edu">
-<h3>Bachelor's Degree</h3>
-<p>Jain University – Bangalore</p>
-</div>
 
 </div>
 </section>
 
 <section id="skills" class="section hidden">
+
 <h2>DevOps & Cloud Skills</h2>
+
 <div class="container">
+
 <div class="skills">
 
-<div class="skill">AWS</div>
-<div class="skill">Docker</div>
-<div class="skill">Kubernetes</div>
-<div class="skill">Terraform</div>
-<div class="skill">GitHub Actions</div>
-<div class="skill">CI/CD</div>
-<div class="skill">CloudWatch</div>
-<div class="skill">Linux</div>
+<div class="skill"><i class="fab fa-aws"></i>AWS</div>
+<div class="skill"><i class="fab fa-docker"></i>Docker</div>
+<div class="skill"><i class="fas fa-dharmachakra"></i>Kubernetes</div>
+<div class="skill"><i class="fas fa-cubes"></i>Terraform</div>
+<div class="skill"><i class="fab fa-github"></i>GitHub</div>
+<div class="skill"><i class="fas fa-code-branch"></i>CI/CD</div>
+<div class="skill"><i class="fab fa-linux"></i>Linux</div>
+<div class="skill"><i class="fas fa-chart-line"></i>CloudWatch</div>
 
 </div>
+
 </div>
+
 </section>
 
 <footer>
