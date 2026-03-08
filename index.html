@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +23,6 @@ html{
 scroll-behavior:smooth;
 scroll-snap-type:y mandatory;
 }
-
-/* DARK MODE DEFAULT */
 
 body{
 font-family:'Poppins',sans-serif;
@@ -190,7 +189,8 @@ color:#020617;
 /* SECTIONS */
 
 .section{
-padding:90px 0;
+min-height:100vh;
+padding:120px 20px;
 background:#020617;
 }
 
@@ -203,6 +203,86 @@ font-size:34px;
 margin-bottom:40px;
 color:#38bdf8;
 text-align:center;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:#111827;
+border:1px solid #1f2937;
+padding:35px;
+border-radius:15px;
+transition:.4s;
+text-align:center;
+}
+
+body.light .card{
+background:white;
+border:1px solid #e3e7ee;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#38bdf8;
+}
+
+/* EDUCATION */
+
+.edu{
+background:#111827;
+padding:25px;
+border-radius:12px;
+border:1px solid #1f2937;
+margin-bottom:20px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+body.light .edu{
+background:white;
+border:1px solid #e3e7ee;
+}
+
+.edu:hover{
+border-color:#38bdf8;
+transform:translateY(-5px);
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+max-width:800px;
+margin:auto;
+}
+
+.skill{
+padding:12px 20px;
+background:#111827;
+border:1px solid #1f2937;
+border-radius:20px;
+}
+
+body.light .skill{
+background:white;
+border:1px solid #e3e7ee;
+}
+
+.skill:hover{
+background:#38bdf8;
+color:#020617;
 }
 
 /* FOOTER */
@@ -235,7 +315,7 @@ border-top:1px solid #e3e7ee;
 </div>
 </div>
 
-<!-- THEME BUTTON TOP RIGHT -->
+<!-- THEME BUTTON -->
 
 <div class="theme-toggle" onclick="toggleTheme()">
 <i id="theme-icon" class="fas fa-moon"></i>
@@ -270,9 +350,66 @@ View Experience
 
 </section>
 
-<script>
+<section id="experience" class="section">
 
-/* THEME TOGGLE */
+<h2>Experience</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Cloud Engineer</h3>
+<p>Worked on AWS infrastructure, Docker containers, and CI/CD pipelines.</p>
+</div>
+
+<div class="card">
+<h3>DevOps Engineer</h3>
+<p>Automated deployments using Terraform and GitHub Actions.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="education" class="section">
+
+<h2>Education</h2>
+
+<div class="edu">
+<h3>Master's in Computer Science</h3>
+<p>University Name</p>
+<p>2023 - 2025</p>
+</div>
+
+<div class="edu">
+<h3>Bachelor's Degree</h3>
+<p>Your College Name</p>
+<p>2019 - 2023</p>
+</div>
+
+</section>
+
+<section id="skills" class="section">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">AWS</div>
+<div class="skill">Docker</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">Terraform</div>
+<div class="skill">Linux</div>
+<div class="skill">CI/CD</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Vijay Kumar Chelluboyana
+</footer>
+
+<script>
 
 function toggleTheme(){
 
@@ -293,8 +430,6 @@ localStorage.setItem("theme","dark");
 
 }
 
-/* LOAD SAVED THEME */
-
 window.onload=function(){
 
 const saved=localStorage.getItem("theme");
@@ -312,3 +447,4 @@ icon.classList.add("fa-sun");
 
 </body>
 </html>
+```
