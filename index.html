@@ -8,7 +8,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- ICON LIBRARY -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -46,8 +45,6 @@ justify-content:center;
 z-index:1000;
 }
 
-/* center icons */
-
 .nav-links{
 display:flex;
 gap:50px;
@@ -78,8 +75,6 @@ scroll-snap-align:start;
 background:#0f172a;
 padding-top:70px;
 }
-
-/* container */
 
 .container{
 width:1200px;
@@ -126,6 +121,42 @@ font-size:15px;
 margin-top:20px;
 max-width:600px;
 color:#cbd5f5;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+margin-top:30px;
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 26px;
+background:#38bdf8;
+color:#020617;
+border-radius:30px;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(56,189,248,.3);
+}
+
+.btn.outline{
+background:transparent;
+border:2px solid #38bdf8;
+color:#38bdf8;
+}
+
+.btn.outline:hover{
+background:#38bdf8;
+color:#020617;
 }
 
 .scroll{
@@ -254,24 +285,14 @@ transform:translateY(0);
 
 <body>
 
-<!-- NAVBAR -->
-
 <div class="navbar">
-
 <div class="nav-links">
-
 <a href="#"><i class="fas fa-home"></i></a>
-
 <a href="#experience"><i class="fas fa-briefcase"></i></a>
-
 <a href="#education"><i class="fas fa-graduation-cap"></i></a>
-
 <a href="#skills"><i class="fas fa-cogs"></i></a>
-
 </div>
-
 </div>
-
 
 <!-- HERO -->
 
@@ -290,10 +311,21 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient systems using modern DevOps technologies.
 </p>
 
+<div class="hero-buttons">
+
+<a href="Vijay_Kumar_Chelluboyana_Resume.pdf" download class="btn">
+<i class="fa-solid fa-download"></i> Download Resume
+</a>
+
+<a href="#experience" class="btn outline">
+View Experience
+</a>
+
+</div>
+
 <div class="scroll">Scroll to explore ↓</div>
 
 </section>
-
 
 <!-- EXPERIENCE -->
 
@@ -332,7 +364,6 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 
 </section>
 
-
 <!-- EDUCATION -->
 
 <section id="education" class="section hidden">
@@ -354,7 +385,6 @@ Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient
 </div>
 
 </section>
-
 
 <!-- SKILLS -->
 
