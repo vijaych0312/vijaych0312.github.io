@@ -136,6 +136,15 @@ margin-top:10px;
 color:#bfc9c4;
 }
 
+.contact a{
+color:#bfc9c4;
+text-decoration:none;
+}
+
+.contact a:hover{
+color:#4A6958;
+}
+
 .social{
 margin-top:15px;
 font-size:24px;
@@ -153,7 +162,7 @@ color:#4A6958;
 transform:scale(1.3);
 }
 
-/* GLASS RESUME BUTTON */
+/* RESUME BUTTON */
 
 .resume-btn{
 margin-top:30px;
@@ -231,9 +240,10 @@ text-align:center;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-.company-logo{
-width:60px;
-margin-bottom:15px;
+.card i{
+font-size:30px;
+margin-bottom:10px;
+color:#6f9180;
 }
 
 .company-card{
@@ -337,18 +347,12 @@ transform:translateY(0);
 
 <h2>Cloud & DevOps Engineer</h2>
 
-<div class="location">New York, USA</div>
+<div class="location"><i class="fas fa-location-dot"></i> New York, USA</div>
 
 <div class="contact">
-<a href="mailto:vijaychelluboyana@gmail.com" style="color:#bfc9c4;text-decoration:none;">
-<i class="fas fa-envelope"></i> vijaychelluboyana@gmail.com
-</a>
-
-&nbsp; | &nbsp;
-
-<a href="tel:+13474336878" style="color:#bfc9c4;text-decoration:none;">
-<i class="fas fa-phone"></i> +1 (347) 433-6878
-</a>
+<a href="mailto:vijaychelluboyana@gmail.com"><i class="fas fa-envelope"></i> vijaychelluboyana@gmail.com</a>
+ |
+<a href="tel:+13474336878"><i class="fas fa-phone"></i> +1 (347) 433-6878</a>
 </div>
 
 <div class="social">
@@ -357,7 +361,7 @@ transform:translateY(0);
 </div>
 
 <a href="CVijay_resume1.pdf" class="resume-btn" target="_blank">
-Resume
+<i class="fas fa-file"></i> Resume
 </a>
 
 </div>
@@ -388,7 +392,7 @@ Resume
 
 <a href="welldoc.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
-<img src="welldoc-logo.png" class="company-logo">
+<i class="fas fa-cloud"></i>
 <h3>Cloud / DevOps Engineer</h3>
 <p>Welldoc</p>
 </div>
@@ -396,7 +400,7 @@ Resume
 
 <a href="dxc.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
-<img src="dxc-logo.png" class="company-logo">
+<i class="fas fa-server"></i>
 <h3>DevOps Engineer</h3>
 <p>DXC Technology</p>
 </div>
@@ -404,13 +408,57 @@ Resume
 
 <a href="cedar.html" style="text-decoration:none;color:inherit;">
 <div class="card company-card">
-<img src="cedar-logo.png" class="company-logo">
+<i class="fas fa-database"></i>
 <h3>Cloud Engineer</h3>
 <p>Cedar InfoTech</p>
 </div>
 </a>
 
 </div>
+</div>
+</section>
+
+<section id="projects" class="section hidden">
+<h2>Projects</h2>
+<div class="container">
+<div class="cards">
+
+<div class="card">
+<i class="fab fa-docker"></i>
+<h3>Kubernetes CI/CD Pipeline</h3>
+<p>Automated CI/CD pipeline deploying Dockerized apps to Kubernetes.</p>
+</div>
+
+<div class="card">
+<i class="fab fa-aws"></i>
+<h3>AWS Infrastructure Automation</h3>
+<p>Provisioned AWS infrastructure using Terraform.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-chart-line"></i>
+<h3>Monitoring & Alerting</h3>
+<p>Implemented centralized monitoring using AWS CloudWatch.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="education" class="section hidden">
+<h2>Education</h2>
+<div class="container">
+
+<div class="edu">
+<h3><i class="fas fa-graduation-cap"></i> Master's Degree</h3>
+<p>Pace University – New York</p>
+</div>
+
+<div class="edu">
+<h3><i class="fas fa-university"></i> Bachelor's Degree</h3>
+<p>Jain University – Bangalore</p>
+</div>
+
 </div>
 </section>
 
