@@ -8,6 +8,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- ICON LIBRARY -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -45,6 +46,8 @@ justify-content:center;
 z-index:1000;
 }
 
+/* center icons */
+
 .nav-links{
 display:flex;
 gap:50px;
@@ -62,48 +65,6 @@ color:#0077ff;
 transform:scale(1.2);
 }
 
-/* INTRO SLIDE */
-
-.intro{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-scroll-snap-align:start;
-background:white;
-}
-
-.intro h1{
-font-size:70px;
-font-weight:700;
-letter-spacing:2px;
-background:linear-gradient(90deg,#0077ff,#00c6ff,#0077ff);
-background-size:200%;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:shine 6s linear infinite;
-}
-
-.enter{
-margin-top:40px;
-color:#777;
-font-size:14px;
-animation:float 2s ease-in-out infinite;
-}
-
-@keyframes shine{
-0%{background-position:0%;}
-100%{background-position:200%;}
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(6px);}
-100%{transform:translateY(0);}
-}
-
 /* HERO */
 
 .hero{
@@ -114,9 +75,11 @@ justify-content:center;
 align-items:center;
 text-align:center;
 scroll-snap-align:start;
-background:#f7f9fc;
+background:white;
 padding-top:70px;
 }
+
+/* container */
 
 .container{
 width:1200px;
@@ -124,9 +87,27 @@ max-width:90%;
 margin:auto;
 }
 
+/* Animated Name */
+
+.hero h1{
+font-size:64px;
+font-weight:700;
+background:linear-gradient(90deg,#0077ff,#00c6ff,#0077ff);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+0%{background-position:0%;}
+100%{background-position:200%;}
+}
+
 .hero h2{
-font-size:28px;
-color:#333;
+font-size:24px;
+margin-top:10px;
+color:#555;
 }
 
 .location{
@@ -145,6 +126,19 @@ font-size:15px;
 margin-top:20px;
 max-width:600px;
 color:#444;
+}
+
+.scroll{
+margin-top:40px;
+font-size:14px;
+color:#888;
+animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(6px);}
+100%{transform:translateY(0);}
 }
 
 /* sections */
@@ -266,9 +260,12 @@ transform:translateY(0);
 
 <div class="nav-links">
 
-<a href="#intro"><i class="fas fa-home"></i></a>
+<a href="#"><i class="fas fa-home"></i></a>
+
 <a href="#experience"><i class="fas fa-briefcase"></i></a>
+
 <a href="#education"><i class="fas fa-graduation-cap"></i></a>
+
 <a href="#skills"><i class="fas fa-cogs"></i></a>
 
 </div>
@@ -276,21 +273,11 @@ transform:translateY(0);
 </div>
 
 
-<!-- INTRO SLIDE -->
-
-<section id="intro" class="intro">
-
-<h1>VIJAY KUMAR CHELLUBOYANA</h1>
-
-<div class="enter">Scroll to enter ↓</div>
-
-</section>
-
-
 <!-- HERO -->
 
 <section class="hero">
 
+<h1>VIJAY KUMAR CHELLUBOYANA</h1>
 <h2>Cloud & DevOps Engineer</h2>
 
 <div class="location">NEW YORK, USA</div>
@@ -302,6 +289,8 @@ vijaychelluboyana@gmail.com | +1 (347) 433-6878
 <p>
 Building scalable cloud infrastructure, automated CI/CD pipelines, and resilient systems using modern DevOps technologies.
 </p>
+
+<div class="scroll">Scroll to explore ↓</div>
 
 </section>
 
