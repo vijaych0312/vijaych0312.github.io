@@ -19,10 +19,6 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family:'Poppins',sans-serif;
 background:linear-gradient(135deg,#1C1C1C,#1B2922);
@@ -52,6 +48,7 @@ left:40px;
 font-size:22px;
 font-weight:600;
 letter-spacing:2px;
+color:#e6efe9;
 }
 
 .nav-links{
@@ -74,28 +71,51 @@ color:#4A6958;
 transform:scale(1.1);
 }
 
+/* CONTAINER */
+
+.container{
+width:1100px;
+max-width:90%;
+margin:auto;
+padding-top:120px;
+}
+
+/* BACK LINK TOP */
+
+.back-top{
+display:inline-block;
+margin-bottom:30px;
+color:#4A6958;
+text-decoration:none;
+font-size:15px;
+}
+
+.back-top:hover{
+text-decoration:underline;
+}
+
 /* HERO */
 
 .hero{
-padding-top:120px;
 text-align:center;
+margin-bottom:60px;
 }
 
 .hero h1{
-font-size:50px;
-letter-spacing:3px;
+font-size:48px;
+font-weight:700;
 }
 
 .hero h2{
-font-size:24px;
-margin-top:8px;
+font-size:22px;
+margin-top:6px;
 color:#cfd8d3;
 }
 
 .company{
-font-size:30px;
-color:#4A6958;
+font-size:26px;
 margin-top:10px;
+color:#4A6958;
 font-weight:600;
 }
 
@@ -111,20 +131,14 @@ line-height:1.6;
 /* SECTIONS */
 
 .section{
-padding:80px 0;
+margin-top:70px;
 }
 
 .section h2{
 text-align:center;
-font-size:34px;
-margin-bottom:40px;
+font-size:32px;
+margin-bottom:30px;
 color:#4A6958;
-}
-
-.container{
-width:1100px;
-max-width:90%;
-margin:auto;
 }
 
 /* CARD */
@@ -135,7 +149,6 @@ border:1px solid #4A6958;
 padding:35px;
 border-radius:16px;
 line-height:1.8;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* IMPACT GRID */
@@ -155,14 +168,14 @@ text-align:center;
 transition:.3s;
 }
 
-.impact:hover{
-transform:translateY(-8px);
-background:#4A6958;
-}
-
 .impact i{
 font-size:28px;
 margin-bottom:10px;
+}
+
+.impact:hover{
+transform:translateY(-6px);
+background:#4A6958;
 }
 
 /* RESPONSIBILITIES */
@@ -193,20 +206,11 @@ font-size:22px;
 opacity:.7;
 }
 
-/* ARCHITECTURE */
-
-.architecture img{
-width:100%;
-max-width:850px;
-border-radius:12px;
-margin-top:25px;
-}
-
 /* TECH GRID */
 
 .tech-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 }
 
@@ -217,6 +221,15 @@ border-radius:12px;
 border:1px solid #4A6958;
 text-align:center;
 transition:.3s;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.tech i{
+font-size:20px;
+color:#6f9180;
 }
 
 .tech:hover{
@@ -241,19 +254,6 @@ transition:.3s;
 background:#4A6958;
 }
 
-/* ANIMATION */
-
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
-}
-
 </style>
 
 </head>
@@ -273,28 +273,27 @@ transform:translateY(0);
 
 </div>
 
-<!-- HERO -->
 
-<section class="hero">
+<div class="container">
+
+<a class="back-top" href="index.html">← Back to Portfolio</a>
+
+<div class="hero">
 
 <h1>VIJAY C</h1>
 <h2>Cloud & DevOps Engineer</h2>
 <div class="company">Welldoc</div>
 
 <p>
-Worked on building scalable cloud infrastructure and automated deployment pipelines on AWS using Kubernetes, Docker and Terraform. Focused on reliability, automation, and improving release speed for production environments.
+Built scalable cloud infrastructure and automated deployment pipelines on AWS using Kubernetes, Docker, and Terraform. Focused on improving release speed, reliability, and observability in production environments.
 </p>
 
-</section>
+</div>
 
 
-<!-- IMPACT -->
-
-<section class="section hidden">
+<div class="section">
 
 <h2>Key Impact</h2>
-
-<div class="container">
 
 <div class="impact-grid">
 
@@ -313,29 +312,23 @@ Worked on building scalable cloud infrastructure and automated deployment pipeli
 <div class="impact">
 <i class="fas fa-server"></i>
 <h3>Kubernetes</h3>
-<p>Managed containerized microservices on Amazon EKS.</p>
+<p>Managed containerized workloads on Amazon EKS.</p>
 </div>
 
 <div class="impact">
 <i class="fas fa-chart-line"></i>
 <h3>Monitoring</h3>
-<p>Implemented monitoring and logging using CloudWatch.</p>
+<p>Implemented logging and monitoring using CloudWatch.</p>
 </div>
 
 </div>
 
 </div>
 
-</section>
 
-
-<!-- RESPONSIBILITIES -->
-
-<section class="section hidden">
+<div class="section">
 
 <h2>Responsibilities</h2>
-
-<div class="container">
 
 <div class="card">
 
@@ -346,8 +339,7 @@ Worked on building scalable cloud infrastructure and automated deployment pipeli
 <li>Managed Kubernetes workloads on AWS EKS.</li>
 <li>Provisioned infrastructure using Terraform.</li>
 <li>Configured monitoring pipelines using AWS CloudWatch.</li>
-<li>Integrated AWS Application Load Balancers for traffic distribution.</li>
-<li>Improved reliability and deployment speed using DevOps automation.</li>
+<li>Integrated AWS Application Load Balancers.</li>
 
 </ul>
 
@@ -355,16 +347,10 @@ Worked on building scalable cloud infrastructure and automated deployment pipeli
 
 </div>
 
-</section>
 
-
-<!-- PIPELINE -->
-
-<section class="section hidden">
+<div class="section">
 
 <h2>CI/CD Pipeline</h2>
-
-<div class="container">
 
 <div class="pipeline">
 
@@ -386,50 +372,21 @@ Worked on building scalable cloud infrastructure and automated deployment pipeli
 
 </div>
 
-</section>
 
-
-<!-- ARCHITECTURE -->
-
-<section class="section hidden">
-
-<h2>Cloud Architecture</h2>
-
-<div class="container">
-
-<div class="card architecture">
-
-<p>
-Microservices were deployed on Amazon EKS clusters with traffic routed through AWS Application Load Balancers. Infrastructure provisioning was automated using Terraform while monitoring and logging were handled via AWS CloudWatch.
-</p>
-
-<img src="https://miro.medium.com/v2/resize:fit:1400/1*kgXq4gGmO6exdFvtnxoQew.png">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TECH -->
-
-<section class="section hidden">
+<div class="section">
 
 <h2>Technology Stack</h2>
 
-<div class="container">
-
 <div class="tech-grid">
 
-<div class="tech">AWS</div>
-<div class="tech">Terraform</div>
-<div class="tech">Docker</div>
-<div class="tech">Kubernetes</div>
-<div class="tech">GitHub Actions</div>
-<div class="tech">CloudWatch</div>
-<div class="tech">Linux</div>
-<div class="tech">CI/CD</div>
+<div class="tech"><i class="fab fa-aws"></i>AWS</div>
+<div class="tech"><i class="fas fa-server"></i>Terraform</div>
+<div class="tech"><i class="fab fa-docker"></i>Docker</div>
+<div class="tech"><i class="fas fa-dharmachakra"></i>Kubernetes</div>
+<div class="tech"><i class="fab fa-github"></i>GitHub Actions</div>
+<div class="tech"><i class="fas fa-chart-line"></i>CloudWatch</div>
+<div class="tech"><i class="fab fa-linux"></i>Linux</div>
+<div class="tech"><i class="fas fa-code-branch"></i>CI/CD</div>
 
 </div>
 
@@ -437,24 +394,7 @@ Microservices were deployed on Amazon EKS clusters with traffic routed through A
 
 </div>
 
-</section>
-
-
-<script>
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll(".hidden").forEach(el=>{
-observer.observe(el);
-});
-
-</script>
+</div>
 
 </body>
 </html>
