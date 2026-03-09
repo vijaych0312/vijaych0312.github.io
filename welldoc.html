@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Welldoc | Vijay C</title>
+<title>Welldoc Experience | Vijay C</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -17,6 +17,10 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -48,7 +52,6 @@ left:40px;
 font-size:22px;
 font-weight:600;
 letter-spacing:2px;
-color:#e6efe9;
 }
 
 .nav-links{
@@ -71,32 +74,41 @@ color:#4A6958;
 transform:scale(1.1);
 }
 
-/* HEADER */
+/* HERO */
 
-.header{
+.hero{
 padding-top:120px;
 text-align:center;
 }
 
-.header h1{
-font-size:46px;
-letter-spacing:2px;
+.hero h1{
+font-size:50px;
+letter-spacing:3px;
 }
 
-.header h2{
-font-size:22px;
-margin-top:6px;
+.hero h2{
+font-size:24px;
+margin-top:8px;
 color:#cfd8d3;
 }
 
 .company{
-font-size:28px;
-margin-top:8px;
+font-size:30px;
 color:#4A6958;
+margin-top:10px;
 font-weight:600;
 }
 
-/* SECTION */
+.hero p{
+margin-top:18px;
+color:#cfd8d3;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.6;
+}
+
+/* SECTIONS */
 
 .section{
 padding:80px 0;
@@ -105,7 +117,7 @@ padding:80px 0;
 .section h2{
 text-align:center;
 font-size:34px;
-margin-bottom:35px;
+margin-bottom:40px;
 color:#4A6958;
 }
 
@@ -123,7 +135,34 @@ border:1px solid #4A6958;
 padding:35px;
 border-radius:16px;
 line-height:1.8;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* IMPACT GRID */
+
+.impact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.impact{
+background:#435146;
+border:1px solid #4A6958;
+padding:25px;
+border-radius:14px;
+text-align:center;
+transition:.3s;
+}
+
+.impact:hover{
+transform:translateY(-8px);
+background:#4A6958;
+}
+
+.impact i{
+font-size:28px;
+margin-bottom:10px;
 }
 
 /* RESPONSIBILITIES */
@@ -160,21 +199,21 @@ opacity:.7;
 width:100%;
 max-width:850px;
 border-radius:12px;
-margin-top:20px;
+margin-top:25px;
 }
 
-/* TECHNOLOGIES */
+/* TECH GRID */
 
 .tech-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
 gap:20px;
 }
 
 .tech{
 padding:18px;
 background:#435146;
-border-radius:10px;
+border-radius:12px;
 border:1px solid #4A6958;
 text-align:center;
 transition:.3s;
@@ -190,7 +229,7 @@ transform:translateY(-6px);
 .back{
 display:inline-block;
 margin-top:40px;
-padding:12px 30px;
+padding:14px 34px;
 border-radius:40px;
 border:1px solid #4A6958;
 color:#e6efe9;
@@ -234,15 +273,63 @@ transform:translateY(0);
 
 </div>
 
+<!-- HERO -->
 
-<div class="header">
+<section class="hero">
 
 <h1>VIJAY C</h1>
-<h2>Cloud / DevOps Engineer</h2>
+<h2>Cloud & DevOps Engineer</h2>
 <div class="company">Welldoc</div>
+
+<p>
+Worked on building scalable cloud infrastructure and automated deployment pipelines on AWS using Kubernetes, Docker and Terraform. Focused on reliability, automation, and improving release speed for production environments.
+</p>
+
+</section>
+
+
+<!-- IMPACT -->
+
+<section class="section hidden">
+
+<h2>Key Impact</h2>
+
+<div class="container">
+
+<div class="impact-grid">
+
+<div class="impact">
+<i class="fas fa-rocket"></i>
+<h3>Faster Deployments</h3>
+<p>Automated CI/CD pipelines reducing manual deployments.</p>
+</div>
+
+<div class="impact">
+<i class="fas fa-cloud"></i>
+<h3>Cloud Infrastructure</h3>
+<p>Provisioned scalable AWS infrastructure using Terraform.</p>
+</div>
+
+<div class="impact">
+<i class="fas fa-server"></i>
+<h3>Kubernetes</h3>
+<p>Managed containerized microservices on Amazon EKS.</p>
+</div>
+
+<div class="impact">
+<i class="fas fa-chart-line"></i>
+<h3>Monitoring</h3>
+<p>Implemented monitoring and logging using CloudWatch.</p>
+</div>
 
 </div>
 
+</div>
+
+</section>
+
+
+<!-- RESPONSIBILITIES -->
 
 <section class="section hidden">
 
@@ -254,13 +341,13 @@ transform:translateY(0);
 
 <ul>
 
-<li>Designed and implemented CI/CD pipelines using GitHub Actions to automate deployments.</li>
-<li>Containerized microservices using Docker.</li>
-<li>Managed Kubernetes workloads within AWS EKS clusters.</li>
-<li>Provisioned infrastructure using Terraform following IaC practices.</li>
+<li>Designed CI/CD pipelines using GitHub Actions.</li>
+<li>Containerized applications using Docker.</li>
+<li>Managed Kubernetes workloads on AWS EKS.</li>
+<li>Provisioned infrastructure using Terraform.</li>
 <li>Configured monitoring pipelines using AWS CloudWatch.</li>
-<li>Integrated AWS Application Load Balancers for high availability.</li>
-<li>Improved release reliability through DevOps automation workflows.</li>
+<li>Integrated AWS Application Load Balancers for traffic distribution.</li>
+<li>Improved reliability and deployment speed using DevOps automation.</li>
 
 </ul>
 
@@ -270,6 +357,8 @@ transform:translateY(0);
 
 </section>
 
+
+<!-- PIPELINE -->
 
 <section class="section hidden">
 
@@ -300,16 +389,18 @@ transform:translateY(0);
 </section>
 
 
+<!-- ARCHITECTURE -->
+
 <section class="section hidden">
 
-<h2>Architecture</h2>
+<h2>Cloud Architecture</h2>
 
 <div class="container">
 
 <div class="card architecture">
 
 <p>
-The platform runs containerized microservices on Amazon EKS clusters with traffic routed through AWS Application Load Balancers. Infrastructure provisioning is automated using Terraform and monitoring is handled through AWS CloudWatch.
+Microservices were deployed on Amazon EKS clusters with traffic routed through AWS Application Load Balancers. Infrastructure provisioning was automated using Terraform while monitoring and logging were handled via AWS CloudWatch.
 </p>
 
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*kgXq4gGmO6exdFvtnxoQew.png">
@@ -321,9 +412,11 @@ The platform runs containerized microservices on Amazon EKS clusters with traffi
 </section>
 
 
+<!-- TECH -->
+
 <section class="section hidden">
 
-<h2>Technologies</h2>
+<h2>Technology Stack</h2>
 
 <div class="container">
 
@@ -335,6 +428,8 @@ The platform runs containerized microservices on Amazon EKS clusters with traffi
 <div class="tech">Kubernetes</div>
 <div class="tech">GitHub Actions</div>
 <div class="tech">CloudWatch</div>
+<div class="tech">Linux</div>
+<div class="tech">CI/CD</div>
 
 </div>
 
