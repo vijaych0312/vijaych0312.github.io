@@ -6,10 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Welldoc Experience | Vijay C</title>
+<title>Welldoc | Vijay C</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -20,238 +19,131 @@ box-sizing:border-box;
 }
 
 body{
+background:#000;
+color:#f5f5f5;
 font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#1C1C1C,#1B2922);
-color:#e6efe9;
 overflow-x:hidden;
 }
-
-/* NAVBAR */
-
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-height:70px;
-background:rgba(27,41,34,0.9);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #435146;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:1000;
-}
-
-.logo{
-position:absolute;
-left:40px;
-font-size:22px;
-font-weight:600;
-letter-spacing:2px;
-color:#e6efe9;
-}
-
-.nav-links{
-display:flex;
-gap:35px;
-}
-
-.nav-links a{
-color:#cfd8d3;
-font-size:16px;
-display:flex;
-align-items:center;
-gap:8px;
-text-decoration:none;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#4A6958;
-transform:scale(1.1);
-}
-
-/* CONTAINER */
 
 .container{
 width:1100px;
 max-width:90%;
 margin:auto;
-padding-top:120px;
+padding:60px 0;
 }
 
-/* BACK LINK TOP */
-
-.back-top{
-display:inline-block;
-margin-bottom:30px;
-color:#4A6958;
-text-decoration:none;
-font-size:15px;
-}
-
-.back-top:hover{
-text-decoration:underline;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-margin-bottom:60px;
-}
-
-.hero h1{
-font-size:48px;
-font-weight:700;
-}
-
-.hero h2{
-font-size:22px;
-margin-top:6px;
-color:#cfd8d3;
-}
-
-.company{
-font-size:26px;
-margin-top:10px;
-color:#4A6958;
-font-weight:600;
-}
-
-.hero p{
-margin-top:18px;
-color:#cfd8d3;
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
-line-height:1.6;
-}
-
-/* SECTIONS */
-
-.section{
-margin-top:70px;
-}
-
-.section h2{
-text-align:center;
-font-size:32px;
-margin-bottom:30px;
-color:#4A6958;
-}
-
-/* CARD */
-
-.card{
-background:#435146;
-border:1px solid #4A6958;
-padding:35px;
-border-radius:16px;
-line-height:1.8;
-}
-
-/* IMPACT GRID */
-
-.impact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.impact{
-background:#435146;
-border:1px solid #4A6958;
-padding:25px;
-border-radius:14px;
-text-align:center;
-transition:.3s;
-}
-
-.impact i{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.impact:hover{
-transform:translateY(-6px);
-background:#4A6958;
-}
-
-/* RESPONSIBILITIES */
-
-ul{
-line-height:2;
-}
-
-/* PIPELINE */
-
-.pipeline{
+.topbar{
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
+justify-content:space-between;
 align-items:center;
-gap:15px;
+margin-bottom:50px;
 }
 
-.stage{
-padding:12px 22px;
-border-radius:10px;
-border:1px solid #4A6958;
-background:#435146;
+.back{
+color:#00e0ff;
+text-decoration:none;
+font-weight:500;
 }
 
-.arrow{
-font-size:22px;
+.back:hover{
 opacity:.7;
 }
 
-/* TECH GRID */
+.header{
+margin-bottom:40px;
+}
+
+.name{
+font-size:42px;
+font-weight:700;
+letter-spacing:2px;
+color:#ffffff;
+}
+
+.role{
+font-size:18px;
+color:#cccccc;
+margin-top:5px;
+}
+
+.company{
+font-size:28px;
+color:#00e0ff;
+margin-top:10px;
+font-weight:600;
+}
+
+.section{
+margin-top:60px;
+}
+
+.section h2{
+font-size:26px;
+margin-bottom:25px;
+color:#00e0ff;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+padding:35px;
+border-radius:14px;
+backdrop-filter:blur(8px);
+transition:all .35s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#00e0ff;
+box-shadow:0 15px 40px rgba(0,224,255,0.15);
+}
+
+ul{
+line-height:2;
+color:#dddddd;
+}
 
 .tech-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:20px;
 }
 
 .tech{
+background:#0a0a0a;
+border:1px solid #222;
 padding:18px;
-background:#435146;
-border-radius:12px;
-border:1px solid #4A6958;
+border-radius:10px;
 text-align:center;
 transition:.3s;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
+font-size:15px;
 }
 
-.tech i{
-font-size:20px;
-color:#6f9180;
+.tech span{
+display:block;
+font-size:22px;
+margin-bottom:6px;
 }
 
 .tech:hover{
-background:#4A6958;
-transform:translateY(-6px);
+background:#00e0ff;
+color:#000;
+transform:translateY(-5px);
 }
 
-/* BACK BUTTON */
-
-.back{
-display:inline-block;
-margin-top:40px;
-padding:14px 34px;
-border-radius:40px;
-border:1px solid #4A6958;
-color:#e6efe9;
-text-decoration:none;
-transition:.3s;
+.footer{
+margin-top:60px;
 }
 
-.back:hover{
-background:#4A6958;
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
 }
 
 </style>
@@ -260,86 +152,51 @@ background:#4A6958;
 
 <body>
 
-<div class="navbar">
-
-<div class="logo">VKC</div>
-
-<div class="nav-links">
-<a href="index.html"><i class="fas fa-home"></i> Home</a>
-<a href="index.html#about"><i class="fas fa-user"></i> About</a>
-<a href="index.html#experience"><i class="fas fa-briefcase"></i> Experience</a>
-<a href="index.html#skills"><i class="fas fa-cogs"></i> Skills</a>
-</div>
-
-</div>
-
-
 <div class="container">
 
-<a class="back-top" href="index.html">← Back to Portfolio</a>
+<div class="topbar">
+<a class="back" href="index.html">← Back to Portfolio</a>
+</div>
 
-<div class="hero">
+<div class="header">
 
-<h1>VIJAY C</h1>
-<h2>Cloud & DevOps Engineer</h2>
+<div class="name">VIJAY C</div>
+<div class="role">AWS Cloud & DevOps Engineer</div>
 <div class="company">Welldoc</div>
 
-<p>
-Built scalable cloud infrastructure and automated deployment pipelines on AWS using Kubernetes, Docker, and Terraform. Focused on improving release speed, reliability, and observability in production environments.
-</p>
-
 </div>
 
+<div class="section hidden">
 
-<div class="section">
-
-<h2>Key Impact</h2>
-
-<div class="impact-grid">
-
-<div class="impact">
-<i class="fas fa-rocket"></i>
-<h3>Faster Deployments</h3>
-<p>Automated CI/CD pipelines reducing manual deployments.</p>
-</div>
-
-<div class="impact">
-<i class="fas fa-cloud"></i>
-<h3>Cloud Infrastructure</h3>
-<p>Provisioned scalable AWS infrastructure using Terraform.</p>
-</div>
-
-<div class="impact">
-<i class="fas fa-server"></i>
-<h3>Kubernetes</h3>
-<p>Managed containerized workloads on Amazon EKS.</p>
-</div>
-
-<div class="impact">
-<i class="fas fa-chart-line"></i>
-<h3>Monitoring</h3>
-<p>Implemented logging and monitoring using CloudWatch.</p>
-</div>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<h2>Responsibilities</h2>
+<h2>Roles & Responsibilities</h2>
 
 <div class="card">
 
 <ul>
 
-<li>Designed CI/CD pipelines using GitHub Actions.</li>
-<li>Containerized applications using Docker.</li>
-<li>Managed Kubernetes workloads on AWS EKS.</li>
-<li>Provisioned infrastructure using Terraform.</li>
-<li>Configured monitoring pipelines using AWS CloudWatch.</li>
-<li>Integrated AWS Application Load Balancers.</li>
+<li>Designed and deployed scalable AWS cloud infrastructure supporting enterprise healthcare applications.</li>
+
+<li>Configured and managed VPC networking including custom VPCs, subnets, route tables, security groups, and NACLs.</li>
+
+<li>Implemented IAM policies, roles, and MFA to enforce secure access management across AWS environments.</li>
+
+<li>Managed EC2 instances, AMIs, and EBS snapshots to support backup, migration, and high availability strategies.</li>
+
+<li>Automated infrastructure deployments using Infrastructure as Code (IaC) with AWS CloudFormation and CDK.</li>
+
+<li>Configured Route 53 DNS, CloudFront CDN, and Elastic Load Balancers for secure and optimized traffic routing.</li>
+
+<li>Implemented monitoring and alerting systems using AWS CloudWatch and SNS notifications.</li>
+
+<li>Provisioned and managed EKS clusters, node groups, and IAM integrations for containerized workloads.</li>
+
+<li>Developed and maintained CI/CD pipelines to automate application build, testing, and deployment workflows.</li>
+
+<li>Applied cloud security best practices including WAF protection, firewall configuration, and vulnerability patching.</li>
+
+<li>Automated operations using AWS CLI for faster troubleshooting and infrastructure management.</li>
+
+<li>Managed Linux and Windows servers ensuring system reliability, security updates, and performance optimization.</li>
 
 </ul>
 
@@ -347,54 +204,46 @@ Built scalable cloud infrastructure and automated deployment pipelines on AWS us
 
 </div>
 
-
-<div class="section">
-
-<h2>CI/CD Pipeline</h2>
-
-<div class="pipeline">
-
-<div class="stage">GitHub</div>
-<div class="arrow">→</div>
-
-<div class="stage">Build</div>
-<div class="arrow">→</div>
-
-<div class="stage">Docker</div>
-<div class="arrow">→</div>
-
-<div class="stage">Kubernetes</div>
-<div class="arrow">→</div>
-
-<div class="stage">AWS EKS</div>
-
-</div>
-
-</div>
-
-
-<div class="section">
+<div class="section hidden">
 
 <h2>Technology Stack</h2>
 
 <div class="tech-grid">
 
-<div class="tech"><i class="fab fa-aws"></i>AWS</div>
-<div class="tech"><i class="fas fa-server"></i>Terraform</div>
-<div class="tech"><i class="fab fa-docker"></i>Docker</div>
-<div class="tech"><i class="fas fa-dharmachakra"></i>Kubernetes</div>
-<div class="tech"><i class="fab fa-github"></i>GitHub Actions</div>
-<div class="tech"><i class="fas fa-chart-line"></i>CloudWatch</div>
-<div class="tech"><i class="fab fa-linux"></i>Linux</div>
-<div class="tech"><i class="fas fa-code-branch"></i>CI/CD</div>
+<div class="tech"><span>☁️</span>AWS</div>
+<div class="tech"><span>📦</span>Terraform</div>
+<div class="tech"><span>🐳</span>Docker</div>
+<div class="tech"><span>⚙️</span>Kubernetes</div>
+<div class="tech"><span>🔧</span>GitHub Actions</div>
+<div class="tech"><span>📊</span>CloudWatch</div>
+<div class="tech"><span>🐧</span>Linux</div>
+<div class="tech"><span>🚀</span>CI/CD</div>
 
 </div>
 
+</div>
+
+<div class="footer">
 <a class="back" href="index.html">← Back to Portfolio</a>
-
 </div>
 
 </div>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
 
 </body>
 </html>
