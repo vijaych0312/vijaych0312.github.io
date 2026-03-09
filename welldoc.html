@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Welldoc | Vijay Kumar Chelluboyana</title>
+<title>Welldoc | Vijay C</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Poppins',sans-serif;
@@ -43,6 +48,7 @@ left:40px;
 font-size:22px;
 font-weight:600;
 letter-spacing:2px;
+color:#e6efe9;
 }
 
 .nav-links{
@@ -52,10 +58,11 @@ gap:35px;
 
 .nav-links a{
 color:#cfd8d3;
-text-decoration:none;
+font-size:16px;
 display:flex;
 align-items:center;
 gap:8px;
+text-decoration:none;
 transition:.3s;
 }
 
@@ -64,56 +71,64 @@ color:#4A6958;
 transform:scale(1.1);
 }
 
-.container{
-width:1100px;
-max-width:90%;
-margin:auto;
+/* PAGE HEADER */
+
+.page-header{
 padding-top:120px;
+text-align:center;
 }
 
-/* HEADER */
+.page-header h1{
+font-size:42px;
+font-weight:700;
+letter-spacing:2px;
+}
 
-.header{
-margin-bottom:50px;
+.page-header h2{
+font-size:22px;
+margin-top:8px;
+color:#cfd8d3;
 }
 
 .company{
-font-size:40px;
-font-weight:700;
+margin-top:10px;
+font-size:26px;
 color:#4A6958;
-}
-
-.role{
-margin-top:5px;
-color:#cfd8d3;
+font-weight:600;
 }
 
 /* SECTIONS */
 
 .section{
-margin-top:60px;
+padding:70px 0;
 }
 
 .section h2{
-font-size:28px;
-margin-bottom:20px;
+text-align:center;
+font-size:32px;
+margin-bottom:35px;
 color:#4A6958;
+}
+
+.container{
+width:1100px;
+max-width:90%;
+margin:auto;
 }
 
 /* CARD */
 
 .card{
 background:#435146;
+border:1px solid #4A6958;
 padding:35px;
 border-radius:16px;
-border:1px solid #4A6958;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
-
-/* RESPONSIBILITIES */
 
 ul{
 line-height:2;
+color:#e6efe9;
 }
 
 /* PIPELINE */
@@ -121,18 +136,21 @@ line-height:2;
 .pipeline{
 display:flex;
 flex-wrap:wrap;
-gap:15px;
+justify-content:center;
 align-items:center;
+gap:15px;
+margin-top:10px;
 }
 
 .stage{
-padding:10px 18px;
+padding:12px 22px;
 border-radius:10px;
-background:#435146;
 border:1px solid #4A6958;
+background:#435146;
 }
 
 .arrow{
+font-size:22px;
 opacity:.7;
 }
 
@@ -141,36 +159,43 @@ opacity:.7;
 .tech-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
+gap:20px;
 }
 
 .tech{
-padding:15px;
-text-align:center;
+padding:18px;
 background:#435146;
 border-radius:10px;
 border:1px solid #4A6958;
+text-align:center;
+transition:.3s;
 }
 
-/* ARCHITECTURE */
+.tech:hover{
+background:#4A6958;
+color:white;
+transform:translateY(-5px);
+}
+
+/* IMAGE */
 
 .architecture img{
 width:100%;
 max-width:850px;
+border-radius:12px;
 margin-top:20px;
-border-radius:10px;
 }
 
-/* BACK */
+/* BACK BUTTON */
 
 .back{
 display:inline-block;
-margin-top:50px;
-padding:12px 28px;
-border-radius:30px;
+margin-top:40px;
+padding:12px 30px;
+border-radius:40px;
 border:1px solid #4A6958;
-text-decoration:none;
 color:#e6efe9;
+text-decoration:none;
 }
 
 .back:hover{
@@ -191,11 +216,13 @@ transform:translateY(0);
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="navbar">
+
 <div class="logo">VKC</div>
 
 <div class="nav-links">
@@ -204,80 +231,89 @@ transform:translateY(0);
 <a href="index.html#experience"><i class="fas fa-briefcase"></i> Experience</a>
 <a href="index.html#skills"><i class="fas fa-cogs"></i> Skills</a>
 </div>
+
 </div>
 
-<div class="container">
 
-<div class="header">
+<div class="page-header">
+
+<h1>VIJAY C</h1>
+<h2>Cloud / DevOps Engineer</h2>
 <div class="company">Welldoc</div>
-<div class="role">Cloud / DevOps Engineer</div>
+
 </div>
 
-<div class="section hidden">
+
+<section class="section hidden">
 
 <h2>Responsibilities</h2>
+
+<div class="container">
 
 <div class="card">
 
 <ul>
+
 <li>Designed CI/CD pipelines using GitHub Actions.</li>
 <li>Containerized microservices using Docker.</li>
 <li>Managed Kubernetes deployments in AWS EKS.</li>
 <li>Provisioned infrastructure using Terraform.</li>
-<li>Configured AWS CloudWatch monitoring.</li>
+<li>Configured monitoring using AWS CloudWatch.</li>
 <li>Integrated AWS Load Balancers for high availability.</li>
-<li>Improved deployment reliability using DevOps automation.</li>
+<li>Improved release reliability using DevOps automation.</li>
+
 </ul>
 
 </div>
+
 </div>
 
-<div class="section hidden">
+</section>
+
+
+<section class="section hidden">
 
 <h2>CI/CD Pipeline</h2>
 
+<div class="container">
+
 <div class="pipeline">
+
 <div class="stage">GitHub</div>
 <div class="arrow">→</div>
+
 <div class="stage">Build</div>
 <div class="arrow">→</div>
+
 <div class="stage">Docker</div>
 <div class="arrow">→</div>
+
 <div class="stage">Kubernetes</div>
 <div class="arrow">→</div>
+
 <div class="stage">AWS EKS</div>
-</div>
-
-</div>
-
-<div class="section hidden">
-
-<h2>Architecture</h2>
-
-<div class="card architecture">
-
-<p>
-Applications run on containerized microservices deployed to Amazon EKS clusters with traffic managed through AWS Application Load Balancers.
-</p>
-
-<img src="https://miro.medium.com/v2/resize:fit:1400/1*kgXq4gGmO6exdFvtnxoQew.png">
 
 </div>
 
 </div>
 
-<div class="section hidden">
+</section>
+
+
+<section class="section hidden">
 
 <h2>Technologies</h2>
 
+<div class="container">
+
 <div class="tech-grid">
+
 <div class="tech">AWS</div>
 <div class="tech">Terraform</div>
 <div class="tech">Docker</div>
 <div class="tech">Kubernetes</div>
 <div class="tech">GitHub Actions</div>
 <div class="tech">CloudWatch</div>
-</div>
 
 </div>
 
@@ -285,13 +321,23 @@ Applications run on containerized microservices deployed to Amazon EKS clusters 
 
 </div>
 
+</section>
+
+
 <script>
+
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add("show");}
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
 });
 });
-document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
 </script>
 
 </body>
