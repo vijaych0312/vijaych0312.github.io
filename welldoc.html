@@ -71,41 +71,40 @@ color:#4A6958;
 transform:scale(1.1);
 }
 
-/* PAGE HEADER */
+/* HEADER */
 
-.page-header{
+.header{
 padding-top:120px;
 text-align:center;
 }
 
-.page-header h1{
-font-size:42px;
-font-weight:700;
+.header h1{
+font-size:46px;
 letter-spacing:2px;
 }
 
-.page-header h2{
+.header h2{
 font-size:22px;
-margin-top:8px;
+margin-top:6px;
 color:#cfd8d3;
 }
 
 .company{
-margin-top:10px;
-font-size:26px;
+font-size:28px;
+margin-top:8px;
 color:#4A6958;
 font-weight:600;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
-padding:70px 0;
+padding:80px 0;
 }
 
 .section h2{
 text-align:center;
-font-size:32px;
+font-size:34px;
 margin-bottom:35px;
 color:#4A6958;
 }
@@ -123,12 +122,14 @@ background:#435146;
 border:1px solid #4A6958;
 padding:35px;
 border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
+line-height:1.8;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
+
+/* RESPONSIBILITIES */
 
 ul{
 line-height:2;
-color:#e6efe9;
 }
 
 /* PIPELINE */
@@ -139,7 +140,6 @@ flex-wrap:wrap;
 justify-content:center;
 align-items:center;
 gap:15px;
-margin-top:10px;
 }
 
 .stage{
@@ -154,7 +154,16 @@ font-size:22px;
 opacity:.7;
 }
 
-/* TECH GRID */
+/* ARCHITECTURE */
+
+.architecture img{
+width:100%;
+max-width:850px;
+border-radius:12px;
+margin-top:20px;
+}
+
+/* TECHNOLOGIES */
 
 .tech-grid{
 display:grid;
@@ -173,17 +182,7 @@ transition:.3s;
 
 .tech:hover{
 background:#4A6958;
-color:white;
-transform:translateY(-5px);
-}
-
-/* IMAGE */
-
-.architecture img{
-width:100%;
-max-width:850px;
-border-radius:12px;
-margin-top:20px;
+transform:translateY(-6px);
 }
 
 /* BACK BUTTON */
@@ -196,6 +195,7 @@ border-radius:40px;
 border:1px solid #4A6958;
 color:#e6efe9;
 text-decoration:none;
+transition:.3s;
 }
 
 .back:hover{
@@ -235,7 +235,7 @@ transform:translateY(0);
 </div>
 
 
-<div class="page-header">
+<div class="header">
 
 <h1>VIJAY C</h1>
 <h2>Cloud / DevOps Engineer</h2>
@@ -254,13 +254,13 @@ transform:translateY(0);
 
 <ul>
 
-<li>Designed CI/CD pipelines using GitHub Actions.</li>
+<li>Designed and implemented CI/CD pipelines using GitHub Actions to automate deployments.</li>
 <li>Containerized microservices using Docker.</li>
-<li>Managed Kubernetes deployments in AWS EKS.</li>
-<li>Provisioned infrastructure using Terraform.</li>
-<li>Configured monitoring using AWS CloudWatch.</li>
-<li>Integrated AWS Load Balancers for high availability.</li>
-<li>Improved release reliability using DevOps automation.</li>
+<li>Managed Kubernetes workloads within AWS EKS clusters.</li>
+<li>Provisioned infrastructure using Terraform following IaC practices.</li>
+<li>Configured monitoring pipelines using AWS CloudWatch.</li>
+<li>Integrated AWS Application Load Balancers for high availability.</li>
+<li>Improved release reliability through DevOps automation workflows.</li>
 
 </ul>
 
@@ -292,6 +292,27 @@ transform:translateY(0);
 <div class="arrow">→</div>
 
 <div class="stage">AWS EKS</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section hidden">
+
+<h2>Architecture</h2>
+
+<div class="container">
+
+<div class="card architecture">
+
+<p>
+The platform runs containerized microservices on Amazon EKS clusters with traffic routed through AWS Application Load Balancers. Infrastructure provisioning is automated using Terraform and monitoring is handled through AWS CloudWatch.
+</p>
+
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*kgXq4gGmO6exdFvtnxoQew.png">
 
 </div>
 
