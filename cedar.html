@@ -1,26 +1,35 @@
+```html
+cedar.html
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cedar InfoTech | Vijay Kumar Chelluboyana</title>
+<title>Cedar InfoTech Experience</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
-/* SAME GLOBAL DESIGN */
-
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Poppins',sans-serif;
 background:linear-gradient(135deg,#1C1C1C,#1B2922);
 color:#e6efe9;
+overflow-x:hidden;
 }
+
+/* NAVBAR */
 
 .navbar{
 position:fixed;
@@ -42,6 +51,7 @@ left:40px;
 font-size:22px;
 font-weight:600;
 letter-spacing:2px;
+color:#e6efe9;
 }
 
 .nav-links{
@@ -51,10 +61,11 @@ gap:35px;
 
 .nav-links a{
 color:#cfd8d3;
-text-decoration:none;
+font-size:16px;
 display:flex;
 align-items:center;
 gap:8px;
+text-decoration:none;
 transition:.3s;
 }
 
@@ -63,6 +74,8 @@ color:#4A6958;
 transform:scale(1.1);
 }
 
+/* CONTAINER */
+
 .container{
 width:1100px;
 max-width:90%;
@@ -70,84 +83,185 @@ margin:auto;
 padding-top:120px;
 }
 
+/* HERO */
+
+.hero{
+margin-bottom:60px;
+max-width:900px;
+}
+
 .company{
-font-size:40px;
+font-size:44px;
 font-weight:700;
 color:#4A6958;
+letter-spacing:2px;
+margin-bottom:6px;
 }
 
 .role{
-margin-top:5px;
+font-size:22px;
 color:#cfd8d3;
 }
 
-.section{margin-top:60px;}
+.hero p{
+margin-top:20px;
+color:#cfd8d3;
+line-height:1.8;
+max-width:650px;
+text-wrap:balance;
+}
+
+/* SECTIONS */
+
+.section{
+margin-top:70px;
+}
 
 .section h2{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
 color:#4A6958;
-margin-bottom:20px;
 }
+
+/* CARD */
 
 .card{
 background:#435146;
+border:1px solid #4A6958;
 padding:35px;
 border-radius:16px;
-border:1px solid #4A6958;
+line-height:1.9;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
-ul{line-height:2;}
+/* IMPACT GRID */
 
-.pipeline{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-align-items:center;
+.impact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
-.stage{
-padding:10px 18px;
-border-radius:10px;
+.impact{
 background:#435146;
 border:1px solid #4A6958;
+padding:25px;
+border-radius:14px;
+text-align:center;
+transition:.3s;
 }
 
-.arrow{opacity:.7;}
+.impact i{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.impact:hover{
+transform:translateY(-8px);
+background:#4A6958;
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIBILITIES */
+
+ul{
+line-height:2;
+padding-left:20px;
+}
+
+/* TECH GRID */
 
 .tech-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
 }
 
 .tech{
-padding:15px;
-text-align:center;
+padding:18px;
 background:#435146;
-border-radius:10px;
+border-radius:12px;
 border:1px solid #4A6958;
+text-align:center;
+transition:.3s;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
 }
+
+.tech i{
+font-size:20px;
+color:#6f9180;
+}
+
+.tech:hover{
+background:#4A6958;
+transform:translateY(-6px);
+}
+
+/* BACK BUTTON */
 
 .back{
 display:inline-block;
-margin-top:50px;
-padding:12px 28px;
-border-radius:30px;
+margin-top:40px;
+padding:14px 34px;
+border-radius:40px;
 border:1px solid #4A6958;
-text-decoration:none;
 color:#e6efe9;
+text-decoration:none;
+transition:.3s;
 }
 
-.back:hover{background:#4A6958;}
+.back:hover{
+background:#4A6958;
+}
 
-.hidden{opacity:0;transform:translateY(40px);transition:1s;}
-.show{opacity:1;transform:translateY(0);}
+/* ANIMATION */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+.nav-links{
+gap:18px;
+font-size:14px;
+}
+
+.company{
+font-size:34px;
+}
+
+.role{
+font-size:18px;
+}
+
+.hero p{
+max-width:100%;
+}
+
+}
 
 </style>
+
 </head>
 
 <body>
 
 <div class="navbar">
+
 <div class="logo">VKC</div>
 
 <div class="nav-links">
@@ -156,12 +270,58 @@ color:#e6efe9;
 <a href="index.html#experience"><i class="fas fa-briefcase"></i> Experience</a>
 <a href="index.html#skills"><i class="fas fa-cogs"></i> Skills</a>
 </div>
+
 </div>
+
 
 <div class="container">
 
-<div class="company">Cedar InfoTech</div>
+<div class="hero hidden">
+
+<div class="company">CEDAR INFOTECH</div>
 <div class="role">Cloud Engineer</div>
+
+<p>
+Supported AWS cloud infrastructure and DevOps automation for enterprise applications. Focused on containerization, CI/CD automation, and improving reliability across development and production environments.
+</p>
+
+</div>
+
+
+<div class="section hidden">
+
+<h2>Key Impact</h2>
+
+<div class="impact-grid">
+
+<div class="impact">
+<i class="fas fa-cloud"></i>
+<h3>AWS Infrastructure</h3>
+<p>Supported deployment and management of scalable AWS environments.</p>
+</div>
+
+<div class="impact">
+<i class="fas fa-code-branch"></i>
+<h3>CI/CD Automation</h3>
+<p>Implemented automated build and deployment pipelines.</p>
+</div>
+
+<div class="impact">
+<i class="fab fa-docker"></i>
+<h3>Containerization</h3>
+<p>Containerized applications using Docker for consistent environments.</p>
+</div>
+
+<div class="impact">
+<i class="fas fa-chart-line"></i>
+<h3>Monitoring</h3>
+<p>Improved system visibility using CloudWatch monitoring.</p>
+</div>
+
+</div>
+
+</div>
+
 
 <div class="section hidden">
 
@@ -170,29 +330,34 @@ color:#e6efe9;
 <div class="card">
 
 <ul>
-<li>Supported AWS cloud infrastructure deployments.</li>
-<li>Built CI/CD pipelines for automated builds.</li>
+
+<li>Supported AWS cloud infrastructure deployments and operations.</li>
+<li>Built CI/CD pipelines for automated builds and deployments.</li>
 <li>Containerized applications using Docker.</li>
-<li>Managed Kubernetes clusters.</li>
+<li>Managed Kubernetes clusters and container orchestration.</li>
 <li>Monitored infrastructure using AWS CloudWatch.</li>
 <li>Improved deployment reliability across environments.</li>
+<li>Maintained Linux servers and automated operational tasks.</li>
+
 </ul>
 
 </div>
+
 </div>
+
 
 <div class="section hidden">
 
-<h2>Technologies</h2>
+<h2>Technology Stack</h2>
 
 <div class="tech-grid">
-<div class="tech">AWS</div>
-<div class="tech">Docker</div>
-<div class="tech">Kubernetes</div>
-<div class="tech">CI/CD</div>
-<div class="tech">Linux</div>
-<div class="tech">CloudWatch</div>
-</div>
+
+<div class="tech"><i class="fab fa-aws"></i>AWS</div>
+<div class="tech"><i class="fab fa-docker"></i>Docker</div>
+<div class="tech"><i class="fas fa-dharmachakra"></i>Kubernetes</div>
+<div class="tech"><i class="fas fa-code-branch"></i>CI/CD</div>
+<div class="tech"><i class="fab fa-linux"></i>Linux</div>
+<div class="tech"><i class="fas fa-chart-line"></i>CloudWatch</div>
 
 </div>
 
@@ -200,14 +365,24 @@ color:#e6efe9;
 
 </div>
 
+</div>
+
 <script>
+
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add("show");}
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
 });
 });
-document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
 </script>
 
 </body>
 </html>
+```
