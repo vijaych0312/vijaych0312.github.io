@@ -84,6 +84,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 padding-top:70px;
+scroll-snap-align:start;
 }
 
 .hero-container{
@@ -191,10 +192,9 @@ background:rgba(255,255,255,0.15);
 border-color:#4A6958;
 }
 
-/* SECTIONS */
-
 .section{
 padding:90px 0;
+scroll-snap-align:start;
 }
 
 .section h2{
@@ -210,8 +210,6 @@ max-width:90%;
 margin:auto;
 }
 
-/* ABOUT */
-
 .about-text{
 background:#435146;
 padding:40px;
@@ -219,8 +217,6 @@ border-radius:16px;
 line-height:1.7;
 border:1px solid #4A6958;
 }
-
-/* CARDS */
 
 .cards{
 display:grid;
@@ -247,8 +243,6 @@ color:#6f9180;
 transform:translateY(-10px);
 }
 
-/* SKILLS */
-
 .skills{
 display:flex;
 flex-wrap:wrap;
@@ -266,14 +260,25 @@ border:1px solid #4A6958;
 border-radius:25px;
 }
 
-/* FOOTER */
-
 footer{
 text-align:center;
 padding:40px 0;
 color:#9da8a3;
 border-top:1px solid #435146;
 margin-top:40px;
+}
+
+/* SLIDE ANIMATION */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
 }
 
 </style>
@@ -319,10 +324,6 @@ margin-top:40px;
 <a href="https://linkedin.com/in/vijaych0312" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
 
-<a href="Vijay_Kumar_Chelluboyana_Resume.pdf" class="resume-btn" target="_blank">
-<i class="fas fa-file"></i> Resume
-</a>
-
 </div>
 
 <div class="hero-right">
@@ -333,120 +334,17 @@ margin-top:40px;
 
 </section>
 
-<section id="about" class="section">
+<section id="about" class="section hidden">
 <h2>About Me</h2>
 
 <div class="container">
 <div class="about-text">
 
-<p>
-Cloud and DevOps Engineer with 4+ years of experience designing and managing scalable cloud infrastructure.
-</p>
-
-<p>
-Experienced in AWS services, Kubernetes, Docker, Terraform, and CI/CD automation pipelines.
-</p>
-
-<p>
-Focused on improving deployment reliability, automation, and cloud performance for enterprise applications.
-</p>
+<p>AWS Cloud & DevOps Engineer with 4+ years of experience building scalable cloud infrastructure.</p>
+<p>Experienced in AWS, Docker, Kubernetes, Terraform and CI/CD pipelines.</p>
+<p>Focused on automation, reliability, and high-performance cloud systems.</p>
 
 </div>
-</div>
-
-</section>
-
-<section id="experience" class="section">
-
-<h2>Professional Experience</h2>
-
-<div class="container">
-
-<div class="cards">
-
-<a href="welldoc.html" style="text-decoration:none;color:inherit;">
-<div class="card">
-<i class="fas fa-cloud"></i>
-<h3>Welldoc</h3>
-<p>Cloud / DevOps Engineer</p>
-</div>
-</a>
-
-<a href="dxc.html" style="text-decoration:none;color:inherit;">
-<div class="card">
-<i class="fas fa-server"></i>
-<h3>DXC Technology</h3>
-<p>DevOps Engineer</p>
-</div>
-</a>
-
-<a href="cedar.html" style="text-decoration:none;color:inherit;">
-<div class="card">
-<i class="fas fa-database"></i>
-<h3>Cedar InfoTech</h3>
-<p>Cloud Engineer</p>
-</div>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects" class="section">
-
-<h2>Projects</h2>
-
-<div class="container">
-
-<div class="cards">
-
-<div class="card">
-<i class="fas fa-cloud"></i>
-<h3>AWS Infrastructure Automation</h3>
-<p>Provisioned infrastructure using Terraform and deployed workloads on AWS.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-rocket"></i>
-<h3>CI/CD Automation</h3>
-<p>Implemented automated pipelines using GitHub Actions.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-chart-line"></i>
-<h3>Monitoring System</h3>
-<p>Implemented monitoring using Prometheus, Grafana and CloudWatch.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="skills" class="section">
-
-<h2>DevOps & Cloud Skills</h2>
-
-<div class="container">
-
-<div class="skills">
-
-<div class="skill"><i class="fab fa-aws"></i>AWS</div>
-<div class="skill"><i class="fab fa-docker"></i>Docker</div>
-<div class="skill"><i class="fas fa-dharmachakra"></i>Kubernetes</div>
-<div class="skill"><i class="fas fa-server"></i>Terraform</div>
-<div class="skill"><i class="fab fa-github"></i>GitHub Actions</div>
-<div class="skill"><i class="fab fa-jenkins"></i>Jenkins</div>
-<div class="skill"><i class="fas fa-chart-line"></i>Prometheus</div>
-<div class="skill"><i class="fas fa-chart-bar"></i>Grafana</div>
-<div class="skill"><i class="fab fa-linux"></i>Linux</div>
-<div class="skill"><i class="fab fa-python"></i>Python</div>
-
-</div>
-
 </div>
 
 </section>
@@ -454,6 +352,22 @@ Focused on improving deployment reliability, automation, and cloud performance f
 <footer>
 <p>© 2026 Vijay Kumar Chelluboyana</p>
 </footer>
+
+<script>
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".hidden").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
 
 </body>
 </html>
