@@ -31,7 +31,7 @@ color:#e6efe9;
 overflow-x:hidden;
 }
 
-/* BACKGROUND DESIGN */
+/* BACKGROUND */
 
 .bg-wrapper{
 position:fixed;
@@ -116,7 +116,6 @@ left:40px;
 font-size:22px;
 font-weight:600;
 letter-spacing:2px;
-color:#e6efe9;
 }
 
 .nav-links{
@@ -159,9 +158,7 @@ justify-content:space-between;
 gap:60px;
 }
 
-.hero-left{
-flex:1;
-}
+.hero-left{flex:1;}
 
 .hero-right{
 flex:1;
@@ -177,15 +174,17 @@ border-radius:20px;
 box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
+/* NAME (LESS GLOW) */
+
 .hero h1{
 font-size:60px;
 font-weight:700;
 color:#ffffff;
 
 text-shadow:
-0 0 8px rgba(255,255,255,0.9),
-0 0 16px rgba(255,255,255,0.7),
-0 0 24px rgba(74,105,88,0.6);
+0 0 4px rgba(255,255,255,0.6),
+0 0 10px rgba(255,255,255,0.4),
+0 0 16px rgba(74,105,88,0.3);
 
 letter-spacing:2px;
 }
@@ -232,7 +231,7 @@ color:#4A6958;
 transform:scale(1.3);
 }
 
-/* GLASS RESUME BUTTON */
+/* RESUME BUTTON */
 
 .resume-btn{
 margin-top:30px;
@@ -240,18 +239,13 @@ display:inline-flex;
 align-items:center;
 gap:10px;
 padding:15px 38px;
-
 font-size:16px;
 font-weight:500;
-
 color:#ffffff;
 text-decoration:none;
-
 border-radius:40px;
-
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(12px);
-
 border:1px solid rgba(255,255,255,0.25);
 
 box-shadow:
@@ -262,17 +256,13 @@ transition:all .35s ease;
 }
 
 .resume-btn:hover{
-
 transform:translateY(-4px) scale(1.03);
-
 background:rgba(255,255,255,0.15);
-
 border-color:#7cffc4;
 
 box-shadow:
 0 10px 30px rgba(124,255,196,0.35),
 0 0 20px rgba(124,255,196,0.25);
-
 }
 
 /* SECTIONS */
@@ -327,7 +317,7 @@ border:1px solid #4A6958;
 padding:35px;
 border-radius:16px;
 text-align:center;
-transition:.4s;
+transition:.35s ease;
 }
 
 .card i{
@@ -337,7 +327,12 @@ color:#6f9180;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
+border-color:#7cffc4;
+
+box-shadow:
+0 10px 30px rgba(124,255,196,0.25),
+0 0 15px rgba(124,255,196,0.2);
 }
 
 /* SKILLS */
@@ -448,8 +443,11 @@ margin-top:40px;
 </section>
 
 <section id="experience" class="section">
+
 <h2>Professional Experience</h2>
+
 <div class="container">
+
 <div class="cards">
 
 <a href="welldoc.html" style="text-decoration:none;color:inherit;">
@@ -477,12 +475,17 @@ margin-top:40px;
 </a>
 
 </div>
+
 </div>
+
 </section>
 
 <section id="projects" class="section">
+
 <h2>Projects</h2>
+
 <div class="container">
+
 <div class="cards">
 
 <div class="card">
@@ -504,13 +507,17 @@ margin-top:40px;
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 <section id="skills" class="section">
+
 <h2>DevOps & Cloud Skills</h2>
 
 <div class="container">
+
 <div class="skills">
 
 <div class="skill"><i class="fab fa-aws"></i>AWS</div>
@@ -525,7 +532,9 @@ margin-top:40px;
 <div class="skill"><i class="fab fa-python"></i>Python</div>
 
 </div>
+
 </div>
+
 </section>
 
 <footer>
