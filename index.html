@@ -79,12 +79,12 @@ transform:scale(1.1);
 /* HERO */
 
 .hero{
-min-height:100vh;
-scroll-snap-align:start;
+height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 padding-top:70px;
+scroll-snap-align:start;
 }
 
 .hero-container{
@@ -195,9 +195,16 @@ border-color:#4A6958;
 /* SECTIONS */
 
 .section{
-min-height:100vh;
+padding:90px 0;
 scroll-snap-align:start;
-padding:120px 0 60px;
+opacity:0;
+transform:translateY(80px);
+transition:all 0.9s ease;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .section h2{
@@ -276,6 +283,7 @@ text-align:center;
 padding:40px 0;
 color:#9da8a3;
 border-top:1px solid #435146;
+margin-top:40px;
 }
 
 </style>
@@ -341,11 +349,17 @@ border-top:1px solid #435146;
 <div class="container">
 <div class="about-text">
 
-<p>Cloud and DevOps Engineer with 4+ years of experience designing and managing scalable cloud infrastructure.</p>
+<p>
+Cloud and DevOps Engineer with 4+ years of experience designing and managing scalable cloud infrastructure.
+</p>
 
-<p>Experienced in AWS services, Kubernetes, Docker, Terraform, and CI/CD automation pipelines.</p>
+<p>
+Experienced in AWS services, Kubernetes, Docker, Terraform, and CI/CD automation pipelines.
+</p>
 
-<p>Focused on improving deployment reliability, automation, and cloud performance for enterprise applications.</p>
+<p>
+Focused on improving deployment reliability, automation, and cloud performance for enterprise applications.
+</p>
 
 </div>
 </div>
@@ -450,6 +464,26 @@ border-top:1px solid #435146;
 <footer>
 <p>© 2026 Vijay Kumar Chelluboyana</p>
 </footer>
+
+<script>
+
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{
+threshold:0.2
+});
+
+sections.forEach(section=>{
+observer.observe(section);
+});
+
+</script>
 
 </body>
 </html>
