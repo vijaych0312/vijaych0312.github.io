@@ -159,7 +159,9 @@ justify-content:space-between;
 gap:60px;
 }
 
-.hero-left{flex:1;}
+.hero-left{
+flex:1;
+}
 
 .hero-right{
 flex:1;
@@ -175,35 +177,17 @@ border-radius:20px;
 box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* BRIGHTER NAME */
-
 .hero h1{
 font-size:60px;
 font-weight:700;
-
-background:linear-gradient(
-90deg,
-#00ffe5,
-#7cffc4,
-#ffffff,
-#7cffc4,
-#00ffe5
-);
-
-background-size:300%;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-animation:shine 6s linear infinite;
+color:#ffffff;
 
 text-shadow:
-0 0 10px rgba(0,255,229,0.4),
-0 0 20px rgba(124,255,196,0.4);
-}
+0 0 8px rgba(255,255,255,0.9),
+0 0 16px rgba(255,255,255,0.7),
+0 0 24px rgba(74,105,88,0.6);
 
-@keyframes shine{
-0%{background-position:0%;}
-100%{background-position:200%;}
+letter-spacing:2px;
 }
 
 .hero h2{
@@ -248,25 +232,47 @@ color:#4A6958;
 transform:scale(1.3);
 }
 
+/* GLASS RESUME BUTTON */
+
 .resume-btn{
 margin-top:30px;
 display:inline-flex;
 align-items:center;
 gap:10px;
-padding:14px 34px;
+padding:15px 38px;
+
 font-size:16px;
-color:#e6efe9;
+font-weight:500;
+
+color:#ffffff;
 text-decoration:none;
+
 border-radius:40px;
+
 background:rgba(255,255,255,0.08);
-border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,0.25);
+
+box-shadow:
+0 8px 25px rgba(0,0,0,0.35),
+inset 0 0 10px rgba(255,255,255,0.08);
+
 transition:all .35s ease;
 }
 
 .resume-btn:hover{
-transform:translateY(-3px);
+
+transform:translateY(-4px) scale(1.03);
+
 background:rgba(255,255,255,0.15);
-border-color:#4A6958;
+
+border-color:#7cffc4;
+
+box-shadow:
+0 10px 30px rgba(124,255,196,0.35),
+0 0 20px rgba(124,255,196,0.25);
+
 }
 
 /* SECTIONS */
@@ -426,8 +432,6 @@ margin-top:40px;
 
 </section>
 
-<!-- ABOUT -->
-
 <section id="about" class="section">
 <h2>About Me</h2>
 <div class="container">
@@ -443,12 +447,8 @@ margin-top:40px;
 </div>
 </section>
 
-<!-- EXPERIENCE -->
-
 <section id="experience" class="section">
-
 <h2>Professional Experience</h2>
-
 <div class="container">
 <div class="cards">
 
@@ -478,15 +478,10 @@ margin-top:40px;
 
 </div>
 </div>
-
 </section>
 
-<!-- PROJECTS -->
-
 <section id="projects" class="section">
-
 <h2>Projects</h2>
-
 <div class="container">
 <div class="cards">
 
@@ -510,13 +505,9 @@ margin-top:40px;
 
 </div>
 </div>
-
 </section>
 
-<!-- SKILLS -->
-
 <section id="skills" class="section">
-
 <h2>DevOps & Cloud Skills</h2>
 
 <div class="container">
@@ -535,7 +526,6 @@ margin-top:40px;
 
 </div>
 </div>
-
 </section>
 
 <footer>
