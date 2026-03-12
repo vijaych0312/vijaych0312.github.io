@@ -21,7 +21,6 @@ box-sizing:border-box;
 
 html{
 scroll-behavior:smooth;
-scroll-snap-type:y mandatory;
 }
 
 body{
@@ -40,7 +39,6 @@ left:0;
 width:100%;
 height:100%;
 z-index:-1;
-pointer-events:none;
 overflow:hidden;
 }
 
@@ -101,18 +99,17 @@ position:fixed;
 top:0;
 width:100%;
 height:70px;
-background:rgba(27,41,34,0.9);
+background:rgba(27,41,34,0.95);
 backdrop-filter:blur(10px);
 border-bottom:1px solid #435146;
 display:flex;
 align-items:center;
-justify-content:center;
+justify-content:space-between;
+padding:0 40px;
 z-index:1000;
 }
 
 .logo{
-position:absolute;
-left:40px;
 font-size:22px;
 font-weight:600;
 letter-spacing:2px;
@@ -135,7 +132,12 @@ transition:.3s;
 
 .nav-links a:hover{
 color:#4A6958;
-transform:scale(1.1);
+}
+
+.menu-btn{
+display:none;
+font-size:26px;
+cursor:pointer;
 }
 
 /* HERO */
@@ -145,20 +147,21 @@ min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding-top:70px;
-scroll-snap-align:start;
+padding-top:90px;
 }
 
 .hero-container{
 width:1100px;
-max-width:90%;
+max-width:92%;
 display:flex;
 align-items:center;
 justify-content:space-between;
 gap:60px;
 }
 
-.hero-left{flex:1;}
+.hero-left{
+flex:1;
+}
 
 .hero-right{
 flex:1;
@@ -167,21 +170,17 @@ justify-content:center;
 }
 
 .hero-photo{
-width:420px;
-height:520px;
+width:380px;
+height:480px;
 object-fit:cover;
 border-radius:20px;
 box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
 .hero h1{
-font-size:60px;
+font-size:56px;
 font-weight:700;
-color:#ffffff;
-text-shadow:
-0 0 4px rgba(255,255,255,0.6),
-0 0 10px rgba(255,255,255,0.4),
-0 0 16px rgba(74,105,88,0.3);
+color:#fff;
 letter-spacing:2px;
 }
 
@@ -204,10 +203,6 @@ color:#bfc9c4;
 .contact a{
 color:#bfc9c4;
 text-decoration:none;
-}
-
-.contact a:hover{
-color:#4A6958;
 }
 
 .social{
@@ -234,35 +229,22 @@ align-items:center;
 gap:10px;
 padding:15px 38px;
 font-size:16px;
-font-weight:500;
-color:#ffffff;
+color:#fff;
 text-decoration:none;
 border-radius:40px;
 background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
 border:1px solid rgba(255,255,255,0.25);
-transition:all .35s ease;
+transition:.3s;
 }
 
 .resume-btn:hover{
-transform:translateY(-4px) scale(1.03);
 background:rgba(255,255,255,0.15);
-border-color:#7cffc4;
 }
 
 /* SECTIONS */
 
 .section{
 padding:90px 0;
-scroll-snap-align:start;
-opacity:0;
-transform:translateY(80px);
-transition:all .9s ease;
-}
-
-.section.show{
-opacity:1;
-transform:translateY(0);
 }
 
 .section h2{
@@ -274,7 +256,7 @@ text-align:center;
 
 .container{
 width:1100px;
-max-width:90%;
+max-width:92%;
 margin:auto;
 }
 
@@ -292,7 +274,7 @@ border:1px solid #4A6958;
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
 }
 
@@ -302,7 +284,7 @@ border:1px solid #4A6958;
 padding:35px;
 border-radius:16px;
 text-align:center;
-transition:.35s ease;
+transition:.3s;
 }
 
 .card i{
@@ -345,82 +327,87 @@ border-top:1px solid #435146;
 margin-top:40px;
 }
 
-/* ========================= */
-/* MOBILE RESPONSIVE */
-/* ========================= */
+/* ================= */
+/* TABLET */
+/* ================= */
 
-@media (max-width:900px){
+@media (max-width:1000px){
 
 .hero-container{
 flex-direction:column;
 text-align:center;
-gap:40px;
+}
+
+.hero h1{
+font-size:42px;
 }
 
 .hero-photo{
 width:300px;
-height:360px;
+height:380px;
 }
 
-.hero h1{
-font-size:36px;
+.cards{
+grid-template-columns:repeat(2,1fr);
 }
 
-.hero h2{
-font-size:20px;
 }
 
-.logo{
-left:20px;
-}
+/* ================= */
+/* MOBILE */
+/* ================= */
+
+@media (max-width:700px){
 
 .nav-links{
-gap:20px;
-font-size:14px;
-flex-wrap:wrap;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#1b2922;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding:30px 0;
+display:none;
 }
 
+.nav-links.active{
+display:flex;
 }
 
-@media (max-width:600px){
+.menu-btn{
+display:block;
+}
 
-.hero-photo{
-width:240px;
-height:300px;
+.hero{
+padding-top:110px;
 }
 
 .hero h1{
-font-size:28px;
+font-size:30px;
 }
 
 .hero h2{
 font-size:18px;
 }
 
-.navbar{
-height:auto;
-padding:10px 0;
+.hero-photo{
+width:220px;
+height:280px;
 }
 
-.nav-links{
-gap:15px;
-}
-
-.section{
-padding:70px 0;
+.cards{
+grid-template-columns:1fr;
 }
 
 .about-text{
 padding:25px;
 }
 
-.card{
-padding:25px;
-}
-
 .skill{
 font-size:14px;
-padding:8px 15px;
+padding:8px 14px;
 }
 
 }
@@ -442,12 +429,16 @@ padding:8px 15px;
 
 <div class="logo">VKC</div>
 
-<div class="nav-links">
-<a href="#"><i class="fas fa-home"></i> Home</a>
-<a href="#about"><i class="fas fa-user"></i> About</a>
-<a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-<a href="#projects"><i class="fas fa-code"></i> Projects</a>
-<a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+<div class="menu-btn" id="menuBtn">
+<i class="fas fa-bars"></i>
+</div>
+
+<div class="nav-links" id="navLinks">
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
 </div>
 
 </div>
@@ -488,23 +479,18 @@ padding:8px 15px;
 
 </section>
 
-<!-- rest of your sections stay same -->
+<footer>
+<p>© 2026 Vijay Kumar Chelluboyana</p>
+</footer>
 
 <script>
 
-const sections = document.querySelectorAll('.section');
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
 
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-},{threshold:0.2});
-
-sections.forEach(section=>{
-observer.observe(section);
-});
+menuBtn.onclick=()=>{
+navLinks.classList.toggle("active");
+};
 
 </script>
 
